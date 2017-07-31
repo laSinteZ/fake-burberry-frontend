@@ -114,7 +114,7 @@ html {
 
 .product-controls-button {
   text-transform: uppercase;
-  padding: 0.9375rem 0rem 0.9375rem 0rem;
+  padding: 1rem 0rem 1rem 0rem;
 
   font-family: Raleway;
   font-size: 12px;
@@ -155,7 +155,7 @@ html {
 }
 
 .product-text-item {
-  padding: 1.875rem 1rem 1.875rem 1rem; /*Eugene plz fix grid kappa*/
+  padding: 2rem 1rem 2rem 1rem; /*Eugene plz fix grid kappa*/
   display: flex;
   justify-content: space-between;
   align-items: baseline;
