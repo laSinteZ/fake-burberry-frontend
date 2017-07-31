@@ -173,3 +173,29 @@ html {
   color: #171717;
   margin: 0;
 }
+
+.recommend-products{
+  padding: 3rem 1rem 0rem 1rem;
+}
+
+.recommend-products-title{
+  text-transform: uppercase;
+	font-family: Raleway;
+	font-size: 14px;
+	font-weight: 500;
+  color: #171717;
+  border-bottom: 	solid 2px #171717;
+  margin: 0px;
+  padding-bottom: 8px;
+  display: inline;
+}
+
+.recommend-products-content{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.recommend-products-content-item-title{
+
+}
