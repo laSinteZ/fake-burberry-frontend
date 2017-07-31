@@ -106,43 +106,70 @@ html {
   border-bottom: 2px solid#c6c6c6;
 }
 
-.product-controls{
+.product-controls {
   padding: 2rem 1rem 3rem 1rem;
   display: flex;
-  flex-flow: column
+  flex-flow: column;
 }
 
 .product-controls-button {
-  padding: 1rem;
+  text-transform: uppercase;
+  padding: 0.9375rem 0rem 0.9375rem 0rem;
 
   font-family: Raleway;
-	font-size: 12px;
+  font-size: 12px;
   text-align: center;
   background-color: white;
   border-radius: 2px;
-	border: solid 1px #999999;
+  border: solid 1px #999999;
 }
 
-.product-controls-button+.product-controls-button{
+.product-controls-button + .product-controls-button {
   margin-top: 1rem;
 }
 
-.product-controls-button+.button-text-only{
+.product-controls-button + .button-text-only {
   margin-top: 1.5rem;
 }
 
-.product-controls-button.button-dark{
+.product-controls-button.button-dark {
   color: #ffffff;
-	background-color: #171717;
-	border:#171717;
+  background-color: #171717;
+  border: #171717;
 }
 
-.product-controls-button.button-text-only{
+.product-controls-button.button-text-only {
   font-family: Raleway;
-	font-size: 12px;
-	text-align: center;
+  font-size: 12px;
+  text-align: center;
   color: #171717;
   padding: 0;
   border: none;
   text-align: left;
+}
+
+.product-text {
+  flex: column;
+  border-top: solid 2px #c6c6c6;
+  border-bottom: solid 2px #c6c6c6;
+}
+
+.product-text-item {
+  padding: 1.875rem 1rem 1.875rem 1rem; /*Eugene plz fix grid kappa*/
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.product-text-item+.product-text-item {
+  border-top: solid 2px #c6c6c6;
+}
+
+.product-text-item-title {
+  text-transform: uppercase;
+  font-family: Raleway;
+  font-size: 14px;
+  font-weight: 500;
+  color: #171717;
+  margin: 0;
 }
