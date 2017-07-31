@@ -50,7 +50,7 @@ html {
 .product-info-top {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 }
 
 .product-info-top-price {
@@ -305,4 +305,6 @@ html {
   font-family: Lora;
   font-size: 14px;
   font-style: italic;
+  margin: 0px;
+  padding: 0px;
 }
