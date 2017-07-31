@@ -1,0 +1,12 @@
+.header {
+  padding: 1rem 0 1rem 0;
+  border-bottom: 2px solid #c6c6c6;
+  display: flex;
+  justify-content: center;
+}
+
+.header-logo {
+  width: 138px;
+  height: 10px;
+  object-fit: contain;
+}
