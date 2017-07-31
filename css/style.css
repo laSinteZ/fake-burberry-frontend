@@ -146,6 +146,7 @@ html {
   padding: 0;
   border: none;
   text-align: left;
+  align-self: flex-start;
 }
 
 .product-text {
