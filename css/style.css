@@ -2,9 +2,15 @@ html {
   font-size: 16px;
 }
 
+body {
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased;
+}
+
 .header {
   padding: 1rem 0 1rem 0;
-  border-bottom: 1px solid #c6c6c6;
+  /*border-bottom: 1px solid #c6c6c6;*/
+  box-shadow: inset 0 -1px 0 0 #c6c6c6;
   display: flex;
   justify-content: center;
 }
@@ -18,15 +24,16 @@ html {
 .product {
 }
 
-.product-title {
-  padding: 1.5rem 1rem 1.5rem 1rem;
+.product-header {
+  padding: 1rem 1rem 1rem 1rem;
 }
 
-.product-title h1 {
-  font-family: Lora;
-  font-size: 14px;
+.product-header-title {
   font-weight: normal;
-  color: #111111;
+	font-family: Lora;
+  font-size: 20px;
+  line-height: 1.5rem;
+	color: #171717;
   padding: 0;
   margin: 0;
 }
@@ -44,7 +51,7 @@ html {
 }
 
 .product-info {
-  padding: 1.5rem 1rem 2rem 1rem;
+  padding: 1rem 1rem 2rem 1rem;
 }
 
 .product-info-top {
@@ -55,7 +62,8 @@ html {
 
 .product-info-top-price {
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 1.1875;
   color: #111111;
   font-weight: normal;
   padding: 0;
@@ -65,7 +73,7 @@ html {
 .product-info-top-number {
   font-family: Raleway;
   font-size: 12px;
-  text-align: center;
+  line-height: 1.167;
   color: #171717;
   padding: 0;
   margin: 0;
@@ -81,6 +89,7 @@ html {
   margin: 0;
   font-family: Raleway;
   font-size: 12px;
+  line-height: 1.2;
   text-align: left;
   color: #171717;
 }
@@ -124,10 +133,12 @@ html {
 
   font-family: Raleway;
   font-size: 12px;
+  line-height: 1.2;
   text-align: center;
   background-color: white;
-  border-radius: 1px;
-  border: solid 1px #999999;
+  border-radius: 2px;
+  border: none;
+  box-shadow: inset 0 0 0 1px #999999;
 }
 
 .product-controls-button + .product-controls-button {
@@ -141,7 +152,8 @@ html {
 .product-controls-button.button-dark {
   color: #ffffff;
   background-color: #171717;
-  border: #171717;
+  border: none;
+  box-shadow: inset 0 0 0 1px #171717;
 }
 
 .product-controls-button.button-text-only {
@@ -150,14 +162,17 @@ html {
   color: #171717;
   padding: 0;
   border: none;
+  box-shadow: none;
   text-align: left;
   align-self: flex-start;
 }
 
 .product-description {
   flex: column;
-  border-top: solid 1px #c6c6c6;
-  border-bottom: solid 1px #c6c6c6;
+  box-shadow: inset 0 -1px 0 0 #c6c6c6,
+              inset 0 1px 0 0 #c6c6c6;
+  /* border-top: solid 1px #c6c6c6;
+  border-bottom: solid 1px #c6c6c6; */
 }
 
 .product-description-item {
@@ -167,29 +182,45 @@ html {
 }
 
 .product-description-item + .product-description-item {
-  border-top: solid 1px #c6c6c6;
+  /* border-top: solid 1px #c6c6c6; */
+  box-shadow: inset 0 1px 0 0 #c6c6c6;
 }
 
 .product-description-item-header{
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
 }
+
 .product-description-item-header-title {
   text-transform: uppercase;
   font-family: Raleway;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.1875;
   font-weight: 500;
   color: #171717;
   margin: 0;
 }
 
 .product-description-item-text{
+  margin-top: 2rem;
   font-family: Lora;
 	font-size: 14px;
-	line-height: 1.71;
-	color: #171717;
+	line-height: 24px; /*For some reason, 24/14=1.714 doesnt work right*/
+  color: #171717;
+  padding: 0;
 }
+
+.product-description-item-text ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-description-item-text p{
+  padding: 0;
+  margin: 0;
+}
+
 .recommend {
   padding: 0rem 1rem 0rem 1rem;
 }
@@ -198,11 +229,12 @@ html {
   margin-top: 3rem;
 }
 
-.recommend-products-title {
+.recommend-title {
   text-transform: uppercase;
   font-family: Raleway;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
+  line-height: 1.2;
   color: #171717;
   border-bottom: solid 1px #171717;
   margin: 0px;
@@ -215,10 +247,12 @@ html {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
 }
 
 .recommend-products-content-card {
+  display: flex;
+  flex-direction: column;
   flex-basis: 130px;
   padding-bottom: 2rem;
 }
@@ -233,14 +267,15 @@ html {
   font-family: Lora;
   font-size: 16px;
   font-weight: normal;
-  line-height: 1.5;
+  line-height: 1.2;
   color: #111111;
-  margin: 0.75rem 0px 0.5rem 0px;
+  margin: 0.5rem 0px 0.5rem 0px;
 }
 
 .recommend-products-content-card-price {
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   font-size: 12px;
+  line-height: 1.17;
   font-weight: normal;
   color: #999999;
   margin: 0;
@@ -248,17 +283,6 @@ html {
 
 .recommend-more {
   margin-top: 1rem;
-}
-
-.recommend-more-title{
-  text-transform: uppercase;
-  font-family: Lora;
-	font-size: 14px;
-  color: #111111;
-  border-bottom: solid 1px #111111;
-  margin: 0px;
-  padding-bottom: 8px;
-  display: inline-block;
 }
 
 .recommend-more-content {
@@ -273,6 +297,7 @@ html {
   font-family: Lora;
   font-size: 14px;
   font-style: italic;
+  line-height: 1.215;
   color: #171717;
   margin: 0;
   text-decoration: none;
@@ -293,6 +318,7 @@ html {
 .footer-button {
   font-family: Raleway;
   font-size: 12px;
+  line-height: 1.2;
   color: #999999;
   background-color: #f3f3f3;
   align-self: flex-start;
@@ -308,14 +334,16 @@ html {
 .footer-help-title {
   margin-top: 1.5rem;
   font-family: Raleway;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
+  line-height: 1.2;
 }
 
 .footer-help-link {
   font-family: Lora;
   font-size: 14px;
   font-style: italic;
+  line-height: 1.25;
   margin: 0px;
   padding: 0px;
 }
