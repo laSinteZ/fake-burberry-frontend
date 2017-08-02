@@ -3,8 +3,8 @@ html {
 }
 
 body {
-    text-rendering: optimizeLegibility !important;
-    -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased;
 }
 
 .header {
@@ -188,7 +188,7 @@ body {
   text-transform: uppercase;
   font-family: Raleway;
   font-size: 16px;
-  line-height: 1.1875;
+  line-height: 20px;
   font-weight: 500;
   color: #171717;
   margin: 0;
