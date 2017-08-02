@@ -7,6 +7,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  margin: 0px;
+  padding: 0px;
+}
+
 .header {
   padding: 1rem 0 1rem 0;
   border-bottom: 1px solid #c6c6c6;
@@ -33,8 +41,6 @@ body {
   font-size: 20px;
   line-height: 1.5rem;
 	color: #171717;
-  padding: 0;
-  margin: 0;
 }
 
 .product-showcase {
@@ -88,7 +94,7 @@ body {
   margin: 0;
   font-family: Raleway;
   font-size: 12px;
-  line-height: 1.2;
+  line-height: 1.34;
   text-align: left;
   color: #171717;
 }
@@ -145,6 +151,7 @@ body {
 
 .product-controls-button + .button-text-only {
   margin-top: 1.5rem;
+  line-height: 1.35;
 }
 
 .product-controls-button.button-dark {
@@ -191,7 +198,6 @@ body {
   line-height: 20px;
   font-weight: 500;
   color: #171717;
-  margin: 0;
 }
 
 .product-description-item-text{
@@ -230,7 +236,6 @@ body {
   line-height: 1.2;
   color: #171717;
   border-bottom: solid 1px #171717;
-  margin: 0px;
   padding-bottom: 0.5rem;
   display: inline-block;
 }
@@ -311,7 +316,7 @@ body {
 .footer-button {
   font-family: Raleway;
   font-size: 12px;
-  line-height: 1.2;
+  line-height: 1.35;
   color: #999999;
   background-color: #f3f3f3;
   align-self: flex-start;
@@ -325,7 +330,7 @@ body {
 }
 
 .footer-help-title {
-  margin-top: 1.5rem;
+  margin: 1.5rem 0rem 1rem 0rem;
   font-family: Raleway;
   font-size: 16px;
   font-weight: bold;
