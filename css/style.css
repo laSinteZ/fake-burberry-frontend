@@ -34,10 +34,10 @@ h4 {
 .product-title {
   padding: 1rem;
   font-weight: normal;
-	font-family: Lora;
+  font-family: Lora;
   font-size: 20px;
   line-height: 1.5rem;
-	color: #171717;
+  color: #171717;
 }
 
 .product-showcase {
@@ -103,6 +103,7 @@ h4 {
   border-radius: 100px;
   background-color: #cfa880;
   border: solid 1px #232122;
+  font-size: 0px;
 }
 
 .product-info-bottom-button-colour.is-active {
@@ -179,7 +180,7 @@ h4 {
   border-top: solid 1px #c6c6c6; 
 }
 
-.product-description-item-button{
+.product-description-item-button {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -189,11 +190,11 @@ h4 {
   background: white;
 }
 
-.product-description-item-button::after{	
+.product-description-item-button::after {
   content: '';
   width: 10px;
-	height: 10px;
-	object-fit: contain;
+  height: 10px;
+  object-fit: contain;
   background-image: url("../img/triangle.svg")
 }
 
@@ -213,8 +214,8 @@ h4 {
 .product-description-item-text{
   margin-top: 2rem;
   font-family: Lora;
-	font-size: 14px;
-	line-height: 1.75;
+  font-size: 14px;
+  line-height: 1.75;
   color: #171717;
   padding: 0;
 }
@@ -354,4 +355,5 @@ h4 {
   line-height: 1.25;
   margin: 0px;
   padding: 0px;
+  
 }
