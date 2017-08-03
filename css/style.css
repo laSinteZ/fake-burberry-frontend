@@ -103,6 +103,7 @@ h4 {
   border-radius: 100px;
   background-color: #cfa880;
   border: solid 1px #232122;
+  font-size: 0;
 }
 
 .product-info-bottom-button-colour.is-active {
@@ -155,17 +156,12 @@ h4 {
 .product-controls-button.button-text-only {
   font-family: Raleway;
   font-size: 12px;
+  line-height: 1.35;
   color: #171717;
   padding: 0;
   border: none;
   text-align: left;
   align-self: flex-start;
-}
-
-.button-text-only-title {
-  line-height: 1.35;
-  font-size: 12px;
-  font-weight: normal;
 }
 
 .product-description {
@@ -194,6 +190,18 @@ h4 {
   background: white;
 }
 
+.product-description-item-button::after{	
+  content: '';
+  width: 10px;
+	height: 10px;
+	object-fit: contain;
+  background-image: url("../img/triangle.svg")
+}
+
+.product-description-item.is-active .product-description-item-button::after{
+  transform: rotate(180deg);
+}
+
 .product-description-item-button-title {
   text-transform: uppercase;
   font-family: Raleway;
@@ -207,7 +215,7 @@ h4 {
   margin-top: 2rem;
   font-family: Lora;
 	font-size: 14px;
-	line-height: 24px; /*For some reason, 24/14=1.714 doesnt work right*/
+	line-height: 1.75;
   color: #171717;
   padding: 0;
 }
@@ -347,15 +355,4 @@ h4 {
   line-height: 1.25;
   margin: 0px;
   padding: 0px;
-}
-
-.icon-triangle{	
-  width: 10px;
-	height: 10px;
-	object-fit: contain;
-  background-image: url("../img/triangle.svg")
-}
-
-i.is-reversed{
-    transform: rotate(180deg);
 }
