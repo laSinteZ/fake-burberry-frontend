@@ -266,8 +266,7 @@ h4 {
 }
 
 .recommend-products-content-card-image {
-  width: 130px;
-  height: 174px;
+  width: 100%;
   margin: 0;
 }
 
