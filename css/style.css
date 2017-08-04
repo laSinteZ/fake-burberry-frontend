@@ -23,9 +23,7 @@ h4 {
 }
 
 .header-logo {
-  width: 138px;
-  height: 10px;
-  object-fit: contain;
+  line-height: 0px;
 }
 
 .product {
@@ -34,7 +32,7 @@ h4 {
 .product-title {
   padding: 1rem;
   font-weight: normal;
-  font-family: Lora;
+  font-family: Lora, serif;
   font-size: 20px;
   line-height: 1.5rem;
   color: #171717;
@@ -73,7 +71,7 @@ h4 {
 }
 
 .product-info-top-number {
-  font-family: Raleway;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   font-size: 12px;
   line-height: 1.167;
   color: #171717;
@@ -84,7 +82,7 @@ h4 {
 .product-info-middle-colour {
   margin: 0;
   margin-top: 1rem;
-  font-family: Raleway;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   font-size: 12px;
   line-height: 1.34;
   text-align: left;
@@ -130,7 +128,7 @@ h4 {
   text-transform: uppercase;
   padding: 1rem 0rem 1rem 0rem;
 
-  font-family: Raleway;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   font-size: 12px;
   line-height: 1.2;
   text-align: center;
@@ -154,7 +152,7 @@ h4 {
 }
 
 .product-controls-button.button-text-only {
-  font-family: Raleway;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   font-size: 12px;
   line-height: 1.35;
   color: #171717;
@@ -204,7 +202,7 @@ h4 {
 
 .product-description-item-button-title {
   text-transform: uppercase;
-  font-family: Raleway;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
@@ -213,7 +211,7 @@ h4 {
 
 .product-description-item-text{
   margin-top: 2rem;
-  font-family: Lora;
+  font-family: Lora, serif;
   font-size: 14px;
   line-height: 1.75;
   color: #171717;
@@ -241,7 +239,7 @@ h4 {
 
 .recommend-title {
   text-transform: uppercase;
-  font-family: Raleway;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.2;
@@ -263,7 +261,8 @@ h4 {
   display: flex;
   flex-direction: column;
   flex-basis: 130px;
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  text-decoration: none;
 }
 
 .recommend-products-content-card-image {
@@ -273,7 +272,7 @@ h4 {
 }
 
 .recommend-products-content-card-title {
-  font-family: Lora;
+  font-family: Lora, serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.2;
@@ -303,7 +302,7 @@ h4 {
 }
 
 .recommend-more-content-item {
-  font-family: Lora;
+  font-family: Lora, serif;
   font-size: 14px;
   font-style: italic;
   line-height: 1.215;
@@ -325,7 +324,7 @@ h4 {
 }
 
 .footer-button {
-  font-family: Raleway;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   font-size: 12px;
   line-height: 1.35;
   color: #999999;
@@ -342,18 +341,18 @@ h4 {
 
 .footer-help-title {
   margin: 1.5rem 0rem 1rem 0rem;
-  font-family: Raleway;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   font-size: 16px;
   font-weight: bold;
   line-height: 1.2;
 }
 
 .footer-help-link {
-  font-family: Lora;
+  font-family: Lora, serif;
   font-size: 14px;
   font-style: italic;
-  line-height: 1.25;
+  line-height: 1.25;  
   margin: 0px;
   padding: 0px;
-  
+  text-decoration: none;
 }
