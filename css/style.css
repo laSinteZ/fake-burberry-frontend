@@ -45,7 +45,6 @@ h4 {
 }
 
 .product-showcase-image {
-  width: 300px;
   height: 400px;
   object-fit: contain;
 }
