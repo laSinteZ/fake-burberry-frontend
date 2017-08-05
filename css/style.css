@@ -259,7 +259,6 @@ h4 {
 }
 
 .product-description-item-button-wrapper::after {
-  position: absolute right .5rem;
   content: '';
   width: 10px;
   height: 10px;
