@@ -11,13 +11,13 @@ h1,
 h2,
 h3,
 h4 {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
   display: flex;
-  padding: 1rem 0 1rem 0;
+  padding: 1rem 0;
   border-bottom: 1px solid #c6c6c6;
 
   justify-content: center;
@@ -25,7 +25,7 @@ h4 {
 
 @media screen and (min-width: 48rem) {
   .header {
-    padding: 1.5rem 0 1.5rem 0;
+    padding: 1.5rem 0;
   }
 }
 
@@ -34,7 +34,7 @@ h4 {
 }
 
 .product-title {
-  padding: 1rem 0.5rem 1rem 0.5rem;
+  padding: 1rem 0.5rem;
   color: #171717;
   font-weight: normal;
   font-size: 20px;
@@ -44,7 +44,7 @@ h4 {
 
 @media screen and (min-width: 48rem) {
   .product-title {
-    padding: 1.5rem 0 1.5rem 0;
+    padding: 1.5rem 0;
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
@@ -53,7 +53,7 @@ h4 {
 .product-showcase {
   display: flex;
   overflow-x: auto;
-  margin: 0 -0.5rem 0 -0.5rem;
+  margin: 0 -0.5rem;
   white-space: nowrap;
 }
 
@@ -136,7 +136,7 @@ h4 {
   border: solid 1px #232122;
   border-radius: 100px;
   background-color: #cfa880;
-  font-size: 0px;
+  font-size: 0;
 }
 
 .product-info-bottom-button-colour.is-active {
@@ -148,7 +148,7 @@ h4 {
 }
 
 .content-divider {
-  margin: 0 0.5rem 0 0.5rem;
+  margin: 0 0.5rem;
   border: none;
   border-top: solid 1px #c6c6c6;
 }
@@ -160,7 +160,7 @@ h4 {
 }
 
 .description-divider-mobile {
-  margin: 0 -0.5rem 0 -0.5rem;
+  margin: 0 -0.5rem;
   border: none;
   border-top: solid 1px #c6c6c6;
 }
@@ -186,7 +186,7 @@ h4 {
 }
 
 .product-controls-button {
-  padding: 1rem 0rem 1rem 0rem;
+  padding: 1rem 0rem;
   border: 1px solid #999999;
   border-radius: 2px;
   background-color: white;
@@ -230,7 +230,7 @@ h4 {
 .product-description-item {
   display: flex;
   flex-direction: column;
-  padding: 0rem 0.5rem 0rem 0.5rem;
+  padding: 0rem 0.5rem;
 }
 
 @media screen and (min-width: 48rem) {
@@ -362,7 +362,7 @@ h4 {
 }
 
 .recommend {
-  padding: 0rem 0.5rem 0rem 0.5rem;
+  padding: 0rem 0.5rem;
 }
 
 @media screen and (min-width: 48rem) {
@@ -428,7 +428,7 @@ h4 {
 }
 
 .recommend-products-content-card-title {
-  margin: 0.5rem 0px 0.5rem 0px;
+  margin: 0.5rem 0;
   color: #111111;
   font-weight: normal;
   font-size: 16px;
@@ -547,8 +547,8 @@ h4 {
 
 .footer-help-mobile-link {
   display: block;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   color: #171717;
   text-decoration: none;
   font-style: italic;
