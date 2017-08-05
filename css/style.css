@@ -16,9 +16,10 @@ h4 {
 }
 
 .header {
+  display: flex;
   padding: 1rem 0 1rem 0;
   border-bottom: 1px solid #c6c6c6;
-  display: flex;
+
   justify-content: center;
 }
 
@@ -34,11 +35,11 @@ h4 {
 
 .product-title {
   padding: 1rem 0.5rem 1rem 0.5rem;
-  font-weight: normal;
-  font-family: Lora, serif;
-  font-size: 20px;
-  line-height: 1.5rem;
   color: #171717;
+  font-weight: normal;
+  font-size: 20px;
+  font-family: Lora, serif;
+  line-height: 1.5rem;
 }
 
 @media screen and (min-width: 48rem) {
@@ -50,10 +51,10 @@ h4 {
 }
 
 .product-showcase {
-  margin: 0 -0.5rem 0 -0.5rem;
   display: flex;
-  white-space: nowrap;
   overflow-x: auto;
+  margin: 0 -0.5rem 0 -0.5rem;
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 48rem) {
@@ -64,12 +65,14 @@ h4 {
 
 .product-showcase-image {
   height: 400px;
+
   object-fit: contain;
 }
 
 @media screen and (min-width: 48rem) {
   .product-showcase-image {
     height: 576px;
+
     object-fit: cover;
   }
 }
@@ -87,51 +90,52 @@ h4 {
 
 .product-info-top {
   display: flex;
+
   justify-content: space-between;
   align-items: center;
 }
 
 .product-info-top-price {
-  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  font-size: 16px;
-  line-height: 1.1875;
+  margin: 0;
+  padding: 0;
   color: #111111;
   font-weight: normal;
-  padding: 0;
-  margin: 0;
+  font-size: 16px;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  line-height: 1.1875;
 }
 
 .product-info-top-number {
-  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  font-size: 12px;
-  line-height: 1.167;
-  color: #171717;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  color: #171717;
+  font-size: 12px;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  line-height: 1.167;
 }
 
 .product-info-middle-colour {
   margin: 0;
   margin-top: 1rem;
-  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  font-size: 12px;
-  line-height: 1.34;
-  text-align: left;
   color: #171717;
+  text-align: left;
+  font-size: 12px;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  line-height: 1.34;
 }
 
 .product-info-bottom {
   display: flex;
-  white-space: nowrap;
   margin-top: 1rem;
+  white-space: nowrap;
 }
 
 .product-info-bottom-button-colour {
   width: 40px;
   height: 40px;
+  border: solid 1px #232122;
   border-radius: 100px;
   background-color: #cfa880;
-  border: solid 1px #232122;
   font-size: 0px;
 }
 
@@ -168,8 +172,9 @@ h4 {
 }
 
 .product-controls {
-  padding: 2rem 0.5rem 3rem 0.5rem;
   display: flex;
+  padding: 2rem 0.5rem 3rem 0.5rem;
+
   flex-flow: column;
 }
 
@@ -181,16 +186,15 @@ h4 {
 }
 
 .product-controls-button {
-  text-transform: uppercase;
   padding: 1rem 0rem 1rem 0rem;
-
-  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  font-size: 12px;
-  line-height: 1.2;
-  text-align: center;
-  background-color: white;
-  border-radius: 2px;
   border: 1px solid #999999;
+  border-radius: 2px;
+  background-color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  line-height: 1.2;
 }
 
 .product-controls-button + .product-controls-button {
@@ -202,19 +206,20 @@ h4 {
 }
 
 .product-controls-button.button-dark {
-  color: #ffffff;
-  background-color: #171717;
   border: 1px solid #171717;
+  background-color: #171717;
+  color: #ffffff;
 }
 
 .product-controls-button.button-text-only {
-  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  font-size: 12px;
-  line-height: 1.35;
-  color: #171717;
   padding: 0;
   border: none;
+  color: #171717;
   text-align: left;
+  font-size: 12px;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  line-height: 1.35;
+
   align-self: flex-start;
 }
 
@@ -223,9 +228,9 @@ h4 {
 }
 
 .product-description-item {
-  padding: 0rem 0.5rem 0rem 0.5rem;
   display: flex;
   flex-direction: column;
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
 
 @media screen and (min-width: 48rem) {
@@ -236,13 +241,14 @@ h4 {
 
 .product-description-item-button-wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
-  border: 0;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  padding: 0;
+  border: 0;
   background: white;
+
+  justify-content: space-between;
+  align-items: center;
 }
 
 @media screen and (min-width: 48rem) {
@@ -252,18 +258,19 @@ h4 {
 }
 
 .product-description-item-button {
+  margin: 0;
   padding: 0;
   border: 0;
-  margin: 0;
   background: white;
 }
 
 .product-description-item-button-wrapper::after {
-  content: '';
   width: 10px;
   height: 10px;
-  object-fit: contain;
   background-image: url("../img/triangle.svg");
+  content: '';
+
+  object-fit: contain;
 }
 
 .product-description-item.is-active .product-description-item-button-wrapper::after {
@@ -277,21 +284,21 @@ h4 {
 }
 
 .product-description-item-button-title {
-  text-transform: uppercase;
-  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
   color: #171717;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  line-height: 20px;
 }
 
 .product-description-item-text {
-  font-family: Lora, serif;
-  font-size: 14px;
-  line-height: 1.75;
-  color: #171717;
   margin-bottom: 2rem;
   padding: 0;
+  color: #171717;
+  font-size: 14px;
+  font-family: Lora, serif;
+  line-height: 1.75;
 }
 
 @media screen and (min-width: 48rem) {
@@ -302,14 +309,14 @@ h4 {
 }
 
 .product-description-item-text ul {
-  list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .product-description-item-text p {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .product-description-item-return-text {
@@ -324,19 +331,19 @@ h4 {
 }
 
 .product-description-item-return-text h4 {
-  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 1.167;
   margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  line-height: 1.167;
 }
 
 .product-description-item-return-text p {
-  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  font-size: 12px;
-  line-height: 1.35;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  line-height: 1.35;
 }
 
 .product-description-item-return-text p + h4 {
@@ -382,23 +389,24 @@ h4 {
 }
 
 .recommend-title {
-  text-transform: uppercase;
-  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.2;
-  color: #171717;
-  border-bottom: solid 1px #171717;
-  padding-bottom: 0.5rem;
   display: inline-block;
+  padding-bottom: 0.5rem;
+  border-bottom: solid 1px #171717;
+  color: #171717;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  line-height: 1.2;
 }
 
 .recommend-products-content {
   display: flex;
   flex-direction: row;
+  margin-top: 1.5rem;
+
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 1.5rem;
 }
 
 @media screen and (min-width: 48rem) {
@@ -415,26 +423,26 @@ h4 {
 }
 
 .recommend-products-content-card-image {
-  width: 100%;
   margin: 0;
+  width: 100%;
 }
 
 .recommend-products-content-card-title {
-  font-family: Lora, serif;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.2;
-  color: #111111;
   margin: 0.5rem 0px 0.5rem 0px;
+  color: #111111;
+  font-weight: normal;
+  font-size: 16px;
+  font-family: Lora, serif;
+  line-height: 1.2;
 }
 
 .recommend-products-content-card-price {
-  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  font-size: 12px;
-  line-height: 1.17;
-  font-weight: normal;
-  color: #999999;
   margin: 0;
+  color: #999999;
+  font-weight: normal;
+  font-size: 12px;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  line-height: 1.17;
 }
 
 .recommend-more {
@@ -448,21 +456,22 @@ h4 {
 }
 
 .recommend-more-content {
-  margin-top: 1.5rem;
-  margin-bottom: 4rem;
   display: flex;
   flex-direction: column;
+  margin-top: 1.5rem;
+  margin-bottom: 4rem;
+
   align-items: flex-start;
 }
 
 .recommend-more-content-item {
-  font-family: Lora, serif;
-  font-size: 14px;
-  font-style: italic;
-  line-height: 1.215;
-  color: #171717;
   margin: 0;
+  color: #171717;
   text-decoration: none;
+  font-style: italic;
+  font-size: 14px;
+  font-family: Lora, serif;
+  line-height: 1.215;
 }
 
 .recommend-more-content-item + .recommend-more-content-item {
@@ -483,6 +492,7 @@ h4 {
 .footer-controls {
   display: flex;
   flex-direction: column;
+
   align-items: flex-start;
 }
 
@@ -493,14 +503,14 @@ h4 {
 }
 
 .footer-controls-button {
-  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  font-size: 12px;
-  line-height: 1.35;
-  color: #999999;
-  background-color: #f3f3f3;
   padding: 0;
   border: none;
+  background-color: #f3f3f3;
+  color: #999999;
   text-align: left;
+  font-size: 12px;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  line-height: 1.35;
 }
 
 .footer-controls-button + .footer-controls-button {
@@ -515,8 +525,9 @@ h4 {
 }
 
 .footer-help-mobile {
-  align-self: center;
   text-align: center;
+
+  align-self: center;
 }
 
 @media screen and (min-width: 48rem) {
@@ -527,23 +538,23 @@ h4 {
 
 .footer-help-mobile-title {
   margin: 1.5rem 0rem 1rem 0rem;
-  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 1.2;
   color: #171717;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  line-height: 1.2;
 }
 
 .footer-help-mobile-link {
   display: block;
-  font-family: Lora, serif;
-  font-size: 14px;
-  font-style: italic;
-  line-height: 1.22;
   margin: 0px;
   padding: 0px;
-  text-decoration: none;
   color: #171717;
+  text-decoration: none;
+  font-style: italic;
+  font-size: 14px;
+  font-family: Lora, serif;
+  line-height: 1.22;
 }
 
 .footer-navigation {
@@ -552,23 +563,23 @@ h4 {
 }
 
 .footer-navigation h4 {
-  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 1.24;
-  text-transform: uppercase;
   display: block;
   margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  line-height: 1.24;
 }
 
 .footer-navigation a {
   display: block;
-  line-height: 1.34;
-  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  font-size: 12px;
+  color: #999999;
   text-decoration: none;
   font-weight: 600;
-  color: #999999;
+  font-size: 12px;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  line-height: 1.34;
 }
 
 .footer-navigation a + a {
