@@ -22,12 +22,18 @@ h4 {
   justify-content: center;
 }
 
+@media screen and (min-width: 48rem) {
+  .header {
+    padding: 1.5rem 0 1.5rem 0;
+  }
+}
+
 .header-logo {
   display: block;
 }
 
 .product-title {
-  padding: 1rem;
+  padding: 1rem 0.5rem 1rem 0.5rem;
   font-weight: normal;
   font-family: Lora, serif;
   font-size: 20px;
@@ -35,10 +41,25 @@ h4 {
   color: #171717;
 }
 
+@media screen and (min-width: 48rem) {
+  .product-title {
+    padding: 1.5rem 0 1.5rem 0;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
 .product-showcase {
+  margin: 0 -0.5rem 0 -0.5rem;
   display: flex;
   white-space: nowrap;
   overflow-x: auto;
+}
+
+@media screen and (min-width: 48rem) {
+  .product-showcase {
+    margin: 0;
+  }
 }
 
 .product-showcase-image {
@@ -46,8 +67,22 @@ h4 {
   object-fit: contain;
 }
 
+@media screen and (min-width: 48rem) {
+  .product-showcase-image {
+    height: 576px;
+    object-fit: cover;
+  }
+}
+
 .product-info {
-  padding: 1rem 1rem 2rem 1rem;
+  padding: 1rem 0.5rem 2rem 0.5rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .product-info {
+    padding: 0;
+    padding-bottom: 2rem;
+  }
 }
 
 .product-info-top {
@@ -109,15 +144,40 @@ h4 {
 }
 
 .content-divider {
-  margin: 0 1rem 0 1rem;
+  margin: 0 0.5rem 0 0.5rem;
   border: none;
   border-top: solid 1px #c6c6c6;
 }
 
+@media screen and (min-width: 48rem) {
+  .content-divider {
+    margin: 0;
+  }
+}
+
+.description-divider-mobile {
+  margin: 0 -0.5rem 0 -0.5rem;
+  border: none;
+  border-top: solid 1px #c6c6c6;
+}
+
+@media screen and (min-width: 48rem) {
+  .description-divider-mobile {
+    display: none;
+  }
+}
+
 .product-controls {
-  padding: 2rem 1rem 3rem 1rem;
+  padding: 2rem 0.5rem 3rem 0.5rem;
   display: flex;
   flex-flow: column;
+}
+
+@media screen and (min-width: 48rem) {
+  .product-controls {
+    padding: 0;
+    padding-top: 2rem;
+  }
 }
 
 .product-controls-button {
@@ -160,40 +220,61 @@ h4 {
 
 .product-description {
   flex: column;
-  border-top: solid 1px #c6c6c6;
-  border-bottom: solid 1px #c6c6c6; 
 }
 
 .product-description-item {
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 0rem 0.5rem 0rem 0.5rem;
   display: flex;
   flex-direction: column;
 }
 
-.product-description-item + .product-description-item {
-  border-top: solid 1px #c6c6c6; 
+@media screen and (min-width: 48rem) {
+  .product-description-item {
+    padding: 1.5rem 0 0 0;
+  }
 }
 
-.product-description-item-button {
+.product-description-item-button-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0;
+  border: 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: white;
+}
+
+@media screen and (min-width: 48rem) {
+  .product-description-item-button-wrapper {
+    margin: 0;
+  }
+}
+
+.product-description-item-button {
   padding: 0;
   border: 0;
   margin: 0;
   background: white;
 }
 
-.product-description-item-button::after {
+.product-description-item-button-wrapper::after {
+  position: absolute right .5rem;
   content: '';
   width: 10px;
   height: 10px;
   object-fit: contain;
-  background-image: url("../img/triangle.svg")
+  background-image: url("../img/triangle.svg");
 }
 
-.product-description-item.is-active .product-description-item-button::after{
+.product-description-item.is-active .product-description-item-button-wrapper::after {
   transform: rotate(180deg);
+}
+
+@media screen and (min-width: 48rem) {
+  .product-description-item-button-wrapper::after {
+    content: none;
+  }
 }
 
 .product-description-item-button-title {
@@ -205,32 +286,100 @@ h4 {
   color: #171717;
 }
 
-.product-description-item-text{
-  margin-top: 2rem;
+.product-description-item-text {
   font-family: Lora, serif;
   font-size: 14px;
   line-height: 1.75;
   color: #171717;
+  margin-bottom: 2rem;
   padding: 0;
 }
 
-.product-description-item-text ul{
+@media screen and (min-width: 48rem) {
+  .product-description-item-text {
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+  }
+}
+
+.product-description-item-text ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.product-description-item-text p{
+.product-description-item-text p {
   padding: 0;
   margin: 0;
 }
 
+.product-description-item-return-text {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .product-description-item-return-text {
+    margin-bottom: 0rem;
+  }
+}
+
+.product-description-item-return-text h4 {
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.167;
+  margin-bottom: 4px;
+}
+
+.product-description-item-return-text p {
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  font-size: 12px;
+  line-height: 1.35;
+  padding: 0;
+  margin: 0;
+}
+
+.product-description-item-return-text p + h4 {
+  margin-top: 1.5rem;
+}
+
+.product-shipping-image {
+  display: none;
+}
+
+@media screen and (min-width: 48rem) {
+  .product-shipping-image {
+    display: block;
+    width: 100%;
+  }
+}
+
 .recommend {
-  padding: 0rem 1rem 0rem 1rem;
+  padding: 0rem 0.5rem 0rem 0.5rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .recommend {
+    padding: 0;
+    padding-bottom: 1rem;
+  }
 }
 
 .recommend-products {
   margin-top: 3rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .recommend-products {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .recommend-products {
+    margin-bottom: 1rem;
+  }
 }
 
 .recommend-title {
@@ -250,13 +399,18 @@ h4 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .recommend-products-content {
+    margin-top: 1rem;
+  }
 }
 
 .recommend-products-content-card {
   display: flex;
   flex-direction: column;
-  flex-basis: 130px;
   margin-bottom: 2rem;
   text-decoration: none;
 }
@@ -288,6 +442,12 @@ h4 {
   margin-top: 1rem;
 }
 
+@media screen and (min-width: 48rem) {
+  .recommend-more {
+    display: none;
+  }
+}
+
 .recommend-more-content {
   margin-top: 1.5rem;
   margin-bottom: 4rem;
@@ -311,43 +471,113 @@ h4 {
 }
 
 .footer {
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 2rem 0.5rem;
   background-color: #f3f3f3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-.footer-button {
+@media screen and (min-width: 48rem) {
+  .footer {
+    padding: 2rem 0;
+  }
+}
+
+.footer-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media screen and (min-width: 48rem) {
+  .footer-controls {
+    flex-direction: row;
+  }
+}
+
+.footer-controls-button {
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   font-size: 12px;
   line-height: 1.35;
   color: #999999;
   background-color: #f3f3f3;
-  align-self: flex-start;
   padding: 0;
   border: none;
   text-align: left;
 }
 
-.footer-button + .footer-button {
+.footer-controls-button + .footer-controls-button {
   margin-top: 1rem;
 }
 
-.footer-help-title {
+@media screen and (min-width: 48rem) {
+  .footer-controls-button + .footer-controls-button {
+    margin-top: 0;
+    margin-left: 1.5rem;
+  }
+}
+
+.footer-help-mobile {
+  align-self: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 48rem) {
+  .footer-help-mobile {
+    display: none;
+  }
+}
+
+.footer-help-mobile-title {
   margin: 1.5rem 0rem 1rem 0rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   font-size: 16px;
   font-weight: bold;
   line-height: 1.2;
+  color: #171717;
 }
 
-.footer-help-link {
+.footer-help-mobile-link {
+  display: block;
   font-family: Lora, serif;
   font-size: 14px;
   font-style: italic;
-  line-height: 1.25;  
+  line-height: 1.22;
   margin: 0px;
   padding: 0px;
   text-decoration: none;
+  color: #171717;
+}
+
+.footer-navigation {
+  display: none;
+  margin-bottom: 2rem;
+}
+
+.footer-navigation h4 {
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.24;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.footer-navigation a {
+  display: block;
+  line-height: 1.34;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #999999;
+}
+
+.footer-navigation a + a {
+  margin-top: 0.75rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .footer-navigation {
+    display: block;
+  }
 }
