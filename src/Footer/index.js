@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import MobileHelp from "./MobileHelp"
-import Navigation from "./Navigation"
+import MobileHelp from "./MobileHelp";
+import Navigation from "./Navigation";
 
 const Footer = styled.footer`
   padding: 2rem 0.5rem;
