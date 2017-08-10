@@ -3,7 +3,7 @@ import styled from "styled-components";
 import MobileHelp from "./MobileHelp"
 import Navigation from "./Navigation"
 
-const Footer = styled.header`
+const Footer = styled.footer`
   padding: 2rem 0.5rem;
   background-color: #f3f3f3;
 
