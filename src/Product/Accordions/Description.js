@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 import triangle from "../../assets/triangle.svg";
 
-const Description = styled.div`
+const DescriptionContainer = styled.div`
   padding: 0rem 0.5rem;
   @media screen and (min-width: 48rem) {
     padding: 0rem;
@@ -10,6 +10,7 @@ const Description = styled.div`
 `;
 
 const Text = styled.div`  
+  display: ${props => (props.active ? `block` : 'none')};
   margin-bottom: 2rem;
   padding: 0;
   color: #171717;
@@ -46,18 +47,20 @@ const ButtonWrapper = styled.div`
   align-items: center;
 
 
-  &::after {
+  ::after {
     width: 10px;
     height: 10px;
     background-image: url(${triangle});
     content: '';
 
     object-fit: contain;
+
+    ${props => (props.active ? 'transform: rotate(180deg);' : '')};    
   }
 
   @media screen and (min-width: 48rem) {
     margin: 1.5rem 0 0 0;
-    &::after {
+    ::after {
       content: none;
     }
   }
@@ -79,17 +82,33 @@ const Title = styled.h2`
   line-height: 20px;
 `;
 
-export default function(props) {
-  return (
-    <Description>
-      <ButtonWrapper>
-        <Button type="button">
-          <Title>{props.title}</Title>
-        </Button>
-      </ButtonWrapper>
-      <Text>
-        {props.children}
-      </Text>
-    </Description>
-  );
+class Description extends Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      active: false
+    };
+    this.toggle = this.toggle.bind(this);
+  }
+
+  toggle() {
+    this.setState((state, props) => ({active: !state.active}))
+  }
+
+  render() {
+    return (
+      <DescriptionContainer>
+        <ButtonWrapper active={this.state.active} onClick={this.toggle}>
+          <Button type="button">
+            <Title>{this.props.title}</Title>
+          </Button>
+        </ButtonWrapper>
+        <Text active={this.state.active}>
+          {this.props.children}
+        </Text>
+      </DescriptionContainer>
+    );
+  }
 }
+
+export default Description
