@@ -2,7 +2,7 @@
 A fake iplementation of [Burberry](https://burberry.com/) website. Created as a part of [Evgeny Rodionov's](https://github.com/evgenyrodionov) frontend [KURSKURSKURS](https://kurskurskurs.erodionov.ru/). Heavely based on original layouts from Burberry.
 ### How to run?
 ```yarn start```
-After that, proceed to [localhost:3000](localhost:3000). However, you can use ```npm```.
+After that, proceed to [localhost:3000](http://localhost:3000). However, you can use ```npm```.
 
 ### Used technologies
 - [React](https://github.com/facebook/react)
