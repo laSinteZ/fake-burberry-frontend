@@ -24,10 +24,34 @@ const Subheading = styled.h2`
 const Products = styled.div`
   margin-top: 3rem;
 
-    @media screen and (min-width: 48rem) {
-      margin-top: 1.5rem;
-      margin-bottom: 1rem;    
-    }
+  @media screen and (min-width: 48rem) {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+`;
+
+const More = styled.div`
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+
+  @media screen and (min-width: 48rem) {
+    display: none;
+  }
+`;
+
+const Link = styled.a`
+  display: block;
+  margin: 0;
+  color: #171717;
+  text-decoration: none;
+  font-style: italic;
+  font-size: 14px;
+  font-family: Lora, serif;
+  line-height: 1.215;
+
+  & + & {
+    margin-top: 1rem;
+  }
 `;
 
 export default function() {
@@ -70,6 +94,12 @@ export default function() {
           </div>
         </div>
       </Products>
+      <More>
+        <Subheading>More for you</Subheading>
+        <Link href="#" class="recommend-more-content-item">Men’s Black Trench Coats</Link>
+        <Link href="#" class="recommend-more-content-item">Men’s Short Trench Coats</Link>
+        <Link href="#" class="recommend-more-content-item">Men’s Long Trench Coats</Link>
+      </More>
     </Recommend>
   );
 }
