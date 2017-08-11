@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Showcase from "./Showcase";
 import InfoPanel from "./InfoPanel/";
 import Recommend from "./Recommend/";
+import Accordions from "./Accordions/";
 
 const Title = styled.h1`
   padding: 1rem 0.5rem;
@@ -30,8 +31,9 @@ export default function Product() {
         <div className="col-xs-12 col-md-5">
           <InfoPanel />
         </div>
-        <Recommend />
       </div>
+      <Accordions />
+      <Recommend />
     </main>
   );
 }
