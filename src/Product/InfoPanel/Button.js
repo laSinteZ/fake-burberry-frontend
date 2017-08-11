@@ -10,14 +10,15 @@ const Button = styled.button`
   font-size: 12px;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   line-height: 1.2;
+  margin-bottom: 1rem;
 
-  ${props => props.primary && `
+  ${props =>
+    props.primary &&
+    `
     border: 1px solid #171717;
     background-color: #171717;
     color: #ffffff;
-  `}
-
-  margin-bottom: 1rem;
+  `};
 `;
 
 export default Button;

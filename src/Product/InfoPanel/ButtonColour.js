@@ -9,14 +9,14 @@ const ButtonColour = styled.button`
 
   margin-right: 1rem;
 
-  border: ${props => (props.active ? 'solid 1px #232122' : 'none')};
+  border: ${props => (props.active ? "solid 1px #232122" : "none")};
   background-color: ${props => props.value};
 `;
 
 export default function(props) {
   return (
     <ButtonColour value={props.value} type="button" active={props.isActive}>
-      {props.colourName + ' colour'} 
+      {props.colourName + " colour"}
     </ButtonColour>
   );
 }

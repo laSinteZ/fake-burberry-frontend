@@ -30,8 +30,12 @@ const ID = styled.p`
 export default function(props) {
   return (
     <Price>
-      <PriceNumber>{props.price} руб.</PriceNumber>
-      <ID>Item {props.id}</ID>
+      <PriceNumber>
+        {props.price} руб.
+      </PriceNumber>
+      <ID>
+        Item {props.id}
+      </ID>
     </Price>
   );
 }

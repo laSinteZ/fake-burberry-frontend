@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "./Button"
-import ButtonColour from "./ButtonColour"
-import ButtonTextOnly from "./ButtonTextOnly"
-import Price from "./Price"
+import Button from "./Button";
+import ButtonColour from "./ButtonColour";
+import ButtonTextOnly from "./ButtonTextOnly";
+import Price from "./Price";
 
 const Divider = styled.hr`
   margin: 0 0.5rem;
@@ -55,11 +55,11 @@ export default function() {
   return (
     <section>
       <InfoContainer>
-        <Price id="39428531" price="110 000"/>
+        <Price id="39428531" price="110 000" />
         <Colour>Colour: Honey</Colour>
         <InfoBottom>
-          <ButtonColour value="#232122" colourName = "Black" />
-          <ButtonColour value="#cfa880" colourName = "Honey" isActive="true"/>
+          <ButtonColour value="#232122" colourName="Black" />
+          <ButtonColour value="#cfa880" colourName="Honey" isActive="true" />
         </InfoBottom>
       </InfoContainer>
       <Divider />
@@ -67,12 +67,8 @@ export default function() {
         <Button primary type="button">
           Select a size
         </Button>
-        <Button type="button">
-          Find in store
-        </Button>
-        <ButtonTextOnly type="button">
-          Need size help?
-        </ButtonTextOnly>
+        <Button type="button">Find in store</Button>
+        <ButtonTextOnly type="button">Need size help?</ButtonTextOnly>
       </Controls>
     </section>
   );

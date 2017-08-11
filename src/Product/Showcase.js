@@ -6,7 +6,7 @@ const Showcase = styled.div`
   overflow-x: auto;
   margin: 0 -0.5rem;
   white-space: nowrap;
-  
+
   @media screen and (min-width: 48rem) {
     margin: 0;
   }

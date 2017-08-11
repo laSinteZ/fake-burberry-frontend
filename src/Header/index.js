@@ -13,9 +13,7 @@ const Header = styled.header`
   }
 `;
 
-const Logo = styled.img`
-    display: block;
-`;
+const Logo = styled.img`display: block;`;
 
 export default function() {
   return (

@@ -15,7 +15,7 @@ const Title = styled.h1`
     padding: 1.5rem 0;
     font-size: 1.5rem;
     line-height: 1.75rem;
-  } 
+  }
 `;
 
 export default function Product() {

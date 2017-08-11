@@ -13,7 +13,6 @@ const ButtonTextOnly = styled.button`
 
   margin-top: 0.5rem;
   background-color: white;
-  
 `;
 
 export default ButtonTextOnly;
