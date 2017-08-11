@@ -37,7 +37,7 @@ export default function(props) {
           style="currency"
           currency={props.currency}
           currencyDisplay="code"
-          minimumFractionDigits="0"
+          minimumFractionDigits={0}
         />
       </PriceNumber>
       <ID>
