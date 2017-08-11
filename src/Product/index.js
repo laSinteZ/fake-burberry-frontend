@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Showcase from "./Showcase";
+import InfoPanel from "./InfoPanel/";
 
 const Title = styled.h1`
   padding: 1rem 0.5rem;
@@ -26,6 +27,7 @@ export default function Product() {
           <Showcase />
         </div>
         <div className="col-xs-12 col-md-5">
+          <InfoPanel />
         </div>
       </div>
     </main>
