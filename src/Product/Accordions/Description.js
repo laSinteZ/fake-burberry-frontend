@@ -22,6 +22,7 @@ const Text = styled.div`
     margin-top: 1rem;
     margin-bottom: 3rem;
     padding: 0;
+    display: block;
   }
 
   ul {
