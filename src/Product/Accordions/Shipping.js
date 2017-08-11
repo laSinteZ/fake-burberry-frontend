@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import triangle from "../../assets/triangle.svg";
 
-const ShippingContainer = styled.div`
+const Container = styled.div`
   padding: 0rem 0.5rem;
   @media screen and (min-width: 48rem) {
     padding: 0rem;
@@ -11,7 +11,7 @@ const ShippingContainer = styled.div`
 
 const Text = styled.div`
   margin: 1rem 0 2rem 0;
-  display: ${props => (props.active ? `block` : 'none')};  
+  display: ${props => (props.active ? `block` : "none")};
 
   @media screen and (min-width: 48rem) {
     margin: 1rem 0rem 0rem 0rem;
@@ -37,7 +37,6 @@ const Text = styled.div`
   p + h4 {
     margin-top: 1.5rem;
   }
-
 `;
 
 const ButtonWrapper = styled.div`
@@ -58,7 +57,7 @@ const ButtonWrapper = styled.div`
 
     object-fit: contain;
 
-    ${props => (props.active ? 'transform: rotate(180deg);' : '')};  
+    ${props => (props.active ? "transform: rotate(180deg);" : "")};
   }
 
   @media screen and (min-width: 48rem) {
@@ -94,9 +93,9 @@ const Image = styled.img`
   }
 `;
 
-class Shipping extends Component{
-  constructor(props){
-    super(props)
+class Shipping extends Component {
+  constructor(props) {
+    super(props);
     this.state = {
       active: false
     };
@@ -104,18 +103,15 @@ class Shipping extends Component{
   }
 
   toggle() {
-    this.setState((state, props) => ({active: !state.active}))
+    this.setState((state, props) => ({ active: !state.active }));
   }
 
   render() {
     return (
-      <ShippingContainer>
+      <Container>
         <div className="row">
           <div className="col-xs-12 col-md-7">
-            <Image
-              src="img/shipping.png"
-              alt="Shipping gifts"
-            />
+            <Image src="img/shipping.png" alt="Shipping gifts" />
           </div>
           <div className="col-xs-12 col-md-5">
             <ButtonWrapper active={this.state.active} onClick={this.toggle}>
@@ -127,7 +123,9 @@ class Shipping extends Component{
             </ButtonWrapper>
             <Text active={this.state.active}>
               <h4>Free Next Day Delivery</h4>
-              <p>Order before 7pm Monday to Thursday for delivery the next day</p>
+              <p>
+                Order before 7pm Monday to Thursday for delivery the next day
+              </p>
               <h4>Collect-in-Store</h4>
               <p>
                 Order online today and pick up your items in store as early as
@@ -137,15 +135,15 @@ class Shipping extends Component{
               <p>Enjoy free returns on your order</p>
               <h4>Free Gift Packaging</h4>
               <p>
-                Discover our gift packaging, a gold lined box tied with a coloured
-                ribbon
+                Discover our gift packaging, a gold lined box tied with a
+                coloured ribbon
               </p>
             </Text>
           </div>
         </div>
-      </ShippingContainer>
-    )
+      </Container>
+    );
   }
 }
 
-export default Shipping
+export default Shipping;

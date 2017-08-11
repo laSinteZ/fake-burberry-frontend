@@ -55,7 +55,7 @@ export default function() {
   return (
     <section>
       <InfoContainer>
-        <Price id="39428531" price={110000} currency = "RUB" />
+        <Price id="39428531" price={110000} currency="RUB" />
         <Colour>Colour: Honey</Colour>
         <InfoBottom>
           <ButtonColour value="#232122" colourName="Black" />

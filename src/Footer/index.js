@@ -23,7 +23,7 @@ const TextOnlyButton = styled.button`
   line-height: 1rem;
 
   & + & {
-    margin-top: 1rem;    
+    margin-top: 1rem;
   }
 
   @media screen and (min-width: 48rem) {
@@ -50,7 +50,9 @@ export default function() {
       <div className="container">
         <Navigation />
         <Controls>
-          <TextOnlyButton type="button">Shipping country: Russian Federation</TextOnlyButton>
+          <TextOnlyButton type="button">
+            Shipping country: Russian Federation
+          </TextOnlyButton>
           <TextOnlyButton type="button">Language: English</TextOnlyButton>
         </Controls>
         <MobileHelp />

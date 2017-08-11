@@ -31,7 +31,6 @@ const Link = styled.a`
   line-height: 1.22;
 `;
 
-
 export default function() {
   return (
     <MobileHelp>

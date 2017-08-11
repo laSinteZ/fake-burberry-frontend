@@ -10,7 +10,10 @@ class App extends Component {
       <div>
         <Helmet>
           <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
-          <meta name="description" content="Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and breathable fabric that protects against wind and rain." />
+          <meta
+            name="description"
+            content="Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and breathable fabric that protects against wind and rain."
+          />
           <meta name="keywords" content="Gabardine Coat, Car Coat, Luxury" />
         </Helmet>
         <Header />

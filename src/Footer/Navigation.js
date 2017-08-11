@@ -29,7 +29,7 @@ const Link = styled.a`
   line-height: 1.34;
 
   & + & {
-    margin-top: 0.75rem;    
+    margin-top: 0.75rem;
   }
 `;
 

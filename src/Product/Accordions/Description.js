@@ -2,15 +2,15 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import triangle from "../../assets/triangle.svg";
 
-const DescriptionContainer = styled.div`
+const Container = styled.div`
   padding: 0rem 0.5rem;
   @media screen and (min-width: 48rem) {
     padding: 0rem;
-  }    
+  }
 `;
 
-const Text = styled.div`  
-  display: ${props => (props.active ? `block` : 'none')};
+const Text = styled.div`
+  display: ${props => (props.active ? `block` : "none")};
   margin-bottom: 2rem;
   padding: 0;
   color: #171717;
@@ -47,7 +47,6 @@ const ButtonWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
 
-
   ::after {
     width: 10px;
     height: 10px;
@@ -56,7 +55,7 @@ const ButtonWrapper = styled.div`
 
     object-fit: contain;
 
-    ${props => (props.active ? 'transform: rotate(180deg);' : '')};    
+    ${props => (props.active ? "transform: rotate(180deg);" : "")};
   }
 
   @media screen and (min-width: 48rem) {
@@ -83,9 +82,9 @@ const Title = styled.h2`
   line-height: 20px;
 `;
 
-class Description extends Component{
-  constructor(props){
-    super(props)
+class Description extends Component {
+  constructor(props) {
+    super(props);
     this.state = {
       active: false
     };
@@ -93,23 +92,25 @@ class Description extends Component{
   }
 
   toggle() {
-    this.setState((state, props) => ({active: !state.active}))
+    this.setState((state, props) => ({ active: !state.active }));
   }
 
   render() {
     return (
-      <DescriptionContainer>
+      <Container>
         <ButtonWrapper active={this.state.active} onClick={this.toggle}>
           <Button type="button">
-            <Title>{this.props.title}</Title>
+            <Title>
+              {this.props.title}
+            </Title>
           </Button>
         </ButtonWrapper>
         <Text active={this.state.active}>
           {this.props.children}
         </Text>
-      </DescriptionContainer>
+      </Container>
     );
   }
 }
 
-export default Description
+export default Description;
