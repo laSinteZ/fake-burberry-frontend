@@ -40,34 +40,34 @@ export default function() {
         <div className="col-md-3">
           <Subtitle>Customer Service</Subtitle>
           <nav>
-            <Link href="#" class="footer-navigation-link">Contact Us</Link>
-            <Link href="#" class="footer-navigation-link">Payment</Link>
-            <Link href="#" class="footer-navigation-link">Shipping</Link>
-            <Link href="#" class="footer-navigation-link">Returns</Link>
-            <Link href="#" class="footer-navigation-link">Faqs</Link>
-            <Link href="#" class="footer-navigation-link">Live Chat</Link>
-            <Link href="#" class="footer-navigation-link">The Burberry App</Link>
-            <Link href="#" class="footer-navigation-link">Store Locator</Link>
+            <Link href="#">Contact Us</Link>
+            <Link href="#">Payment</Link>
+            <Link href="#">Shipping</Link>
+            <Link href="#">Returns</Link>
+            <Link href="#">Faqs</Link>
+            <Link href="#">Live Chat</Link>
+            <Link href="#">The Burberry App</Link>
+            <Link href="#">Store Locator</Link>
           </nav>
         </div>
         <div className="col-md-3">
           <Subtitle>Our Company</Subtitle>
           <nav>
-            <Link href="#" class="footer-navigation-link">Our History</Link>
-            <Link href="#" class="footer-navigation-link">Burberry Group Pic</Link>
-            <Link href="#" class="footer-navigation-link">Careers</Link>
-            <Link href="#" class="footer-navigation-link">Corporate Responsibility</Link>
-            <Link href="#" class="footer-navigation-link">Site Map</Link>
+            <Link href="#">Our History</Link>
+            <Link href="#">Burberry Group Pic</Link>
+            <Link href="#">Careers</Link>
+            <Link href="#">Corporate Responsibility</Link>
+            <Link href="#">Site Map</Link>
           </nav>
         </div>
         <div className="col-md-3">
           <Subtitle>Legal &amp; Cookies</Subtitle>
           <nav>
-            <Link href="#" class="footer-navigation-link">Terms &amp; Conditions</Link>
-            <Link href="#" class="footer-navigation-link">Privacy Policy</Link>
-            <Link href="#" class="footer-navigation-link">Cookie Policy</Link>
-            <Link href="#" class="footer-navigation-link">Accessibility Statement</Link>
-            <Link href="#" class="footer-navigation-link">Japan Only - SCTL indications</Link>
+            <Link href="#">Terms &amp; Conditions</Link>
+            <Link href="#">Privacy Policy</Link>
+            <Link href="#">Cookie Policy</Link>
+            <Link href="#">Accessibility Statement</Link>
+            <Link href="#">Japan Only - SCTL indications</Link>
           </nav>
         </div>
       </div>

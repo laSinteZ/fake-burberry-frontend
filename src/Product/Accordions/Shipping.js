@@ -97,7 +97,6 @@ export default function(props) {
         <div className="col-xs-12 col-md-7">
           <Image
             src="img/shipping.png"
-            class="product-shipping-image"
             alt="Shipping gifts"
           />
         </div>

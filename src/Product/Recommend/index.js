@@ -96,9 +96,9 @@ export default function() {
       </Products>
       <More>
         <Subheading>More for you</Subheading>
-        <Link href="#" class="recommend-more-content-item">Men’s Black Trench Coats</Link>
-        <Link href="#" class="recommend-more-content-item">Men’s Short Trench Coats</Link>
-        <Link href="#" class="recommend-more-content-item">Men’s Long Trench Coats</Link>
+        <Link href="#">Men’s Black Trench Coats</Link>
+        <Link href="#">Men’s Short Trench Coats</Link>
+        <Link href="#">Men’s Long Trench Coats</Link>
       </More>
     </Recommend>
   );
