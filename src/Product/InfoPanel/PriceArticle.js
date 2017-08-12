@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FormattedNumber } from "react-intl";
-import { LgOnly } from "../../common/Breakpoints";
+import { Md } from "../../common/Breakpoints";
 
 const PriceArticle = styled.div`
   display: flex;
@@ -45,11 +45,11 @@ export default function(props) {
           minimumFractionDigits={0}
         />
       </Price>
-      <LgOnly>
+      <Md>
         <ID>
           Item {props.id}
         </ID>
-      </LgOnly>
+      </Md>
     </PriceArticle>
   );
 }
