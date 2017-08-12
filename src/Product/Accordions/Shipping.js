@@ -34,14 +34,11 @@ const Subtitle = styled.h4`
 
 const Paragraph = styled.p`
   margin: 0;
+  margin-bottom: 1.5rem;
   padding: 0;
   font-size: 12px;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   line-height: 1.35;
-
-  & + ${Subtitle} {
-    margin-top: 1.5rem;
-  }
 `;
 
 const ButtonWrapper = styled.div`

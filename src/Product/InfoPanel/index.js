@@ -4,8 +4,8 @@ import Button from "./Button";
 import ButtonColour from "./ButtonColour";
 import ButtonTextOnly from "./ButtonTextOnly";
 import ButtonSize from "./ButtonSize";
-import Price from "./Price";
-import { Medium, Large } from "../../common/responsive";
+import PriceArticle from "./PriceArticle";
+import { ToLarge, Large } from "../../common/Breakpoints";
 
 const Divider = styled.hr`
   margin: 0 0.5rem;
@@ -72,22 +72,19 @@ const Subtitle = styled.h4`
 
 const Paragraph = styled.p`
   margin: 0;
+  margin-bottom: 1.5rem;  
   padding: 0;
   font-size: 12px;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   line-height: 1.35;
-
-  & + ${Subtitle} {
-    margin-top: 1.5rem;
-  }
 `;
 
 export default function() {
   return (
     <section>
-      <Medium>
+      <ToLarge>
         <InfoContainer>
-          <Price id="39428531" price={110000} currency="RUB" />
+          <PriceArticle id="39428531" price={110000} currency="RUB" />
           <Colour>Colour: <b>Honey</b></Colour>
           <ButtonContainer>
             <ButtonColour value="#232122" colourName="Black" />
@@ -102,12 +99,12 @@ export default function() {
           <Button type="button">Find in store</Button>
           <ButtonTextOnly type="button">Need size help?</ButtonTextOnly>
         </Controls>
-      </Medium>
+      </ToLarge>
 
       <Large>
         <div className="row">
           <div className="col-lg-12">
-            <Price id="39428531" price={110000} currency="RUB" />
+            <PriceArticle id="39428531" price={110000} currency="RUB" />
           </div>
           <div className="col-lg-6">
             <Colour>Colour: <b>Honey</b></Colour>

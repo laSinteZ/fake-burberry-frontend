@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { FormattedNumber } from "react-intl";
-import { Medium } from "../../common/responsive";
+import { ToLarge } from "../../common/Breakpoints";
 
-const Price = styled.div`
+const PriceArticle = styled.div`
   display: flex;
 
   justify-content: space-between;
@@ -14,7 +14,7 @@ const Price = styled.div`
   }
 `;
 
-const PriceNumber = styled.h2`
+const Price = styled.h2`
   margin: 0;
   padding: 0;
   color: #171717;
@@ -35,8 +35,8 @@ const ID = styled.p`
 
 export default function(props) {
   return (
-    <Price>
-      <PriceNumber>
+    <PriceArticle>
+      <Price>
         <FormattedNumber
           value={props.price}
           style="currency"
@@ -44,12 +44,12 @@ export default function(props) {
           currencyDisplay="code"
           minimumFractionDigits={0}
         />
-      </PriceNumber>
-      <Medium>
+      </Price>
+      <ToLarge>
         <ID>
           Item {props.id}
         </ID>
-      </Medium>
-    </Price>
+      </ToLarge>
+    </PriceArticle>
   );
 }

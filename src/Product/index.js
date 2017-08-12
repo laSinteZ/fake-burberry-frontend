@@ -6,7 +6,7 @@ import InfoPanel from "./InfoPanel/";
 import Recommend from "./Recommend/";
 import Description from "./Accordions/Description";
 import Shipping from "./Accordions/Shipping";
-import { Medium, Large } from "../common/responsive";
+import { ToLarge, Large } from "../common/Breakpoints";
 
 const Title = styled.h1`
   padding: 1rem 0.5rem;
@@ -29,9 +29,9 @@ const Title = styled.h1`
 `;
 
 const DividerMobile = styled.hr`
-margin: 0 -0.5rem;
-border: none;
-border-top: solid 1px #c6c6c6;
+  margin: 0 -0.5rem;
+  border: none;
+  border-top: solid 1px #c6c6c6;
 
   @media screen and (min-width: 48rem) {
     display: none;
@@ -39,8 +39,10 @@ border-top: solid 1px #c6c6c6;
 `;
 
 const Background = styled.div`
-  background: #d4bdad;
-  margin-bottom: 4rem;
+  @media screen and (min-width: 62rem) {  
+    background: #d4bdad;
+    margin-bottom: 4rem;
+  }
 `;
 
 const PrimaryImage = styled.img`
@@ -49,44 +51,37 @@ const PrimaryImage = styled.img`
 `;
 
 const InfoPanelWrapper = styled.div`
-  display: flex;
-  flex-basis: 100%;
-  align-items: center;
+  @media screen and (min-width: 62rem) {  
+    align-items: center;
+  }
 `;
 
 export default function Product(props) {
   return (
-    <main>        
-      <Medium>
-        <div className="container">
+    <main> 
+      <Background>
+      <div className="container">
+          <ToLarge>
             <Title>{props.title}</Title>
-          <div className="row">
-            <div className="col-xs-12 col-md-7">
-              <Showcase images={props.images}/>
-            </div>
-            <div className="col-xs-12 col-md-5">
-              <InfoPanel />
-            </div>
+          </ToLarge>
+          <div className="row middle-lg">
+              <div className="col-xs-12 col-md-7 col-lg-6">
+                <ToLarge>
+                  <Showcase images={props.images}/>
+                </ToLarge>
+                <Large>
+                  <PrimaryImage src={props.images[0].src} alt={props.images[0].alt}/>
+                </Large>
+              </div>
+              <div className="col-xs-12 col-md-5 col-lg-6">
+                <Large>
+                  <Title>{props.title}</Title>
+                </Large>
+                <InfoPanel />
+              </div>
           </div>
         </div>
-      </Medium>
-      <Large>
-        <Background>
-          <div className="container">
-            <div className="row">
-              <InfoPanelWrapper>
-                <div className="col-lg-6">
-                  <PrimaryImage src={props.images[0].src} alt={props.images[0].alt}/>
-                </div>
-                <div className="col-lg-6">
-                  <Title>{props.title}</Title>
-                  <InfoPanel />
-                </div>
-              </InfoPanelWrapper>
-            </div>
-          </div>
-        </Background>
-      </Large>
+      </Background>
       <div className="container">
         <DividerMobile />
         <Description title="Description">
