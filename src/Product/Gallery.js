@@ -5,7 +5,7 @@ const GalleryContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-bottom: 4rem;
-  
+
   > div:nth-child(1) {
     margin-top: 6rem;
   }
@@ -23,18 +23,16 @@ const Image = styled.img`
 `;
 
 export default function Gallery(props) {
+  const allImages = props.images.slice(1,4).map(img =>
+    <div className="col-lg-4">
+      <Image src={img.src} alt={img.alt} />
+    </div>
+  );
+
   return (
     <div className="row">
       <GalleryContainer>
-        <div className="col-lg-4">
-          <Image src={props.images[1].src} alt={props.images[1].alt} />
-        </div>
-        <div className="col-lg-4">
-          <Image src={props.images[2].src} alt={props.images[2].alt} />
-        </div>
-        <div className="col-lg-4">
-          <Image src={props.images[3].src} alt={props.images[3].alt} />
-        </div>
+        {allImages}
       </GalleryContainer>
     </div>
   );

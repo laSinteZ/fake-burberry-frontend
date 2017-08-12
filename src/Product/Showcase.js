@@ -23,12 +23,13 @@ const Image = styled.img`
 `;
 
 export default function(props) {
+  const allImages = props.images.map(img =>
+    <Image src={img.src} alt={img.alt} />
+  );
+  
   return (
     <Showcase>
-      <Image src={props.images[0].src} alt={props.images[0].alt} />
-      <Image src={props.images[1].src} alt={props.images[1].alt} />
-      <Image src={props.images[2].src} alt={props.images[2].alt} />
-      <Image src={props.images[3].src} alt={props.images[3].alt} />
+      {allImages}
     </Showcase>
   );
 }
