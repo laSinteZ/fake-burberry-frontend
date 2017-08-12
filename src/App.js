@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
 import Header from "./Header";
 import Product from "./Product";
@@ -10,7 +10,7 @@ addLocaleData(ruLocaleData);
 
 export default function App() {
   return (
-    <IntlProvider locale="ru">    
+    <IntlProvider locale="ru">
       <div>
         <Helmet>
           <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
