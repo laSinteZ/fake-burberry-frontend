@@ -10,6 +10,7 @@ After that, proceed to [localhost:3000](http://localhost:3000). However, you can
 - [Styled Components](https://github.com/styled-components/styled-components) 💅
 - [React Helmet](https://github.com/nfl/react-helmet) ⛑ 
 - [React intl](https://github.com/yahoo/react-intl) 🌎
+- [React responsive](https://github.com/contra/react-responsive) 👻
 - [Flexboxgrid2](https://github.com/evgenyrodionov/flexboxgrid2) 🔥
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).

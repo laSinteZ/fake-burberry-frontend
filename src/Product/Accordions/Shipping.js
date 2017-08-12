@@ -17,24 +17,25 @@ const Text = styled.div`
     margin: 1rem 0rem 0rem 0rem;
     display: block;
   }
+`;
 
-  h4 {
-    margin-bottom: 4px;
-    font-weight: bold;
-    font-size: 12px;
-    font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-    line-height: 1.167;
-  }
 
-  p {
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
-    font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-    line-height: 1.35;
-  }
+const Subtitle = styled.h4`
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  line-height: 1.167;
+`;
 
-  p + h4 {
+const Paragraph = styled.p`
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  line-height: 1.35;
+
+  & + ${Subtitle} {
     margin-top: 1.5rem;
   }
 `;
@@ -122,22 +123,22 @@ class Shipping extends Component {
               </Button>
             </ButtonWrapper>
             <Text active={this.state.active}>
-              <h4>Free Next Day Delivery</h4>
-              <p>
+              <Subtitle>Free Next Day Delivery</Subtitle>
+              <Paragraph>
                 Order before 7pm Monday to Thursday for delivery the next day
-              </p>
-              <h4>Collect-in-Store</h4>
-              <p>
+              </Paragraph>
+              <Subtitle>Collect-in-Store</Subtitle>
+              <Paragraph>
                 Order online today and pick up your items in store as early as
                 tomorrow
-              </p>
-              <h4>Free Returns</h4>
-              <p>Enjoy free returns on your order</p>
-              <h4>Free Gift Packaging</h4>
-              <p>
+              </Paragraph>
+              <Subtitle>Free Returns</Subtitle>
+              <Paragraph>Enjoy free returns on your order</Paragraph>
+              <Subtitle>Free Gift Packaging</Subtitle>
+              <Paragraph>
                 Discover our gift packaging, a gold lined box tied with a
                 coloured ribbon
-              </p>
+              </Paragraph>
             </Text>
           </div>
         </div>
