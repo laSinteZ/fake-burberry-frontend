@@ -14,14 +14,14 @@ const Header = styled.header`
 
   @media screen and (min-width: 62rem) {
     padding: 2rem 0;
-    border-bottom: none;    
+    border-bottom: none;
   }
 `;
 
 const Logo = styled.img`
   display: block;
   @media screen and (min-width: 62rem) {
-    height: 1rem;    
+    height: 1rem;
   }
 `;
 

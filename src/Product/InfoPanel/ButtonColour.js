@@ -11,9 +11,9 @@ const ButtonColour = styled.button`
 
   border: ${props => (props.active ? "solid 1px #232122" : "none")};
   background-color: ${props => props.value};
- 
+
   @media screen and (min-width: 62rem) {
-    margin-bottom: 1.5rem;      
+    margin-bottom: 1.5rem;
   }
 `;
 
