@@ -1,18 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 import { FormattedNumber } from "react-intl";
+import { Medium } from "../../common/responsive";
 
 const Price = styled.div`
   display: flex;
 
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1rem;
+  @media screen and (min-width: 62rem) {
+    margin-bottom: 3rem;
+  }
 `;
 
 const PriceNumber = styled.h2`
   margin: 0;
   padding: 0;
-  color: #111111;
+  color: #171717;
   font-weight: normal;
   font-size: 16px;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
@@ -40,9 +45,11 @@ export default function(props) {
           minimumFractionDigits={0}
         />
       </PriceNumber>
-      <ID>
-        Item {props.id}
-      </ID>
+      <Medium>
+        <ID>
+          Item {props.id}
+        </ID>
+      </Medium>
     </Price>
   );
 }
