@@ -11,10 +11,10 @@ addLocaleData(ruLocaleData);
 /*Let's imagine that this information has come to us form somewhere */
 const productTitle = "Long Cotton Gabardine Car Coat Coat Coat Coat Coat";
 const productImages = [
-  { src: "img/product-1.jpg", alt: "Long Cotton Gabardine Car Coat" },
-  { src: "img/product-2.jpg", alt: "Long Cotton Gabardine Car Coat" },
-  { src: "img/product-3.jpg", alt: "Long Cotton Gabardine Car Coat" },
-  { src: "img/product-4.jpg", alt: "Long Cotton Gabardine Car Coat" }
+  { id: 1, src: "img/product-1.jpg", alt: "Long Cotton Gabardine Car Coat" },
+  { id: 2, src: "img/product-2.jpg", alt: "Long Cotton Gabardine Car Coat" },
+  { id: 3, src: "img/product-3.jpg", alt: "Long Cotton Gabardine Car Coat" },
+  { id: 4, src: "img/product-4.jpg", alt: "Long Cotton Gabardine Car Coat" }
 ];
 
 export default function App() {
