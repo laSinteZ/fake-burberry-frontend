@@ -6,7 +6,7 @@ import InfoPanel from "./InfoPanel/";
 import Recommend from "./Recommend/";
 import Description from "./Accordions/Description";
 import Shipping from "./Accordions/Shipping";
-import { ToLarge, Large } from "../common/Breakpoints";
+import { Md, LgOnly } from "../common/Breakpoints";
 
 const Title = styled.h1`
   padding: 1rem 0.5rem;
@@ -39,7 +39,7 @@ const DividerMobile = styled.hr`
 `;
 
 const Background = styled.div`
-  @media screen and (min-width: 62rem) {  
+  @media screen and (min-width: 62rem) {
     background: #d4bdad;
     margin-bottom: 4rem;
   }
@@ -50,35 +50,36 @@ const PrimaryImage = styled.img`
   width: 100%;
 `;
 
-const InfoPanelWrapper = styled.div`
-  @media screen and (min-width: 62rem) {  
-    align-items: center;
-  }
-`;
-
 export default function Product(props) {
   return (
-    <main> 
+    <main>
       <Background>
-      <div className="container">
-          <ToLarge>
-            <Title>{props.title}</Title>
-          </ToLarge>
+        <div className="container">
+          <Md>
+            <Title>
+              {props.title}
+            </Title>
+          </Md>
           <div className="row middle-lg">
-              <div className="col-xs-12 col-md-7 col-lg-6">
-                <ToLarge>
-                  <Showcase images={props.images}/>
-                </ToLarge>
-                <Large>
-                  <PrimaryImage src={props.images[0].src} alt={props.images[0].alt}/>
-                </Large>
-              </div>
-              <div className="col-xs-12 col-md-5 col-lg-6">
-                <Large>
-                  <Title>{props.title}</Title>
-                </Large>
-                <InfoPanel />
-              </div>
+            <div className="col-xs-12 col-md-7 col-lg-6">
+              <Md>
+                <Showcase images={props.images} />
+              </Md>
+              <LgOnly>
+                <PrimaryImage
+                  src={props.images[0].src}
+                  alt={props.images[0].alt}
+                />
+              </LgOnly>
+            </div>
+            <div className="col-xs-12 col-md-5 col-lg-6">
+              <LgOnly>
+                <Title>
+                  {props.title}
+                </Title>
+              </LgOnly>
+              <InfoPanel />
+            </div>
           </div>
         </div>
       </Background>
@@ -110,9 +111,9 @@ export default function Product(props) {
             <li>Item 39428531</li>
           </ul>
         </Description>
-        <Large>
-          <Gallery images={props.images}/>
-        </Large>
+        <LgOnly>
+          <Gallery images={props.images} />
+        </LgOnly>
         <DividerMobile />
         <Shipping title="Delivery" />
         <DividerMobile />

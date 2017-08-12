@@ -5,7 +5,7 @@ import ButtonColour from "./ButtonColour";
 import ButtonTextOnly from "./ButtonTextOnly";
 import ButtonSize from "./ButtonSize";
 import PriceArticle from "./PriceArticle";
-import { ToLarge, Large } from "../../common/Breakpoints";
+import { Md, LgOnly } from "../../common/Breakpoints";
 
 const Divider = styled.hr`
   margin: 0 0.5rem;
@@ -42,7 +42,7 @@ const Size = Colour;
 const SizeWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;  
+  align-items: center;
 `;
 
 const InfoContainer = styled.div`
@@ -52,7 +52,6 @@ const InfoContainer = styled.div`
     padding: 0;
     padding-bottom: 2rem;
   }
-  
 `;
 
 const ButtonContainer = styled.div`
@@ -72,7 +71,6 @@ const Subtitle = styled.h4`
 
 const Paragraph = styled.p`
   margin: 0;
-  margin-bottom: 1.5rem;  
   padding: 0;
   font-size: 12px;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
@@ -82,16 +80,18 @@ const Paragraph = styled.p`
 export default function() {
   return (
     <section>
-      <ToLarge>
+      <Md>
         <InfoContainer>
           <PriceArticle id="39428531" price={110000} currency="RUB" />
-          <Colour>Colour: <b>Honey</b></Colour>
+          <Colour>
+            Colour: <b>Honey</b>
+          </Colour>
           <ButtonContainer>
             <ButtonColour value="#232122" colourName="Black" />
             <ButtonColour value="#cfa880" colourName="Honey" isActive />
           </ButtonContainer>
         </InfoContainer>
-          <Divider />
+        <Divider />
         <Controls>
           <Button primary type="button">
             Select a size
@@ -99,15 +99,17 @@ export default function() {
           <Button type="button">Find in store</Button>
           <ButtonTextOnly type="button">Need size help?</ButtonTextOnly>
         </Controls>
-      </ToLarge>
+      </Md>
 
-      <Large>
+      <LgOnly>
         <div className="row">
           <div className="col-lg-12">
             <PriceArticle id="39428531" price={110000} currency="RUB" />
           </div>
           <div className="col-lg-6">
-            <Colour>Colour: <b>Honey</b></Colour>
+            <Colour>
+              Colour: <b>Honey</b>
+            </Colour>
             <ButtonContainer>
               <ButtonColour value="#232122" colourName="Black" />
               <ButtonColour value="#cfa880" colourName="Honey" isActive />
@@ -118,15 +120,19 @@ export default function() {
           </div>
           <div className="col-lg-6">
             <SizeWrapper>
-              <Size>Size: <b>XL</b></Size>
+              <Size>
+                Size: <b>XL</b>
+              </Size>
               <ButtonTextOnly type="button">NEED SIZE HELP?</ButtonTextOnly>
             </SizeWrapper>
             <ButtonContainer>
               <ButtonSize type="button">S</ButtonSize>
               <ButtonSize type="button">M</ButtonSize>
               <ButtonSize type="button">L</ButtonSize>
-              <ButtonSize type="button" isActive>XL</ButtonSize>
-              </ButtonContainer>
+              <ButtonSize type="button" isActive>
+                XL
+              </ButtonSize>
+            </ButtonContainer>
             <Button type="button">Find in store</Button>
           </div>
           <div className="col-lg-12">
@@ -135,9 +141,8 @@ export default function() {
               Order before 7pm Monday to Thursday for delivery the next day
             </Paragraph>
           </div>
-            
         </div>
-      </Large>
+      </LgOnly>
     </section>
   );
 }
