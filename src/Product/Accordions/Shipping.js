@@ -7,6 +7,10 @@ const Container = styled.div`
   @media screen and (min-width: 48rem) {
     padding: 0rem;
   }
+
+  @media screen and (min-width: 62rem) {
+    margin-bottom: 4rem;
+  }
 `;
 
 const Text = styled.div`
@@ -42,7 +46,7 @@ const Paragraph = styled.p`
 
 const ButtonWrapper = styled.div`
   display: flex;
-  margin: 2rem 0rem 2rem 0rem;
+  margin: 2rem 0rem;
   padding: 0;
   border: 0;
   background: white;
@@ -66,6 +70,10 @@ const ButtonWrapper = styled.div`
     ::after {
       content: none;
     }
+  }
+
+  @media screen and (min-width: 62rem) {
+    margin-top: 4rem;
   }
 `;
 
@@ -114,7 +122,7 @@ class Shipping extends Component {
           <div className="col-xs-12 col-md-7">
             <Image src="img/shipping.png" alt="Shipping gifts" />
           </div>
-          <div className="col-xs-12 col-md-5">
+          <div className="col-xs-12 col-md-5 col-lg-offset-1 col-lg-4">
             <ButtonWrapper active={this.state.active} onClick={this.toggle}>
               <Button type="button">
                 <Title>
