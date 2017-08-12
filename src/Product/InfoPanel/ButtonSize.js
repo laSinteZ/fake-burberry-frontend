@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import Button from "./Button"
 
 const ButtonSize = Button.extend`

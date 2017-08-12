@@ -24,7 +24,7 @@ const Image = styled.img`
 
 export default function(props) {
   const allImages = props.images.map(img =>
-    <Image src={img.src} alt={img.alt} key={img.id} g />
+    <Image src={img.src} alt={img.alt} key={img.src.toString()} />
   );
 
   return (

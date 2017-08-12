@@ -17,17 +17,6 @@ const Divider = styled.hr`
   }
 `;
 
-const Controls = styled.div`
-  display: flex;
-  padding: 2rem 0.5rem 3rem 0.5rem;
-  flex-flow: column;
-
-  @media screen and (min-width: 48rem) {
-    padding: 0;
-    padding-top: 2rem;
-  }
-`;
-
 const Colour = styled.p`
   margin: 0;
   margin-bottom: 1rem;

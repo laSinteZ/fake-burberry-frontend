@@ -24,8 +24,8 @@ const Image = styled.img`
 
 export default function Gallery(props) {
   const allImages = props.images.slice(1,4).map(img =>
-    <div className="col-lg-4">
-      <Image src={img.src} alt={img.alt} />
+    <div className="col-lg-4"  key={img.src.toString()}>
+      <Image src={img.src} alt={img.alt}/>
     </div>
   );
 
