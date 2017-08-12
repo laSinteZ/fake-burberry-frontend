@@ -27,7 +27,6 @@ const Title = styled.h3`
     line-height: 1.25rem;
     margin-top: 1rem;
   }
-
 `;
 
 const Price = styled.h5`
@@ -40,9 +39,8 @@ const Price = styled.h5`
   @media screen and (min-width: 62rem) {
     font-size: 12px;
     line-height: 1rem;
-    color: #171717;    
+    color: #171717;
   }
-
 `;
 
 export default function(props) {

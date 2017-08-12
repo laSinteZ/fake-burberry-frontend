@@ -27,13 +27,13 @@ export default function Gallery(props) {
     <div className="row">
       <GalleryContainer>
         <div className="col-lg-4">
-          <Image src={props.images[0].src} alt={props.images[0].alt} />
-        </div>
-        <div className="col-lg-4">
           <Image src={props.images[1].src} alt={props.images[1].alt} />
         </div>
         <div className="col-lg-4">
           <Image src={props.images[2].src} alt={props.images[2].alt} />
+        </div>
+        <div className="col-lg-4">
+          <Image src={props.images[3].src} alt={props.images[3].alt} />
         </div>
       </GalleryContainer>
     </div>
