@@ -10,6 +10,10 @@ const Footer = styled.footer`
   @media screen and (min-width: 48rem) {
     padding: 2rem 0;
   }
+
+  @media screen and (min-width: 62rem) {
+    padding: 4rem 0;
+  }
 `;
 
 const TextOnlyButton = styled.button`

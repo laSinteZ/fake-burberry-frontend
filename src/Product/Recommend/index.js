@@ -19,6 +19,11 @@ const Subheading = styled.h2`
   font-size: 16px;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   line-height: 1.2;
+
+  @media screen and (min-width: 62rem) {
+    text-align: center;
+    padding-bottom: 2rem;    
+  }
 `;
 
 const Products = styled.div`
