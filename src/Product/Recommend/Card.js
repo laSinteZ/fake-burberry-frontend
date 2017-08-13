@@ -16,7 +16,7 @@ const Image = styled.img`
 
 const Title = styled.h3`
   margin: 0.5rem 0;
-  color: #111111;
+  color: #171717;
   font-weight: normal;
   font-size: 16px;
   font-family: Lora, serif;
@@ -26,8 +26,8 @@ const Title = styled.h3`
     font-size: 12px;
     line-height: 1.25rem;
     margin-top: 1rem;
+    font-weight: 600;
   }
-
 `;
 
 const Price = styled.h5`
@@ -40,9 +40,8 @@ const Price = styled.h5`
   @media screen and (min-width: 62rem) {
     font-size: 12px;
     line-height: 1rem;
-    color: #171717;    
+    color: #171717;
   }
-
 `;
 
 export default function(props) {

@@ -22,7 +22,7 @@ const Subheading = styled.h2`
 
   @media screen and (min-width: 62rem) {
     text-align: center;
-    padding-bottom: 2rem;    
+    padding-bottom: 2rem;
   }
 `;
 

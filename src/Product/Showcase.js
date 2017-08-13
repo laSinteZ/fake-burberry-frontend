@@ -22,13 +22,14 @@ const Image = styled.img`
   }
 `;
 
-export default function() {
+export default function(props) {
+  const allImages = props.images.map(img =>
+    <Image src={img.src} alt={img.alt} key={img.src.toString()} />
+  );
+
   return (
     <Showcase>
-      <Image src="img/product-1.jpg" alt="Long Cotton Gabardine Car Coat" />
-      <Image src="img/product-2.jpg" alt="Long Cotton Gabardine Car Coat" />
-      <Image src="img/product-3.jpg" alt="Long Cotton Gabardine Car Coat" />
-      <Image src="img/product-4.jpg" alt="Long Cotton Gabardine Car Coat" />
+      {allImages}
     </Showcase>
   );
 }

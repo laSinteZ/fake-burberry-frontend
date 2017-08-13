@@ -64,6 +64,10 @@ const ButtonWrapper = styled.div`
       content: none;
     }
   }
+
+  @media screen and (min-width: 62rem) {
+    margin-top: 0;
+  }
 `;
 
 const Button = styled.button`
@@ -82,6 +86,15 @@ const Title = styled.h2`
   line-height: 20px;
 `;
 
+const Image = styled.img`
+  display: none;
+
+  @media screen and (min-width: 62rem) {
+    display: block;
+    width: 100%;
+  }
+`;
+
 class Description extends Component {
   constructor(props) {
     super(props);
@@ -98,16 +111,26 @@ class Description extends Component {
   render() {
     return (
       <Container>
-        <ButtonWrapper active={this.state.active} onClick={this.toggle}>
-          <Button type="button">
-            <Title>
-              {this.props.title}
-            </Title>
-          </Button>
-        </ButtonWrapper>
-        <Text active={this.state.active}>
-          {this.props.children}
-        </Text>
+        <div className="row">
+          <div className="col-xs-12 col-lg-4">
+            <ButtonWrapper active={this.state.active} onClick={this.toggle}>
+              <Button type="button">
+                <Title>
+                  {this.props.title}
+                </Title>
+              </Button>
+            </ButtonWrapper>
+            <Text active={this.state.active}>
+              {this.props.children}
+            </Text>
+          </div>
+          <div className="col-xs-12 col-lg-8">
+            <Image
+              src="img/product-description.jpg"
+              alt="Beautiful Long Coat"
+            />
+          </div>
+        </div>
       </Container>
     );
   }

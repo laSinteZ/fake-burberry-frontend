@@ -12,7 +12,11 @@ const ButtonTextOnly = styled.button`
   align-self: flex-start;
 
   margin-top: 0.5rem;
-  background-color: white;
+  background-color: Transparent;
+
+  @media screen and (min-width: 62rem) {
+    margin: 0;
+  }
 `;
 
 export default ButtonTextOnly;

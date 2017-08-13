@@ -1,18 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 import { FormattedNumber } from "react-intl";
+import { ToMd } from "../../common/Breakpoints";
 
-const Price = styled.div`
+const PriceArticle = styled.div`
   display: flex;
 
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1rem;
+  @media screen and (min-width: 62rem) {
+    margin-bottom: 3rem;
+  }
 `;
 
-const PriceNumber = styled.h2`
+const Price = styled.h2`
   margin: 0;
   padding: 0;
-  color: #111111;
+  color: #171717;
   font-weight: normal;
   font-size: 16px;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
@@ -30,8 +35,8 @@ const ID = styled.p`
 
 export default function(props) {
   return (
-    <Price>
-      <PriceNumber>
+    <PriceArticle>
+      <Price>
         <FormattedNumber
           value={props.price}
           style="currency"
@@ -39,10 +44,12 @@ export default function(props) {
           currencyDisplay="code"
           minimumFractionDigits={0}
         />
-      </PriceNumber>
-      <ID>
-        Item {props.id}
-      </ID>
-    </Price>
+      </Price>
+      <ToMd>
+        <ID>
+          Item {props.id}
+        </ID>
+      </ToMd>
+    </PriceArticle>
   );
 }
