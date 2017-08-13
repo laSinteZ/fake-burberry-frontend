@@ -5,7 +5,7 @@ import ButtonColour from "./ButtonColour";
 import ButtonTextOnly from "./ButtonTextOnly";
 import ButtonSize from "./ButtonSize";
 import PriceArticle from "./PriceArticle";
-import { Md, LgOnly } from "../../common/Breakpoints";
+import { ToMd, Lg } from "../../common/Breakpoints";
 
 const Divider = styled.hr`
   margin: 2rem 0;
@@ -73,7 +73,7 @@ export default function() {
               Colour: <b>Honey</b>
             </Colour>
           </div>
-          <LgOnly>
+          <Lg>
             <div className="col-lg-6">
               <SizeWrapper>
                 <Size>
@@ -82,14 +82,14 @@ export default function() {
                 <ButtonTextOnly type="button">NEED SIZE HELP?</ButtonTextOnly>
               </SizeWrapper>
             </div>
-          </LgOnly>
+          </Lg>
         </div>
         <div className="row">
           <div className="col-xs-12 col-lg-6">
             <ButtonColour value="#232122" colourName="Black" />
             <ButtonColour value="#cfa880" colourName="Honey" isActive />
           </div>
-          <LgOnly>
+          <Lg>
             <div className="col-lg-6">
               <ButtonSize type="button">S</ButtonSize>
               <ButtonSize type="button">M</ButtonSize>
@@ -98,37 +98,37 @@ export default function() {
                 XL
               </ButtonSize>
             </div>
-          </LgOnly>
+          </Lg>
         </div>
         <div className="row">
           <div className="col-xs-12 col-lg-6">
-            <LgOnly>
+            <Lg>
               <Button primary type="button">
                 Add to bag
               </Button>
-            </LgOnly>
-            <Md>
+            </Lg>
+            <ToMd>
               <Divider />
               <Button primary type="button">
                 Select a size
               </Button>
-            </Md>
+            </ToMd>
           </div>
           <div className="col-xs-12 col-lg-6">
             <Button type="button">Find in store</Button>
-            <Md>
+            <ToMd>
               <ButtonTextOnly type="button">NEED SIZE HELP?</ButtonTextOnly>
-            </Md>
+            </ToMd>
           </div>
         </div>
-        <LgOnly>
+        <Lg>
           <div className="col-lg-12">
             <Subtitle>Free Next Day Delivery</Subtitle>
             <Paragraph>
               Order before 7pm Monday to Thursday for delivery the next day
             </Paragraph>
           </div>
-        </LgOnly>
+        </Lg>
       </InfoContainer>
     </section>
   );

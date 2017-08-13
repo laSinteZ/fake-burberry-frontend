@@ -6,7 +6,7 @@ import InfoPanel from "./InfoPanel/";
 import Recommend from "./Recommend/";
 import Description from "./Accordions/Description";
 import Shipping from "./Accordions/Shipping";
-import { Md, LgOnly } from "../common/Breakpoints";
+import { ToMd, Lg } from "../common/Breakpoints";
 
 const Title = styled.h1`
   padding: 1rem 0.5rem;
@@ -55,29 +55,29 @@ export default function Product(props) {
     <main>
       <Background>
         <div className="container">
-          <Md>
+          <ToMd>
             <Title>
               {props.title}
             </Title>
-          </Md>
+          </ToMd>
           <div className="row middle-lg">
             <div className="col-xs-12 col-md-7 col-lg-6">
-              <Md>
+              <ToMd>
                 <Showcase images={props.images} />
-              </Md>
-              <LgOnly>
+              </ToMd>
+              <Lg>
                 <PrimaryImage
                   src={props.images[0].src}
                   alt={props.images[0].alt}
                 />
-              </LgOnly>
+              </Lg>
             </div>
             <div className="col-xs-12 col-md-5 col-lg-6">
-              <LgOnly>
+              <Lg>
                 <Title>
                   {props.title}
                 </Title>
-              </LgOnly>
+              </Lg>
               <InfoPanel />
             </div>
           </div>
@@ -111,9 +111,9 @@ export default function Product(props) {
             <li>Item 39428531</li>
           </ul>
         </Description>
-        <LgOnly>
+        <Lg>
           <Gallery images={props.images} />
-        </LgOnly>
+        </Lg>
         <DividerMobile />
         <Shipping title="Delivery" />
         <DividerMobile />

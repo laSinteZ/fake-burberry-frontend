@@ -1,7 +1,7 @@
 import React from "react";
 import Responsive from "react-responsive";
 
-export const LgOnly = ({ children }) =>
+export const Lg = ({ children }) =>
   <Responsive minWidth="62rem" children={children} />;
-export const Md = ({ children }) =>
+export const ToMd = ({ children }) =>
   <Responsive maxWidth={992 - 1} children={children} />;
