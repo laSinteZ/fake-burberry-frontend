@@ -1,9 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import { FormattedNumber } from "react-intl";
-import { ToMd } from "../../common/Breakpoints";
+/* eslint react/style-prop-object: 0 */
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { FormattedNumber } from 'react-intl';
+import { ToMd } from '../../common/Breakpoints';
 
-const PriceArticle = styled.div`
+const Wrapper = styled.div`
   display: flex;
 
   justify-content: space-between;
@@ -33,9 +35,9 @@ const ID = styled.p`
   line-height: 1.167;
 `;
 
-export default function(props) {
+export default function PriceArticle(props) {
   return (
-    <PriceArticle>
+    <Wrapper>
       <Price>
         <FormattedNumber
           value={props.price}
@@ -50,6 +52,12 @@ export default function(props) {
           Item {props.id}
         </ID>
       </ToMd>
-    </PriceArticle>
+    </Wrapper>
   );
 }
+
+PriceArticle.propTypes = {
+  id: PropTypes.number.isRequired,
+  currency: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+};

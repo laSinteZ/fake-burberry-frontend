@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import MobileHelp from "./MobileHelp";
-import Navigation from "./Navigation";
+import React from 'react';
+import styled from 'styled-components';
+import MobileHelp from './MobileHelp';
+import Navigation from './Navigation';
 
 const Footer = styled.footer`
   padding: 2rem 0.5rem;
@@ -48,7 +48,7 @@ const Controls = styled.div`
   }
 `;
 
-export default function() {
+export default function () {
   return (
     <Footer>
       <div className="container">

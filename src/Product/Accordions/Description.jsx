@@ -1,6 +1,7 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import triangle from "../../assets/triangle.svg";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import triangle from '../../assets/triangle.svg';
 
 const Container = styled.div`
   padding: 0rem 0.5rem;
@@ -10,7 +11,7 @@ const Container = styled.div`
 `;
 
 const Text = styled.div`
-  display: ${props => (props.active ? `block` : "none")};
+  display: ${props => (props.active ? 'block' : 'none')};
   margin-bottom: 2rem;
   padding: 0;
   color: #171717;
@@ -55,7 +56,7 @@ const ButtonWrapper = styled.div`
 
     object-fit: contain;
 
-    ${props => (props.active ? "transform: rotate(180deg);" : "")};
+    ${props => (props.active ? 'transform: rotate(180deg);' : '')};
   }
 
   @media screen and (min-width: 48rem) {
@@ -99,13 +100,13 @@ class Description extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: false
+      active: false,
     };
     this.toggle = this.toggle.bind(this);
   }
 
   toggle() {
-    this.setState((state, props) => ({ active: !state.active }));
+    this.setState(state => ({ active: !state.active }));
   }
 
   render() {
@@ -125,15 +126,17 @@ class Description extends Component {
             </Text>
           </div>
           <div className="col-xs-12 col-lg-8">
-            <Image
-              src="img/product-description.jpg"
-              alt="Beautiful Long Coat"
-            />
+            <Image src="img/product-description.jpg" alt="Beautiful Long Coat" />
           </div>
         </div>
       </Container>
     );
   }
 }
+
+Description.propTypes = {
+  children: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+};
 
 export default Description;

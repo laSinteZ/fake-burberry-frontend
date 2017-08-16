@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import Card from "./Card";
+import React from 'react';
+import styled from 'styled-components';
+import Card from './Card';
 
 const Recommend = styled.section`
   padding: 0rem 0.5rem;
@@ -59,7 +59,7 @@ const Link = styled.a`
   }
 `;
 
-export default function() {
+export default function () {
   return (
     <Recommend>
       <Products>

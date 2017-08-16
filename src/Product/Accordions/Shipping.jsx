@@ -1,6 +1,7 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import triangle from "../../assets/triangle.svg";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import triangle from '../../assets/triangle.svg';
 
 const Container = styled.div`
   padding: 0rem 0.5rem;
@@ -15,14 +16,13 @@ const Container = styled.div`
 
 const Text = styled.div`
   margin: 1rem 0 2rem 0;
-  display: ${props => (props.active ? `block` : "none")};
+  display: ${props => (props.active ? 'block' : 'none')};
 
   @media screen and (min-width: 48rem) {
     margin: 1rem 0rem 0rem 0rem;
     display: block;
   }
 `;
-
 
 const Subtitle = styled.h4`
   margin-bottom: 4px;
@@ -59,7 +59,7 @@ const ButtonWrapper = styled.div`
 
     object-fit: contain;
 
-    ${props => (props.active ? "transform: rotate(180deg);" : "")};
+    ${props => (props.active ? 'transform: rotate(180deg);' : '')};
   }
 
   @media screen and (min-width: 48rem) {
@@ -103,13 +103,13 @@ class Shipping extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: false
+      active: false,
     };
     this.toggle = this.toggle.bind(this);
   }
 
   toggle() {
-    this.setState((state, props) => ({ active: !state.active }));
+    this.setState(state => ({ active: !state.active }));
   }
 
   render() {
@@ -129,20 +129,16 @@ class Shipping extends Component {
             </ButtonWrapper>
             <Text active={this.state.active}>
               <Subtitle>Free Next Day Delivery</Subtitle>
-              <Paragraph>
-                Order before 7pm Monday to Thursday for delivery the next day
-              </Paragraph>
+              <Paragraph>Order before 7pm Monday to Thursday for delivery the next day</Paragraph>
               <Subtitle>Collect-in-Store</Subtitle>
               <Paragraph>
-                Order online today and pick up your items in store as early as
-                tomorrow
+                Order online today and pick up your items in store as early as tomorrow
               </Paragraph>
               <Subtitle>Free Returns</Subtitle>
               <Paragraph>Enjoy free returns on your order</Paragraph>
               <Subtitle>Free Gift Packaging</Subtitle>
               <Paragraph>
-                Discover our gift packaging, a gold lined box tied with a
-                coloured ribbon
+                Discover our gift packaging, a gold lined box tied with a coloured ribbon
               </Paragraph>
             </Text>
           </div>
@@ -151,5 +147,9 @@ class Shipping extends Component {
     );
   }
 }
+
+Shipping.propTypes = {
+  title: PropTypes.string.isRequired,
+};
 
 export default Shipping;

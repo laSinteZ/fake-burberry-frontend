@@ -1,0 +1,2 @@
+# Ignoring registerServiceWorker for now
+src/registerServiceWorker.js

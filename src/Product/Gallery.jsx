@@ -1,7 +1,8 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-const GalleryContainer = styled.div`
+const Container = styled.div`
   display: flex;
   flex-direction: row;
   margin-bottom: 4rem;
@@ -24,16 +25,20 @@ const Image = styled.img`
 
 export default function Gallery(props) {
   const allImages = props.images.slice(1, 4).map(img =>
-    <div className="col-lg-4" key={img.src.toString()}>
+    (<div className="col-lg-4" key={img.src.toString()}>
       <Image src={img.src} alt={img.alt} />
-    </div>
+    </div>),
   );
 
   return (
     <div className="row">
-      <GalleryContainer>
+      <Container>
         {allImages}
-      </GalleryContainer>
+      </Container>
     </div>
   );
 }
+
+Gallery.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.object).isRequired,
+};

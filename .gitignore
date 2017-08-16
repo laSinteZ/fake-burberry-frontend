@@ -22,3 +22,5 @@ yarn-error.log*
 
 # Early markup
 /temp-markup
+
+package-lock.json

@@ -1,8 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import { FormattedNumber } from "react-intl";
+/* eslint react/style-prop-object: 0 */
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { FormattedNumber } from 'react-intl';
 
-const Card = styled.a`
+const Wrapper = styled.a`
   display: block;
   margin-bottom: 2rem;
   text-decoration: none;
@@ -44,9 +46,9 @@ const Price = styled.h5`
   }
 `;
 
-export default function(props) {
+export default function Card(props) {
   return (
-    <Card href="#">
+    <Wrapper href="/">
       <Image alt={props.title} src={props.image} />
       <Title>
         {props.title}
@@ -60,6 +62,13 @@ export default function(props) {
           minimumFractionDigits={0}
         />
       </Price>
-    </Card>
+    </Wrapper>
   );
 }
+
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+};

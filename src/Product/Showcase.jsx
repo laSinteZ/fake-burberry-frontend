@@ -1,7 +1,8 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-const Showcase = styled.div`
+const Container = styled.div`
   display: flex;
   overflow-x: auto;
   margin: 0 -0.5rem;
@@ -22,14 +23,18 @@ const Image = styled.img`
   }
 `;
 
-export default function(props) {
+export default function Showcase(props) {
   const allImages = props.images.map(img =>
-    <Image src={img.src} alt={img.alt} key={img.src.toString()} />
+    <Image src={img.src} alt={img.alt} key={img.src.toString()} />,
   );
 
   return (
-    <Showcase>
+    <Container>
       {allImages}
-    </Showcase>
+    </Container>
   );
 }
+
+Showcase.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.object).isRequired,
+};

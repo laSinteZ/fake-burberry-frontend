@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import Button from "./Button";
-import ButtonColour from "./ButtonColour";
-import ButtonTextOnly from "./ButtonTextOnly";
-import ButtonSize from "./ButtonSize";
-import PriceArticle from "./PriceArticle";
-import { ToMd, Lg } from "../../common/Breakpoints";
+import React from 'react';
+import styled from 'styled-components';
+import Button from './Button';
+import ButtonColour from './ButtonColour';
+import ButtonTextOnly from './ButtonTextOnly';
+import ButtonSize from './ButtonSize';
+import PriceArticle from './PriceArticle';
+import { ToMd, Lg } from '../../common/Breakpoints';
 
 const Divider = styled.hr`
   margin: 2rem 0;
@@ -62,7 +62,7 @@ const Paragraph = styled.p`
   line-height: 1.35;
 `;
 
-export default function() {
+export default function () {
   return (
     <section>
       <InfoContainer>

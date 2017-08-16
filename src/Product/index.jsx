@@ -1,12 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import Showcase from "./Showcase";
-import Gallery from "./Gallery";
-import InfoPanel from "./InfoPanel/";
-import Recommend from "./Recommend/";
-import Description from "./Accordions/Description";
-import Shipping from "./Accordions/Shipping";
-import { ToMd, Lg } from "../common/Breakpoints";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import Showcase from './Showcase';
+import Gallery from './Gallery';
+import InfoPanel from './InfoPanel/';
+import Recommend from './Recommend/';
+import Description from './Accordions/Description';
+import Shipping from './Accordions/Shipping';
+import { ToMd, Lg } from '../common/Breakpoints';
 
 const Title = styled.h1`
   padding: 1rem 0.5rem;
@@ -66,10 +67,7 @@ export default function Product(props) {
                 <Showcase images={props.images} />
               </ToMd>
               <Lg>
-                <PrimaryImage
-                  src={props.images[0].src}
-                  alt={props.images[0].alt}
-                />
+                <PrimaryImage src={props.images[0].src} alt={props.images[0].alt} />
               </Lg>
             </div>
             <div className="col-xs-12 col-md-5 col-lg-6">
@@ -88,19 +86,16 @@ export default function Product(props) {
         <Description title="Description">
           <p>A refined car coat crafted in protective cotton gabardine.</p>
           <p>
-            Invented by Thomas Burberry in 1879, cotton gabardine is a tightly
-            woven and breathable fabric that protects against wind and rain.
+            Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and breathable
+            fabric that protects against wind and rain.
           </p>
-          <p>
-            Raglan sleeves and a concealed button closure complement the clean
-            tailored lines.
-          </p>
+          <p>Raglan sleeves and a concealed button closure complement the clean tailored lines.</p>
           <p>The piece is finished with a distinctive check undercollar.</p>
           <br />
           <ul>
             <li>
-              Coat length: 98cm/38.6in. This is based on a size UK 48 as
-              proportions change slightly according to size.
+              Coat length: 98cm/38.6in. This is based on a size UK 48 as proportions change slightly
+              according to size.
             </li>
             <li>Outer: 100% cotton</li>
             <li>Check lining: 100% cotton</li>
@@ -122,3 +117,8 @@ export default function Product(props) {
     </main>
   );
 }
+
+Product.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.object).isRequired,
+  title: PropTypes.string.isRequired,
+};
