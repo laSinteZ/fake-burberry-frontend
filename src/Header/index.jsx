@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import logo from "../assets/logo.svg";
+import React from 'react';
+import styled from 'styled-components';
+import logo from '../assets/logo.svg';
 
 const Header = styled.header`
   display: flex;
@@ -25,10 +25,10 @@ const Logo = styled.img`
   }
 `;
 
-export default function() {
+export default function () {
   return (
     <Header>
-      <a href="#">
+      <a href="/">
         <Logo alt="Burberry" src={logo} />
       </a>
     </Header>

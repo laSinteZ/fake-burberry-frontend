@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const MobileHelp = styled.div`
   text-align: center;
@@ -31,7 +31,7 @@ const Link = styled.a`
   line-height: 1.22;
 `;
 
-export default function() {
+export default function () {
   return (
     <MobileHelp>
       <Subtitle>Need help?</Subtitle>

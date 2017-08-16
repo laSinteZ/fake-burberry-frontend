@@ -7,6 +7,7 @@ After that, proceed to [localhost:3000](http://localhost:3000). However, you can
 
 ### Used technologies
 - [React](https://github.com/facebook/react)
+- [Prop Types](https://github.com/facebook/prop-types) 🚓
 - [Styled Components](https://github.com/styled-components/styled-components) 💅
 - [React Helmet](https://github.com/nfl/react-helmet) ⛑ 
 - [React intl](https://github.com/yahoo/react-intl) 🌎
