@@ -66,7 +66,7 @@ export default function () {
   return (
     <section>
       <InfoContainer>
-        <PriceArticle id="39428531" price={110000} currency="RUB" />
+        <PriceArticle id={39428531} price={110000} currency="RUB" />
         <div className="row">
           <div className="col-xs-12 col-lg-6">
             <Colour>
