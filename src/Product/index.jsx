@@ -10,7 +10,7 @@ import Shipping from './Accordions/Shipping';
 import { ToMd, Lg } from '../common/Breakpoints';
 
 const Title = styled.h1`
-  padding: 1rem 0.5rem;
+  padding: 1rem 0;
   color: #111111;
   font-weight: normal;
   font-size: 20px;

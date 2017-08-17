@@ -5,7 +5,6 @@ import logo from '../assets/logo.svg';
 const Header = styled.header`
   display: flex;
   padding: 1rem 0;
-  border-bottom: 1px solid #c6c6c6;
   justify-content: center;
 
   @media screen and (min-width: 48rem) {
@@ -14,13 +13,14 @@ const Header = styled.header`
 
   @media screen and (min-width: 62rem) {
     padding: 2rem 0;
-    border-bottom: none;
   }
 `;
 
 const Logo = styled.img`
   display: block;
-  @media screen and (min-width: 62rem) {
+  height: 0.75rem;
+  
+  @media screen and (min-width: 48rem) {
     height: 1rem;
   }
 `;

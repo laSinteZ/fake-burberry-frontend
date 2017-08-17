@@ -4,12 +4,8 @@ import MobileHelp from './MobileHelp';
 import Navigation from './Navigation';
 
 const Footer = styled.footer`
-  padding: 2rem 0.5rem;
+  padding: 2rem 0rem;
   background-color: #f3f3f3;
-
-  @media screen and (min-width: 48rem) {
-    padding: 2rem 0;
-  }
 
   @media screen and (min-width: 62rem) {
     padding: 4rem 0;

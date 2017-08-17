@@ -6,7 +6,7 @@ import { FormattedNumber } from 'react-intl';
 
 const Wrapper = styled.a`
   display: block;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-decoration: none;
 `;
 

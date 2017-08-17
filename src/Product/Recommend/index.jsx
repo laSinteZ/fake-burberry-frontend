@@ -3,10 +3,9 @@ import styled from 'styled-components';
 import Card from './Card';
 
 const Recommend = styled.section`
-  padding: 0rem 0.5rem;
+  padding: 0;
 
   @media screen and (min-width: 48rem) {
-    padding: 0rem;
     padding-bottom: 1rem;
   }
 `;

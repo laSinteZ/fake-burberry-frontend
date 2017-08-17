@@ -37,7 +37,7 @@ const SizeWrapper = styled.div`
 `;
 
 const InfoContainer = styled.div`
-  padding: 1rem 0.5rem 3rem 0.5rem;
+  padding: 1rem 0 3rem 0;
 
   @media screen and (min-width: 48rem) {
     padding: 0;

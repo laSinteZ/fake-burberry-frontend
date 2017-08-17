@@ -32,7 +32,7 @@ const ID = styled.p`
   color: #171717;
   font-size: 12px;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  line-height: 1.167;
+  line-height: 1.34;
 `;
 
 export default function PriceArticle(props) {
