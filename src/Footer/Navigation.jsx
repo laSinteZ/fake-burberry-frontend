@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Lg } from '../common/Breakpoints';
 
 const Navigation = styled.div`
   display: none;
@@ -31,6 +32,25 @@ const Link = styled.a`
   & + & {
     margin-top: 0.75rem;
   }
+`;
+
+const Shop = styled.img`
+  display: block;
+  margin: 0;
+  width: 100%;
+`;
+
+const ShopLink = styled.a`
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1rem;
+  text-align: left;
+  color: #171717;
+  text-decoration: none;
+  border-bottom: solid 1px #171717;
 `;
 
 export default function () {
@@ -70,6 +90,12 @@ export default function () {
             <Link href="#">Japan Only - SCTL indications</Link>
           </nav>
         </div>
+        <Lg>
+          <div className="col-md-3">
+            <Shop alt="Shop image" src="img/shop.jpg" />
+            <ShopLink href="#">Find a store</ShopLink>
+          </div>
+        </Lg>
       </div>
     </Navigation>
   );

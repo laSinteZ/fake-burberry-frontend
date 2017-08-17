@@ -34,6 +34,10 @@ const TextOnlyButton = styled.button`
   }
 `;
 
+const DarkText = styled.span`
+  color: #171717;
+`;
+
 const Controls = styled.div`
   display: flex;
   flex-direction: column;
@@ -51,9 +55,9 @@ export default function () {
         <Navigation />
         <Controls>
           <TextOnlyButton type="button">
-            Shipping country: Russian Federation
+            Shipping country: <DarkText>Russian Federation</DarkText>
           </TextOnlyButton>
-          <TextOnlyButton type="button">Language: English</TextOnlyButton>
+          <TextOnlyButton type="button">Language: <DarkText>English</DarkText></TextOnlyButton>
         </Controls>
         <MobileHelp />
       </div>

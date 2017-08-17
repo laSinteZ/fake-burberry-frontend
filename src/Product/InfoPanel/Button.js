@@ -12,6 +12,7 @@ const Button = styled.button`
   line-height: 1.2;
   margin-bottom: 1rem;
   width: 100%;
+  
   ${props =>
     props.primary &&
     `
