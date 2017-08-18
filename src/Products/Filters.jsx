@@ -9,6 +9,10 @@ const Container = styled.div`
   overflow-y: auto;
   white-space: nowrap;
   margin-right: -0.5rem;
+
+  @media screen and (min-width: 48rem) {
+    margin-right: 0;
+  }
 `;
 
 const FilterDropdown = Dropdown.extend`
@@ -43,8 +47,11 @@ const Hint = styled.div`
 
 const Right = styled.div`
   margin-left: 1rem;
-  margin-right: 0.5rem;
+  @media screen and (min-width: 48rem) {
+    margin-left: 0;
+  }
 `;
+
 export default function Filters() {
   return (
     <Container>
