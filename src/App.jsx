@@ -1,9 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { IntlProvider, addLocaleData } from 'react-intl';
+import { BrowserRouter, Route } from 'react-router-dom';
 import ruLocaleData from 'react-intl/locale-data/ru';
 import Header from './Header';
 import Product from './Product';
+import Products from './Products';
 import Footer from './Footer';
 
 addLocaleData(ruLocaleData);
@@ -27,13 +29,24 @@ export default function App() {
           </title>
           <meta
             name="description"
-            content={'Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and breathable fabric that protects against wind and rain.'}
+            content={
+              'Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and breathable fabric that protects against wind and rain.'
+            }
           />
           <meta name="keywords" content="Gabardine Coat, Car Coat, Luxury" />
         </Helmet>
-        <Header />
-        <Product title={productTitle} images={productImages} />
-        <Footer />
+        <BrowserRouter>
+          <div>
+            <Header />
+            <Route exact path="/" component={Products} />
+            <Route
+              exact
+              path="/product"
+              render={props => <Product {...props} title={productTitle} images={productImages} />}
+            />
+            <Footer />
+          </div>
+        </BrowserRouter>
       </div>
     </IntlProvider>
   );
