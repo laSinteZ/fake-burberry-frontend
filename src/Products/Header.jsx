@@ -40,14 +40,11 @@ const Link = styled.a`
   color: #171717;
   text-decoration: none;
   border-bottom: solid 1px #171717;
- 
-  ${props =>
-    props.isMain &&
-    `
-      font-weight: 600;  
-    `};
 `;
 
+const Boldish = styled.span`
+  font-weight: 500;
+`;
 export default function Header() {
   return (
     <Background>
@@ -58,7 +55,7 @@ export default function Header() {
             <Text>
               Explore our menswear collection for the season. Sculptural knitwear,{' '}
               <Link>sweatshirts</Link>, artist overalls and oversized cabans feature alongside our
-              signature trench coat in both heritage. <Link isMain>More</Link>
+              signature trench coat in both heritage. <Link><Boldish>More</Boldish></Link>
             </Text>
           </div>
         </div>

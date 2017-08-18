@@ -42,7 +42,7 @@ export default function More() {
   return (
     <Wrapper>
       <Title>Showing 8 of 17</Title>
-      <Button type="button">View 9 More</Button>
+      <Button type="button">View 9 more</Button>
     </Wrapper>
   );
 }
