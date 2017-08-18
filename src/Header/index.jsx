@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import logo from '../assets/logo.svg';
 import hamburger from '../assets/hamburger.svg';
 import Navigation from './Navigation';
@@ -46,9 +47,9 @@ export default function Header() {
           </Md>
         </div>
         <div className="col-xs-8 col-md-4">
-          <a href="/">
+          <Link to="/">
             <Logo alt="Burberry" src={logo} />
-          </a>
+          </Link>
         </div>
       </div>
       <Navigation />
