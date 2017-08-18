@@ -8,7 +8,7 @@ const Footer = styled.footer`
   background-color: #f3f3f3;
 
   @media screen and (min-width: 62rem) {
-    padding: 4rem 0;
+    padding: 4rem 0 3rem 0;
   }
 `;
 
@@ -45,6 +45,10 @@ const Controls = styled.div`
 
   @media screen and (min-width: 48rem) {
     flex-direction: row;
+  }
+
+  @media screen and (min-width: 62rem) {
+    padding-top: 1rem;
   }
 `;
 

@@ -28,8 +28,9 @@ const Title = styled.h2`
   line-height: 1.5rem;
   font-size: 1rem;
   color: #171717;
+
   @media screen and (min-width: 48rem) {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-bottom: 2rem;    
   }
 `;

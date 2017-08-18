@@ -30,8 +30,8 @@ const Title = styled.h3`
   @media screen and (min-width: 48rem) {
     font-size: 0.875rem;
     line-height: 1.25rem;
-    
   }
+  
   @media screen and (min-width: 62rem) {
     font-size: 1rem;
   }
@@ -57,7 +57,6 @@ const Colours = styled.h5`
   line-height: 1rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   font-size: 12px;
-  line-height: 1.33;
   text-align: left;
   color: #171717;
   margin-bottom: 4px;
@@ -126,7 +125,7 @@ export default function Card(props) {
           value={props.price}
           style="currency"
           currency={props.currency}
-          currencyDisplay="code"
+          currencyDisplay="symbol"
           minimumFractionDigits={0}
         />
       </Price>
