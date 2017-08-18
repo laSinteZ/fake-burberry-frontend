@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   margin-bottom: 5rem;
 
   @media screen and (min-width: 48rem) {
-    margin-top: 2rem;    
+    margin-top: 2rem;
   }
 `;
 
@@ -26,13 +26,15 @@ const Button = styled.button`
 
 const Title = styled.h2`
   font-weight: normal;
-  line-height: 1.5rem;
+  line-height: 19px;
   font-family: Lora, serif;
-  font-size: 20px;
+  font-size: 1rem;
   color: #171717;
   margin-bottom: 1rem;
   @media screen and (min-width: 48rem) {
-    margin-bottom: 2rem;    
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+    font-size: 1.25rem;
   }
 `;
 

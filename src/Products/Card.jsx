@@ -24,11 +24,13 @@ const Title = styled.h3`
   font-weight: normal;
   font-size: 12px;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  line-height: 1.25rem;
+  line-height: 1rem;
   font-weight: 600;
 
   @media screen and (min-width: 48rem) {
-    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    
   }
   @media screen and (min-width: 62rem) {
     font-size: 1rem;
