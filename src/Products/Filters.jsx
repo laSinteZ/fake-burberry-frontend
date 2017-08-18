@@ -15,7 +15,7 @@ const Container = styled.div`
   }
 `;
 
-const FilterDropdown = Dropdown.extend`
+const Filter = Dropdown.extend`
   color: #171717;
   font-weight: normal;
   padding-top: 1.5rem;
@@ -57,12 +57,12 @@ export default function Filters() {
     <Container>
       <div>
         <Hint>Refine by</Hint>
-        <FilterDropdown>Category</FilterDropdown>
-        <FilterDropdown>Colour</FilterDropdown>
-        <FilterDropdown>Size</FilterDropdown>
+        <Filter>Category</Filter>
+        <Filter>Colour</Filter>
+        <Filter>Size</Filter>
       </div>
       <Right>
-        <FilterDropdown>Sort by price</FilterDropdown>
+        <Filter>Sort by price</Filter>
       </Right>
     </Container>
   );
