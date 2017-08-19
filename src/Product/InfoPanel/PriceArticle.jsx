@@ -24,6 +24,10 @@ const Price = styled.h2`
   font-size: 16px;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   line-height: 1.1875;
+  
+  @media screen and (min-width: 62rem) {
+    font-weight: 500;
+  }
 `;
 
 const ID = styled.p`
