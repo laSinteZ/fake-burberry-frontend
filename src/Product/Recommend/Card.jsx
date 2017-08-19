@@ -1,10 +1,11 @@
 /* eslint react/style-prop-object: 0 */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { FormattedNumber } from 'react-intl';
 
-const Wrapper = styled.a`
+const Wrapper = styled(Link)`
   display: block;
   margin-bottom: 1rem;
   text-decoration: none;
@@ -48,7 +49,7 @@ const Price = styled.h5`
 
 export default function Card(props) {
   return (
-    <Wrapper href="/">
+    <Wrapper to="/men/clothing/test">
       <Image alt={props.title} src={props.image} />
       <Title>
         {props.title}

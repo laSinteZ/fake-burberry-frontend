@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import Showcase from './Showcase';
 import Gallery from './Gallery';
 import InfoPanel from './InfoPanel/';
@@ -51,9 +52,48 @@ const PrimaryImage = styled.img`
   width: 100%;
 `;
 
+const recs = [
+  {
+    title: 'Emroided Hooded Content For Three Lines',
+    price: 27000,
+    currency: 'RUB',
+    image: `${process.env.PUBLIC_URL}/img/recommend-1.jpg`,
+  },
+  {
+    title: 'Relaxed Fit Stretch Jeans Content For Three Lines',
+    price: 22500,
+    currency: 'RUB',
+    image: `${process.env.PUBLIC_URL}/img/recommend-2.jpg`,
+  },
+  {
+    title: 'Leather and House Check Content For Three Lines',
+    price: '120000',
+    currency: 'RUB',
+    image: `${process.env.PUBLIC_URL}/img/recommend-3.jpg`,
+  },
+  {
+    title: 'Leather Wingtip Check Content For Three Lines',
+    price: 46000,
+    currency: 'RUB',
+    image: `${process.env.PUBLIC_URL}/img/recommend-4.jpg`,
+  },
+];
+
 export default function Product(props) {
   return (
     <main>
+      <Helmet>
+        <title>
+          {props.title} | Men - Burberry
+        </title>
+        <meta
+          name="description"
+          content={
+            'Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and breathable fabric that protects against wind and rain.'
+          }
+        />
+        <meta name="keywords" content="Gabardine Coat, Car Coat, Luxury" />
+      </Helmet>
       <Background>
         <div className="container">
           <ToMd>
@@ -112,7 +152,7 @@ export default function Product(props) {
         <DividerMobile />
         <Shipping title="Delivery" />
         <DividerMobile />
-        <Recommend />
+        <Recommend cards={recs} />
       </div>
     </main>
   );

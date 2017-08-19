@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import Header from './Header';
 import Group from './Group';
 import More from './More';
@@ -12,7 +13,7 @@ const coats = {
       promoLabel: 'Relaxed fit',
       colours: 1,
       currency: 'GBP',
-      image: 'img/product-1.jpg',
+      image: `${process.env.PUBLIC_URL}/img/product-1.jpg`,
     },
     {
       title: 'The Westminster – Long Heritage Trench Coat',
@@ -20,7 +21,7 @@ const coats = {
       promoLabel: 'Classic fit',
       colours: 1,
       currency: 'GBP',
-      image: 'img/product-2.jpg',
+      image: `${process.env.PUBLIC_URL}/img/product-2.jpg`,
     },
     {
       title: 'The Westminster – Long Heritage Trench Coat',
@@ -28,7 +29,7 @@ const coats = {
       promoLabel: 'Tailored fit',
       colours: 1,
       currency: 'GBP',
-      image: 'img/product-3.jpg',
+      image: `${process.env.PUBLIC_URL}/img/product-3.jpg`,
     },
     {
       title: 'The Westminster – Long Heritage Trench Coat',
@@ -36,7 +37,7 @@ const coats = {
       promoLabel: 'Slim fit',
       colours: 3,
       currency: 'GBP',
-      image: 'img/product-4.jpg',
+      image: `${process.env.PUBLIC_URL}/img/product-4.jpg`,
     },
     {
       title: 'The Westminster – Long Heritage Trench Coat',
@@ -44,7 +45,7 @@ const coats = {
       promoLabel: 'Relaxed fit',
       colours: 3,
       currency: 'GBP',
-      image: 'img/recommend-1.jpg',
+      image: `${process.env.PUBLIC_URL}/img/recommend-1.jpg`,
     },
     {
       title: 'The Westminster – Long Heritage Trench Coat',
@@ -52,7 +53,7 @@ const coats = {
       promoLabel: 'Classic fit',
       colours: 4,
       currency: 'GBP',
-      image: 'img/recommend-2.jpg',
+      image: `${process.env.PUBLIC_URL}/img/recommend-2.jpg`,
     },
     {
       title: 'The Westminster – Long Heritage Trench Coat',
@@ -60,7 +61,7 @@ const coats = {
       promoLabel: 'Tailored fit',
       colours: 3,
       currency: 'GBP',
-      image: 'img/recommend-3.jpg',
+      image: `${process.env.PUBLIC_URL}/img/recommend-3.jpg`,
     },
     {
       title: 'The Westminster – Long Heritage Trench Coat',
@@ -68,7 +69,7 @@ const coats = {
       promoLabel: 'Slim fit',
       colours: 3,
       currency: 'GBP',
-      image: 'img/recommend-4.jpg',
+      image: `${process.env.PUBLIC_URL}/img/recommend-4.jpg`,
     },
   ],
 };
@@ -76,6 +77,18 @@ const coats = {
 export default function Products() {
   return (
     <main>
+      <Helmet>
+        <title>
+          Men - Burberry
+        </title>
+        <meta
+          name="description"
+          content={
+            'All types of coats, here adn now'
+          }
+        />
+        <meta name="keywords" content="Man Coats, Man" />
+      </Helmet>
       <Header />
       <div className="container">
         <Group title={coats.title} cards={coats.cards} />

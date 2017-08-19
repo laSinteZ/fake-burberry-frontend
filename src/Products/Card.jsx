@@ -31,7 +31,7 @@ const Title = styled.h3`
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
-  
+
   @media screen and (min-width: 62rem) {
     font-size: 1rem;
   }
@@ -94,7 +94,7 @@ const Like = styled.button`
 
 export default function Card(props) {
   return (
-    <Wrapper to="/product">
+    <Wrapper to="/men/clothing/test">
       <Image alt={props.title} src={props.image} />
       <Promo>
         <PromoLabel>
