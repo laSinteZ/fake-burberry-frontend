@@ -12,10 +12,26 @@ addLocaleData(ruLocaleData);
 /* Let's imagine that this information has come to us form somewhere */
 const productTitle = 'Long Cotton Gabardine Car Coat Coat Coat Coat Coat';
 const productImages = [
-  { id: 1, src: `${process.env.PUBLIC_URL}/img/product-1.jpg`, alt: 'Long Cotton Gabardine Car Coat' },
-  { id: 2, src: `${process.env.PUBLIC_URL}/img/product-2.jpg`, alt: 'Long Cotton Gabardine Car Coat' },
-  { id: 3, src: `${process.env.PUBLIC_URL}/img/product-3.jpg`, alt: 'Long Cotton Gabardine Car Coat' },
-  { id: 4, src: `${process.env.PUBLIC_URL}/img/product-4.jpg`, alt: 'Long Cotton Gabardine Car Coat' },
+  {
+    id: 1,
+    src: `${process.env.PUBLIC_URL}/img/product-1.jpg`,
+    alt: 'Long Cotton Gabardine Car Coat',
+  },
+  {
+    id: 2,
+    src: `${process.env.PUBLIC_URL}/img/product-2.jpg`,
+    alt: 'Long Cotton Gabardine Car Coat',
+  },
+  {
+    id: 3,
+    src: `${process.env.PUBLIC_URL}/img/product-3.jpg`,
+    alt: 'Long Cotton Gabardine Car Coat',
+  },
+  {
+    id: 4,
+    src: `${process.env.PUBLIC_URL}/img/product-4.jpg`,
+    alt: 'Long Cotton Gabardine Car Coat',
+  },
 ];
 
 export default function App() {
@@ -27,7 +43,7 @@ export default function App() {
             <Header />
             <Redirect from="/" to="/men" />
             <Route exact path="/:section/:subsection" component={Products} />
-            <Route exact path="/:section/" component={Products} />
+            <Route exact path="/:section" component={Products} />
             <Route
               path="/:section/:subsection/:id"
               render={props => <Product {...props} title={productTitle} images={productImages} />}
