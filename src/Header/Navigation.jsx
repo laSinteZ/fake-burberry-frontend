@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 const Navigation = styled.nav`
   display: none;
@@ -9,7 +10,11 @@ const Navigation = styled.nav`
   }
 `;
 
-const Link = styled.a`
+const activeClassName = 'nav-item-active';
+
+const NavItem = styled(NavLink).attrs({
+  activeClassName,
+})`
   padding: 1rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   font-size: 0.75rem;
@@ -21,20 +26,20 @@ const Link = styled.a`
   text-transform: uppercase;
   text-decoration: none;
 
-  ${props => props.isActive && `
+  &.${activeClassName} {
     color: #171717;
-    border-bottom: 1px solid #171717;
-  `};
+    border-bottom: 1px solid #171717;  
+  }
 `;
 
 export default function () {
   return (
     <Navigation>
-      <Link href="#">Women</Link>
-      <Link isActive>Men</Link>
-      <Link href="#">Children</Link>
-      <Link href="#">Beauty</Link>
-      <Link href="#">Experience</Link>
+      <NavItem to="/women">Women</NavItem>
+      <NavItem to="/men">Men</NavItem>
+      <NavItem to="/children">Children</NavItem>
+      <NavItem to="/beauty">Beauty</NavItem>
+      <NavItem to="/experience">Experience</NavItem>
     </Navigation>
   );
 }

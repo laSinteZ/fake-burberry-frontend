@@ -1,6 +1,6 @@
 import React from 'react';
 import { IntlProvider, addLocaleData } from 'react-intl';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 import ruLocaleData from 'react-intl/locale-data/ru';
 import Header from './Header';
 import Product from './Product';
@@ -25,7 +25,7 @@ export default function App() {
         <BrowserRouter>
           <div>
             <Header />
-            <Route exact path="/" component={Products} />
+            <Redirect from="/" to="/men" />
             <Route exact path="/:section/:subsection" component={Products} />
             <Route exact path="/:section/" component={Products} />
             <Route
