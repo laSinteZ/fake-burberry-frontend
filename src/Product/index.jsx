@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import Showcase from './Showcase';
 import Gallery from './Gallery';
 import InfoPanel from './InfoPanel/';
-import Recommend from './Recommend/';
+import Recommend from './Recommend';
 import Description from './Accordions/Description';
 import Shipping from './Accordions/Shipping';
 import { ToMd, Lg } from '../common/Breakpoints';
@@ -58,24 +58,32 @@ const recs = [
     price: 27000,
     currency: 'RUB',
     image: `${process.env.PUBLIC_URL}/img/recommend-1.jpg`,
+    promoLabel: 'New in',
+    colours: 4,
   },
   {
     title: 'Relaxed Fit Stretch Jeans Content For Three Lines',
     price: 22500,
     currency: 'RUB',
     image: `${process.env.PUBLIC_URL}/img/recommend-2.jpg`,
+    promoLabel: 'New in',
+    colours: 4,
   },
   {
     title: 'Leather and House Check Content For Three Lines',
-    price: '120000',
+    price: 120000,
     currency: 'RUB',
     image: `${process.env.PUBLIC_URL}/img/recommend-3.jpg`,
+    promoLabel: 'New in',
+    colours: 4,
   },
   {
     title: 'Leather Wingtip Check Content For Three Lines',
     price: 46000,
     currency: 'RUB',
     image: `${process.env.PUBLIC_URL}/img/recommend-4.jpg`,
+    promoLabel: 'New in',
+    colours: 4,
   },
 ];
 

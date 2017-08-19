@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Card from './Card';
+import Card from '../common/Card';
 
 const Wrapper = styled.div`
   padding-top: 2rem;
@@ -12,13 +12,9 @@ const Wrapper = styled.div`
   }
 
   & + &{
-    border-top: 1px solid #c6c6c6;
-    padding-top: 3rem;    
-
-    @media screen and (min-width: 62rem) {
-      padding-top: 4rem;    
-    }
+    border-top: 1px solid #c6c6c6;  
   }
+
 `;
 
 const Title = styled.h2`

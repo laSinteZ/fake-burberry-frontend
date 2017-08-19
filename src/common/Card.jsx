@@ -67,7 +67,11 @@ const Colours = styled.h5`
   margin-bottom: 4px;
 `;
 
-const ColoursNumber = styled.span`border-bottom: 1px solid black;`;
+const ColoursNumber = styled(Link)`
+border-bottom: 1px solid black;
+text-decoration: none;
+color: #171717;
+`;
 
 const Promo = styled.div`
   margin: 1rem 0 0.5rem 0;
@@ -116,7 +120,7 @@ export default function Card(props) {
       </RouteLink>
       <Colours>
         Available in&nbsp;
-        <ColoursNumber>
+        <ColoursNumber to="/men/clothing/test">
           <FormattedMessage
             id="colour"
             defaultMessage={`{colourNumber, number} {colourNumber, plural,

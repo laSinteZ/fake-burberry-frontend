@@ -32,6 +32,13 @@ const TextOnlyButton = styled.button`
       margin-left: 1.5rem;
     }
   }
+
+  @media screen and (min-width: 62rem) {
+    & + & {
+      margin-top: 0;
+      margin-left: 3rem;
+    }
+  }
 `;
 
 const DarkText = styled.span`
