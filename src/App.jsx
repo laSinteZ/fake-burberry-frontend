@@ -42,14 +42,14 @@ export default function App() {
           <div>
             <Header />
             <Switch>
-              <Redirect from="/" to="/men" />
+              <Redirect exact from="/" to="/men" />
+              <Route
+                path="/:section/:subsection/:id"
+                render={props => <Product {...props} title={productTitle} images={productImages} />}
+              />
+              <Route exact path="/:section/:subsection" component={Products} />
+              <Route exact path="/:section" component={Products} />
             </Switch>
-            <Route exact path="/:section/:subsection" component={Products} />
-            <Route exact path="/:section" component={Products} />
-            <Route
-              path="/:section/:subsection/:id"
-              render={props => <Product {...props} title={productTitle} images={productImages} />}
-            />
             <Footer />
           </div>
         </BrowserRouter>
