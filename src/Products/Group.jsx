@@ -8,13 +8,12 @@ const Wrapper = styled.div`
   padding-bottom: 2rem;
 
   @media screen and (min-width: 48rem) {
-    padding-top: 4rem;    
+    padding-top: 4rem;
   }
 
-  & + &{
-    border-top: 1px solid #c6c6c6;  
+  & + & {
+    border-top: 1px solid #c6c6c6;
   }
-
 `;
 
 const Title = styled.h2`
@@ -26,9 +25,9 @@ const Title = styled.h2`
   color: #171717;
 
   @media screen and (min-width: 48rem) {
-    line-height: 1.5rem;    
+    line-height: 1.5rem;
     font-size: 1.25rem;
-    margin-bottom: 2rem;    
+    margin-bottom: 2rem;
   }
 `;
 
@@ -36,6 +35,7 @@ export default function Group(props) {
   const allCards = props.cards.map(card =>
     (<div className="col-xs-6 col-md-3" key={card.image.toString()}>
       <Card
+        link="/men/clothing/test"
         title={card.title}
         price={card.price}
         currency={card.currency}

@@ -8,68 +8,76 @@ const coats = {
   title: 'Heritage Trench Coats',
   cards: [
     {
-      title: 'The Westminster – Long Heritage Trench Coat',
-      price: 1395,
+      title: 'The Westminster – Long Heritage Trench Fun Supa Coat',
+      image:
+        'https://assets.burberry.com/is/image/Burberryltd/995466e7e1113f3b2f6484ceb090072e1c9062dc.jpg?$BBY_V2_ML_3X4$&wid=303&hei=404',
       promoLabel: 'Relaxed fit',
-      colours: 1,
-      currency: 'GBP',
-      image: `${process.env.PUBLIC_URL}/img/product-1.jpg`,
-    },
-    {
-      title: 'The Westminster – Long Heritage Trench Coat',
-      price: 1295,
-      promoLabel: 'Classic fit',
-      colours: 1,
-      currency: 'GBP',
-      image: `${process.env.PUBLIC_URL}/img/product-2.jpg`,
-    },
-    {
-      title: 'The Westminster – Long Heritage Trench Coat',
-      price: 1295,
-      promoLabel: 'Tailored fit',
-      colours: 1,
-      currency: 'GBP',
-      image: `${process.env.PUBLIC_URL}/img/product-3.jpg`,
-    },
-    {
-      title: 'The Westminster – Long Heritage Trench Coat',
+      colours: 3,
       price: 1195,
-      promoLabel: 'Slim fit',
-      colours: 3,
       currency: 'GBP',
-      image: `${process.env.PUBLIC_URL}/img/product-4.jpg`,
     },
     {
-      title: 'The Westminster – Long Heritage Trench Coat',
-      price: 1395,
-      promoLabel: 'Relaxed fit',
-      colours: 3,
-      currency: 'GBP',
-      image: `${process.env.PUBLIC_URL}/img/recommend-1.jpg`,
-    },
-    {
-      title: 'The Westminster – Long Heritage Trench Coat',
-      price: 1395,
+      title: 'The Kensington – Mid-Length Heritage Trench Coat',
+      image:
+        'https://assets.burberry.com/is/image/Burberryltd/90dd344122ccf1884fce63c4fc775bd6baa7a11f.jpg?$BBY_V2_ML_3X4$&wid=303&hei=404',
       promoLabel: 'Classic fit',
       colours: 4,
+      price: 1255,
       currency: 'GBP',
-      image: `${process.env.PUBLIC_URL}/img/recommend-2.jpg`,
     },
     {
-      title: 'The Westminster – Long Heritage Trench Coat',
-      price: 1195,
+      title: 'The Sandringham – Mid-length Heritage Trench Coat',
+      image:
+        'https://assets.burberry.com/is/image/Burberryltd/fb6adea94455f2a73e97b5cf2d7811d9135dcbe2.jpg?$BBY_V2_ML_3X4$&wid=303&hei=404',
       promoLabel: 'Tailored fit',
       colours: 3,
+      price: 1355,
       currency: 'GBP',
-      image: `${process.env.PUBLIC_URL}/img/recommend-3.jpg`,
     },
     {
-      title: 'The Westminster – Long Heritage Trench Coat',
-      price: 1395,
+      title: 'The Chelsea – Short Heritage Trench SuperFun Coat',
+      image:
+        'https://assets.burberry.com/is/image/Burberryltd/a2fa084eae958434c326685fc8ff19dfce9fe430.jpg?$BBY_V2_ML_3X4$&wid=303&hei=404',
       promoLabel: 'Slim fit',
       colours: 3,
+      price: 1125,
       currency: 'GBP',
-      image: `${process.env.PUBLIC_URL}/img/recommend-4.jpg`,
+    },
+    {
+      title: 'The Westminster – Long Heritage Trench Fun Coat',
+      image:
+        'https://assets.burberry.com/is/image/Burberryltd/995466e7e1113f3b2f6484ceb090072e1c9062dc.jpg?$BBY_V2_ML_3X4$&wid=303',
+      promoLabel: 'Relaxed fit',
+      colours: 3,
+      price: 1195,
+      currency: 'GBP',
+    },
+    {
+      title: 'The Kensington – Mid-Length Heritage Trench Coat',
+      image:
+        'https://assets.burberry.com/is/image/Burberryltd/90dd344122ccf1884fce63c4fc775bd6baa7a11f.jpg?$BBY_V2_ML_3X4$&wid=303',
+      promoLabel: 'Classic fit',
+      colours: 4,
+      price: 1255,
+      currency: 'GBP',
+    },
+    {
+      title: 'The Sandringham – Mid-length Heritage Trench Coat',
+      image:
+        'https://assets.burberry.com/is/image/Burberryltd/fb6adea94455f2a73e97b5cf2d7811d9135dcbe2.jpg?$BBY_V2_ML_3X4$&wid=303',
+      promoLabel: 'Tailored fit',
+      colours: 3,
+      price: 1355,
+      currency: 'GBP',
+    },
+    {
+      title: 'The Chelsea – Short Heritage Fun Super Trench Coat',
+      image:
+        'https://assets.burberry.com/is/image/Burberryltd/a2fa084eae958434c326685fc8ff19dfce9fe430.jpg?$BBY_V2_ML_3X4$&wid=303',
+      promoLabel: 'Slim fit',
+      colours: 3,
+      price: 1125,
+      currency: 'GBP',
     },
   ],
 };
@@ -78,15 +86,8 @@ export default function Products() {
   return (
     <main>
       <Helmet>
-        <title>
-          Men - Burberry
-        </title>
-        <meta
-          name="description"
-          content={
-            'All types of coats, here adn now'
-          }
-        />
+        <title>Men - Burberry</title>
+        <meta name="description" content={'All types of coats, here adn now'} />
         <meta name="keywords" content="Man Coats, Man" />
       </Helmet>
       <Header />

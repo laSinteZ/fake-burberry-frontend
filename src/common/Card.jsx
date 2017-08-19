@@ -26,7 +26,7 @@ const Title = styled.h3`
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   line-height: 1rem;
   font-weight: 600;
-  
+
   @media screen and (min-width: 48rem) {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -104,7 +104,7 @@ const Like = styled.button`
 export default function Card(props) {
   return (
     <Wrapper>
-      <RouteLink to="/men/clothing/test">
+      <RouteLink to={props.link}>
         <Image alt={props.title} src={props.image} />
       </RouteLink>
       <Promo>
@@ -113,14 +113,14 @@ export default function Card(props) {
         </PromoLabel>
         <Like />
       </Promo>
-      <RouteLink to="/men/clothing/test">
+      <RouteLink to={props.link}>
         <Title>
           {props.title}
         </Title>
       </RouteLink>
       <Colours>
         Available in&nbsp;
-        <ColoursNumber to="/men/clothing/test">
+        <ColoursNumber to={props.link}>
           <FormattedMessage
             id="colour"
             defaultMessage={`{colourNumber, number} {colourNumber, plural,
@@ -147,6 +147,7 @@ export default function Card(props) {
 }
 
 Card.propTypes = {
+  link: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   currency: PropTypes.string.isRequired,

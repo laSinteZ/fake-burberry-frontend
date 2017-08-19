@@ -54,36 +54,40 @@ const PrimaryImage = styled.img`
 
 const recs = [
   {
-    title: 'Emroided Hooded Content For Three Lines',
-    price: 27000,
-    currency: 'RUB',
-    image: `${process.env.PUBLIC_URL}/img/recommend-1.jpg`,
-    promoLabel: 'New in',
-    colours: 4,
-  },
-  {
-    title: 'Relaxed Fit Stretch Jeans Content For Three Lines',
-    price: 22500,
-    currency: 'RUB',
-    image: `${process.env.PUBLIC_URL}/img/recommend-2.jpg`,
-    promoLabel: 'New in',
-    colours: 4,
-  },
-  {
-    title: 'Leather and House Check Content For Three Lines',
+    title: 'The Westminster – Long Heritage Trench Coat',
+    image:
+      'https://assets.burberry.com/is/image/Burberryltd/995466e7e1113f3b2f6484ceb090072e1c9062dc.jpg?$BBY_V2_ML_3X4$&wid=303&hei=404',
+    promoLabel: 'Relaxed fit',
+    colours: 3,
     price: 120000,
     currency: 'RUB',
-    image: `${process.env.PUBLIC_URL}/img/recommend-3.jpg`,
-    promoLabel: 'New in',
-    colours: 4,
   },
   {
-    title: 'Leather Wingtip Check Content For Three Lines',
-    price: 46000,
-    currency: 'RUB',
-    image: `${process.env.PUBLIC_URL}/img/recommend-4.jpg`,
-    promoLabel: 'New in',
+    title: 'The Kensington – Mid-Length Heritage Trench Coat',
+    image:
+      'https://assets.burberry.com/is/image/Burberryltd/90dd344122ccf1884fce63c4fc775bd6baa7a11f.jpg?$BBY_V2_ML_3X4$&wid=303&hei=404',
+    promoLabel: 'Classic fit',
     colours: 4,
+    price: 110000,
+    currency: 'RUB',
+  },
+  {
+    title: 'The Sandringham – Mid-length Heritage Trench Coat',
+    image:
+      'https://assets.burberry.com/is/image/Burberryltd/fb6adea94455f2a73e97b5cf2d7811d9135dcbe2.jpg?$BBY_V2_ML_3X4$&wid=303&hei=404',
+    promoLabel: 'Tailored fit',
+    colours: 3,
+    price: 110000,
+    currency: 'RUB',
+  },
+  {
+    title: 'The Chelsea – Short Heritage Trench Coat',
+    image:
+      'https://assets.burberry.com/is/image/Burberryltd/a2fa084eae958434c326685fc8ff19dfce9fe430.jpg?$BBY_V2_ML_3X4$&wid=303&hei=404',
+    promoLabel: 'Slim fit',
+    colours: 3,
+    price: 100000,
+    currency: 'RUB',
   },
 ];
 
