@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { FormattedNumber, FormattedMessage } from 'react-intl';
 import heart from '../assets/heart.svg';
 
-const Wrapper = styled(Link)`
+const Wrapper = styled.div`
   display: block;
   margin-bottom: 2rem;
   text-decoration: none;
@@ -26,7 +26,7 @@ const Title = styled.h3`
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   line-height: 1rem;
   font-weight: 600;
-
+  
   @media screen and (min-width: 48rem) {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -35,6 +35,11 @@ const Title = styled.h3`
   @media screen and (min-width: 62rem) {
     font-size: 1rem;
   }
+`;
+
+const RouteLink = styled(Link)`
+  text-decoration: none;
+  color: #171717;
 `;
 
 const Price = styled.h5`
@@ -94,17 +99,21 @@ const Like = styled.button`
 
 export default function Card(props) {
   return (
-    <Wrapper to="/men/clothing/test">
-      <Image alt={props.title} src={props.image} />
+    <Wrapper>
+      <RouteLink to="/men/clothing/test">
+        <Image alt={props.title} src={props.image} />
+      </RouteLink>
       <Promo>
         <PromoLabel>
           {props.promoLabel}
         </PromoLabel>
         <Like />
       </Promo>
-      <Title>
-        {props.title}
-      </Title>
+      <RouteLink to="/men/clothing/test">
+        <Title>
+          {props.title}
+        </Title>
+      </RouteLink>
       <Colours>
         Available in&nbsp;
         <ColoursNumber>
