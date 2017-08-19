@@ -47,8 +47,11 @@ const Hint = styled.div`
 
 const Right = styled.div`
   margin-left: 1rem;
+  padding-right: 0.5rem;
+
   @media screen and (min-width: 48rem) {
     margin-left: 0;
+    padding-right: 0;
   }
 `;
 
