@@ -10,11 +10,7 @@ const Navigation = styled.nav`
   }
 `;
 
-const activeClassName = 'nav-item-active';
-
-const NavItem = styled(NavLink).attrs({
-  activeClassName,
-})`
+const Link = styled(NavLink)`
   padding: 1rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   font-size: 0.75rem;
@@ -26,7 +22,7 @@ const NavItem = styled(NavLink).attrs({
   text-transform: uppercase;
   text-decoration: none;
 
-  &.${activeClassName} {
+  &.active {
     color: #171717;
     border-bottom: 1px solid #171717;  
   }
@@ -35,11 +31,11 @@ const NavItem = styled(NavLink).attrs({
 export default function () {
   return (
     <Navigation>
-      <NavItem to="/women">Women</NavItem>
-      <NavItem to="/men">Men</NavItem>
-      <NavItem to="/children">Children</NavItem>
-      <NavItem to="/beauty">Beauty</NavItem>
-      <NavItem to="/experience">Experience</NavItem>
+      <Link to="/women">Women</Link>
+      <Link to="/men">Men</Link>
+      <Link to="/children">Children</Link>
+      <Link to="/beauty">Beauty</Link>
+      <Link to="/experience">Experience</Link>
     </Navigation>
   );
 }
