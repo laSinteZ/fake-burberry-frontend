@@ -31,20 +31,6 @@ const Filter = Dropdown.extend`
   }
 `;
 
-const Hint = styled.div`
-  display: inline;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  margin-right: 2rem;
-  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  font-size: 12px;
-  line-height: 1rem;
-  color: #171717;
-  @media screen and (min-width: 48rem) {
-    display: none;
-  }
-`;
-
 const Right = styled.div`
   margin-left: 1rem;
   padding-right: 0.5rem;
@@ -59,7 +45,6 @@ export default function Filters() {
   return (
     <Container>
       <div>
-        <Hint>Refine by</Hint>
         <Filter>Category</Filter>
         <Filter>Colour</Filter>
         <Filter>Size</Filter>
