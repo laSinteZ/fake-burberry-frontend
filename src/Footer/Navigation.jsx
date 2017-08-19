@@ -40,7 +40,7 @@ const Shop = styled.img`
   width: 100%;
 `;
 
-const ShopLink = styled.a`
+const ShopLink = styled.span`
   display: inline-block;
   margin-top: 1rem;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
@@ -92,8 +92,10 @@ export default function () {
         </div>
         <Lg>
           <div className="col-md-3">
-            <Shop alt="Shop image" src="img/shop.jpg" />
-            <ShopLink href="#">Find a store</ShopLink>
+            <a href="/">
+              <Shop alt="Shop image" src={`${process.env.PUBLIC_URL}/img/shop.jpg`} />
+              <ShopLink>Find a store</ShopLink>
+            </a>
           </div>
         </Lg>
       </div>

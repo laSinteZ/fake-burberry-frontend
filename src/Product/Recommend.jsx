@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Card from '../common/Card';
+import Card from '../Products/Card';
 
 const Wrapper = styled.section`
   padding: 0;
@@ -63,7 +63,7 @@ export default function Recommend(props) {
   const allCards = props.cards.map(card =>
     (<div className="col-xs-6 col-md-3" key={card.image.toString()}>
       <Card
-        link="/men/clothing/test"
+        to="/men/clothing/test"
         title={card.title}
         price={card.price}
         currency={card.currency}

@@ -8,7 +8,7 @@ const coats = {
   title: 'Heritage Trench Coats',
   cards: [
     {
-      title: 'The Westminster – Long Heritage Trench Fun Supa Coat',
+      title: 'The Westminster – Long Heritage Trench Fun Coat',
       image:
         'https://assets.burberry.com/is/image/Burberryltd/995466e7e1113f3b2f6484ceb090072e1c9062dc.jpg?$BBY_V2_ML_3X4$&wid=303&hei=404',
       promoLabel: 'Relaxed fit',

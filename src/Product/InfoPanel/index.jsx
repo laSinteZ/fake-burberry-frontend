@@ -43,6 +43,10 @@ const InfoContainer = styled.div`
     padding: 0;
     padding-bottom: 2rem;
   }
+
+  @media screen and (min-width: 48rem) {
+    padding: 0;
+  }
 `;
 
 const Subtitle = styled.h4`
@@ -64,72 +68,70 @@ const Paragraph = styled.p`
 
 export default function () {
   return (
-    <section>
-      <InfoContainer>
-        <PriceArticle id={39428531} price={110000} currency="RUB" />
-        <div className="row">
-          <div className="col-xs-12 col-lg-6">
-            <Colour>
-              Colour: <b>Honey</b>
-            </Colour>
-          </div>
-          <Lg>
-            <div className="col-lg-6">
-              <SizeWrapper>
-                <Size>
-                  Size: <b>XL</b>
-                </Size>
-                <ButtonTextOnly type="button">NEED SIZE HELP?</ButtonTextOnly>
-              </SizeWrapper>
-            </div>
-          </Lg>
-        </div>
-        <div className="row">
-          <div className="col-xs-12 col-lg-6">
-            <ButtonColour value="#232122" colourName="Black" />
-            <ButtonColour value="#cfa880" colourName="Honey" isActive />
-          </div>
-          <Lg>
-            <div className="col-lg-6">
-              <ButtonSize type="button">S</ButtonSize>
-              <ButtonSize type="button">M</ButtonSize>
-              <ButtonSize type="button">L</ButtonSize>
-              <ButtonSize type="button" isActive>
-                XL
-              </ButtonSize>
-            </div>
-          </Lg>
-        </div>
-        <div className="row">
-          <div className="col-xs-12 col-lg-6">
-            <Lg>
-              <Button primary type="button">
-                Add to bag
-              </Button>
-            </Lg>
-            <ToMd>
-              <Divider />
-              <Button primary type="button">
-                Select a size
-              </Button>
-            </ToMd>
-          </div>
-          <div className="col-xs-12 col-lg-6">
-            <Button type="button">Find in store</Button>
-            <ToMd>
-              <ButtonTextOnly type="button">NEED SIZE HELP?</ButtonTextOnly>
-            </ToMd>
-          </div>
+    <InfoContainer>
+      <PriceArticle id={39428531} price={110000} currency="RUB" />
+      <div className="row">
+        <div className="col-xs-12 col-lg-6">
+          <Colour>
+            Colour: <b>Honey</b>
+          </Colour>
         </div>
         <Lg>
-          <div className="col-lg-12">
-            <Subtitle>Free Next Day Delivery</Subtitle>
-            <Paragraph>
-              Order before 7pm Monday to Thursday for delivery the next day
-            </Paragraph>
+          <div className="col-lg-6">
+            <SizeWrapper>
+              <Size>
+                Size: <b>XL</b>
+              </Size>
+              <ButtonTextOnly type="button">NEED SIZE HELP?</ButtonTextOnly>
+            </SizeWrapper>
           </div>
         </Lg>
-      </InfoContainer>
-    </section>
+      </div>
+      <div className="row">
+        <div className="col-xs-12 col-lg-6">
+          <ButtonColour value="#232122" colourName="Black" />
+          <ButtonColour value="#cfa880" colourName="Honey" isActive />
+        </div>
+        <Lg>
+          <div className="col-lg-6">
+            <ButtonSize type="button">S</ButtonSize>
+            <ButtonSize type="button">M</ButtonSize>
+            <ButtonSize type="button">L</ButtonSize>
+            <ButtonSize type="button" isActive>
+              XL
+            </ButtonSize>
+          </div>
+        </Lg>
+      </div>
+      <div className="row">
+        <div className="col-xs-12 col-lg-6">
+          <Lg>
+            <Button primary type="button">
+              Add to bag
+            </Button>
+          </Lg>
+          <ToMd>
+            <Divider />
+            <Button primary type="button">
+              Select a size
+            </Button>
+          </ToMd>
+        </div>
+        <div className="col-xs-12 col-lg-6">
+          <Button type="button">Find in store</Button>
+          <ToMd>
+            <ButtonTextOnly type="button">NEED SIZE HELP?</ButtonTextOnly>
+          </ToMd>
+        </div>
+      </div>
+      <Lg>
+        <div className="row">
+          <div className="col-lg-12">
+            <Subtitle>Free Next Day Delivery</Subtitle>
+            <Paragraph>Order before 7pm Monday to Thursday for delivery the next day</Paragraph>
+          </div>
+        </div>
+      </Lg>
+    </InfoContainer>
   );
 }

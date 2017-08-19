@@ -52,6 +52,12 @@ const PrimaryImage = styled.img`
   width: 100%;
 `;
 
+const InfoPanelWrapper = styled.section`
+  @media screen and (min-width: 62rem) {
+    padding: 6rem 0 6rem 0;
+  }
+`;
+
 const recs = [
   {
     title: 'The Westminster – Long Heritage Trench Coat',
@@ -123,12 +129,14 @@ export default function Product(props) {
               </Lg>
             </div>
             <div className="col-xs-12 col-md-5 col-lg-6">
-              <Lg>
-                <Title>
-                  {props.title}
-                </Title>
-              </Lg>
-              <InfoPanel />
+              <InfoPanelWrapper>
+                <Lg>
+                  <Title>
+                    {props.title}
+                  </Title>
+                </Lg>
+                <InfoPanel />
+              </InfoPanelWrapper>
             </div>
           </div>
         </div>

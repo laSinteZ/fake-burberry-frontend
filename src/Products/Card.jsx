@@ -101,10 +101,12 @@ const Like = styled.button`
   border: none;
 `;
 
+const colourMessage = '{colourNumber, number} {colourNumber, plural, one {colour} other {colours}}';
+
 export default function Card(props) {
   return (
     <Wrapper>
-      <RouteLink to={props.link}>
+      <RouteLink to={props.to}>
         <Image alt={props.title} src={props.image} />
       </RouteLink>
       <Promo>
@@ -113,20 +115,17 @@ export default function Card(props) {
         </PromoLabel>
         <Like />
       </Promo>
-      <RouteLink to={props.link}>
+      <RouteLink to={props.to}>
         <Title>
           {props.title}
         </Title>
       </RouteLink>
       <Colours>
         Available in&nbsp;
-        <ColoursNumber to={props.link}>
+        <ColoursNumber to={props.to}>
           <FormattedMessage
             id="colour"
-            defaultMessage={`{colourNumber, number} {colourNumber, plural,
-              one {colour}
-              other {colours}
-            }`}
+            defaultMessage={colourMessage}
             values={{
               colourNumber: props.colours,
             }}
@@ -147,7 +146,7 @@ export default function Card(props) {
 }
 
 Card.propTypes = {
-  link: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   currency: PropTypes.string.isRequired,
