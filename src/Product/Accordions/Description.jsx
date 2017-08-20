@@ -4,10 +4,7 @@ import styled from 'styled-components';
 import triangle from '../../assets/triangle.svg';
 
 const Container = styled.div`
-  padding: 0rem 0.5rem;
-  @media screen and (min-width: 48rem) {
-    padding: 0rem;
-  }
+  padding: 0;
 `;
 
 const Text = styled.div`
@@ -126,7 +123,7 @@ class Description extends Component {
             </Text>
           </div>
           <div className="col-xs-12 col-lg-8">
-            <Image src="img/product-description.jpg" alt="Beautiful Long Coat" />
+            <Image src={`${process.env.PUBLIC_URL}/img/product-description.jpg`} alt="Beautiful Long Coat" />
           </div>
         </div>
       </Container>

@@ -4,15 +4,11 @@ import MobileHelp from './MobileHelp';
 import Navigation from './Navigation';
 
 const Footer = styled.footer`
-  padding: 2rem 0.5rem;
+  padding: 2rem 0rem;
   background-color: #f3f3f3;
 
-  @media screen and (min-width: 48rem) {
-    padding: 2rem 0;
-  }
-
   @media screen and (min-width: 62rem) {
-    padding: 4rem 0;
+    padding: 4rem 0 3rem 0;
   }
 `;
 
@@ -36,6 +32,17 @@ const TextOnlyButton = styled.button`
       margin-left: 1.5rem;
     }
   }
+
+  @media screen and (min-width: 62rem) {
+    & + & {
+      margin-top: 0;
+      margin-left: 3rem;
+    }
+  }
+`;
+
+const DarkText = styled.span`
+  color: #171717;
 `;
 
 const Controls = styled.div`
@@ -46,6 +53,10 @@ const Controls = styled.div`
   @media screen and (min-width: 48rem) {
     flex-direction: row;
   }
+
+  @media screen and (min-width: 62rem) {
+    padding-top: 1rem;
+  }
 `;
 
 export default function () {
@@ -55,9 +66,9 @@ export default function () {
         <Navigation />
         <Controls>
           <TextOnlyButton type="button">
-            Shipping country: Russian Federation
+            Shipping country: <DarkText>Russian Federation</DarkText>
           </TextOnlyButton>
-          <TextOnlyButton type="button">Language: English</TextOnlyButton>
+          <TextOnlyButton type="button">Language: <DarkText>English</DarkText></TextOnlyButton>
         </Controls>
         <MobileHelp />
       </div>

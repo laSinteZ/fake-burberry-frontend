@@ -1,12 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Card from './Card';
+import Card from '../Products/Card';
 
-const Recommend = styled.section`
-  padding: 0rem 0.5rem;
+const Wrapper = styled.section`
+  padding: 0;
 
   @media screen and (min-width: 48rem) {
-    padding: 0rem;
     padding-bottom: 1rem;
   }
 `;
@@ -59,44 +59,27 @@ const Link = styled.a`
   }
 `;
 
-export default function () {
+export default function Recommend(props) {
+  const allCards = props.cards.map(card =>
+    (<div className="col-xs-6 col-md-3" key={card.image.toString()}>
+      <Card
+        to="/men/clothing/test"
+        title={card.title}
+        price={card.price}
+        currency={card.currency}
+        image={card.image}
+        colours={card.colours}
+        promoLabel={card.promoLabel}
+      />
+    </div>),
+  );
+
   return (
-    <Recommend>
+    <Wrapper>
       <Products>
         <Subheading>We recommend</Subheading>
         <div className="row">
-          <div className="col-xs-6 col-md-3">
-            <Card
-              title="Emroided Hooded Content For Three Lines"
-              price={27000}
-              currency="RUB"
-              image="img/recommend-1.jpg"
-            />
-          </div>
-          <div className="col-xs-6 col-md-3">
-            <Card
-              title="Relaxed Fit Stretch Jeans Content For Three Lines"
-              price={22500}
-              currency="RUB"
-              image="img/recommend-2.jpg"
-            />
-          </div>
-          <div className="col-xs-6 col-md-3">
-            <Card
-              title="Leather and House Check Content For Three Lines"
-              price={120000}
-              currency="RUB"
-              image="img/recommend-3.jpg"
-            />
-          </div>
-          <div className="col-xs-6 col-md-3">
-            <Card
-              title="Leather Wingtip Check Content For Three Lines"
-              price={46000}
-              currency="RUB"
-              image="img/recommend-4.jpg"
-            />
-          </div>
+          {allCards}
         </div>
       </Products>
       <More>
@@ -105,6 +88,10 @@ export default function () {
         <Link href="#">Men’s Short Trench Coats</Link>
         <Link href="#">Men’s Long Trench Coats</Link>
       </More>
-    </Recommend>
+    </Wrapper>
   );
 }
+
+Recommend.propTypes = {
+  cards: PropTypes.arrayOf(PropTypes.object).isRequired,
+};

@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import Showcase from './Showcase';
 import Gallery from './Gallery';
 import InfoPanel from './InfoPanel/';
-import Recommend from './Recommend/';
+import Recommend from './Recommend';
 import Description from './Accordions/Description';
 import Shipping from './Accordions/Shipping';
 import { ToMd, Lg } from '../common/Breakpoints';
 
 const Title = styled.h1`
-  padding: 1rem 0.5rem;
+  padding: 1rem 0;
   color: #111111;
   font-weight: normal;
   font-size: 20px;
@@ -51,9 +52,66 @@ const PrimaryImage = styled.img`
   width: 100%;
 `;
 
+const InfoPanelWrapper = styled.section`
+  @media screen and (min-width: 62rem) {
+    padding: 6rem 0 6rem 0;
+  }
+`;
+
+const recs = [
+  {
+    title: 'The Westminster – Long Heritage Trench Coat',
+    image:
+      'https://assets.burberry.com/is/image/Burberryltd/995466e7e1113f3b2f6484ceb090072e1c9062dc.jpg?$BBY_V2_ML_3X4$&wid=303&hei=404',
+    promoLabel: 'Relaxed fit',
+    colours: 3,
+    price: 120000,
+    currency: 'RUB',
+  },
+  {
+    title: 'The Kensington – Mid-Length Heritage Trench Coat',
+    image:
+      'https://assets.burberry.com/is/image/Burberryltd/90dd344122ccf1884fce63c4fc775bd6baa7a11f.jpg?$BBY_V2_ML_3X4$&wid=303&hei=404',
+    promoLabel: 'Classic fit',
+    colours: 4,
+    price: 110000,
+    currency: 'RUB',
+  },
+  {
+    title: 'The Sandringham – Mid-length Heritage Trench Coat',
+    image:
+      'https://assets.burberry.com/is/image/Burberryltd/fb6adea94455f2a73e97b5cf2d7811d9135dcbe2.jpg?$BBY_V2_ML_3X4$&wid=303&hei=404',
+    promoLabel: 'Tailored fit',
+    colours: 3,
+    price: 110000,
+    currency: 'RUB',
+  },
+  {
+    title: 'The Chelsea – Short Heritage Trench Coat',
+    image:
+      'https://assets.burberry.com/is/image/Burberryltd/a2fa084eae958434c326685fc8ff19dfce9fe430.jpg?$BBY_V2_ML_3X4$&wid=303&hei=404',
+    promoLabel: 'Slim fit',
+    colours: 3,
+    price: 100000,
+    currency: 'RUB',
+  },
+];
+
 export default function Product(props) {
   return (
     <main>
+      <Helmet>
+        <title>
+          {props.title} | Men - Burberry
+        </title>
+        <meta
+          name="description"
+          content={
+            'Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and breathable fabric that protects against wind and rain.'
+          }
+        />
+        <meta name="keywords" content="Gabardine Coat, Car Coat, Luxury" />
+      </Helmet>
       <Background>
         <div className="container">
           <ToMd>
@@ -71,12 +129,14 @@ export default function Product(props) {
               </Lg>
             </div>
             <div className="col-xs-12 col-md-5 col-lg-6">
-              <Lg>
-                <Title>
-                  {props.title}
-                </Title>
-              </Lg>
-              <InfoPanel />
+              <InfoPanelWrapper>
+                <Lg>
+                  <Title>
+                    {props.title}
+                  </Title>
+                </Lg>
+                <InfoPanel />
+              </InfoPanelWrapper>
             </div>
           </div>
         </div>
@@ -112,7 +172,7 @@ export default function Product(props) {
         <DividerMobile />
         <Shipping title="Delivery" />
         <DividerMobile />
-        <Recommend />
+        <Recommend cards={recs} />
       </div>
     </main>
   );

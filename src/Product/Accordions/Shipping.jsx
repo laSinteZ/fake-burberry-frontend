@@ -4,10 +4,7 @@ import styled from 'styled-components';
 import triangle from '../../assets/triangle.svg';
 
 const Container = styled.div`
-  padding: 0rem 0.5rem;
-  @media screen and (min-width: 48rem) {
-    padding: 0rem;
-  }
+  padding: 0;
 
   @media screen and (min-width: 62rem) {
     margin-bottom: 4rem;
@@ -117,7 +114,7 @@ class Shipping extends Component {
       <Container>
         <div className="row">
           <div className="col-xs-12 col-md-7">
-            <Image src="img/shipping.png" alt="Shipping gifts" />
+            <Image src={`${process.env.PUBLIC_URL}/img/shipping.png`} alt="Shipping gifts" />
           </div>
           <div className="col-xs-12 col-md-5 col-lg-offset-1 col-lg-4">
             <ButtonWrapper active={this.state.active} onClick={this.toggle}>

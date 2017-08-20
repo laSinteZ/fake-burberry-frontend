@@ -24,6 +24,10 @@ const Price = styled.h2`
   font-size: 16px;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   line-height: 1.1875;
+  
+  @media screen and (min-width: 62rem) {
+    font-weight: 500;
+  }
 `;
 
 const ID = styled.p`
@@ -32,7 +36,7 @@ const ID = styled.p`
   color: #171717;
   font-size: 12px;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  line-height: 1.167;
+  line-height: 1.34;
 `;
 
 export default function PriceArticle(props) {
@@ -43,7 +47,7 @@ export default function PriceArticle(props) {
           value={props.price}
           style="currency"
           currency={props.currency}
-          currencyDisplay="code"
+          currencyDisplay="symbol"
           minimumFractionDigits={0}
         />
       </Price>
