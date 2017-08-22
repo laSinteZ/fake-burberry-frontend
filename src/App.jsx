@@ -41,7 +41,6 @@ export default function App() {
         <BrowserRouter>
           <div>
             <Header />
-            AASDASSADASDASDASDASDASDASDAS
             <Switch>
               <Redirect exact from="/" to="/men" />
               <Route
