@@ -14,10 +14,16 @@ cache:
 script:
   - npm run test
 
-after_success:
-  - if [ "$TRAVIS_BRANCH" = "master" ]; then
-      npm run build && now alias $(now build -t=$NOW_TOKEN --public) $URL_PROD -t=$NOW_TOKEN;
-    fi
-  - if [ "$TRAVIS_BRANCH" = "develop" ]; then
-      npm run build && now alias $(now build -t=$NOW_TOKEN --public) $URL_DEV -t=$NOW_TOKEN;
-    fi
+before_deploy:
+  - npm run build
+
+deploy:
+  - provider: script
+    script: now alias $(now build -t=$NOW_TOKEN --public) $URL_DEV -t=$NOW_TOKEN
+    on:
+      branch: develop
+
+  - provider: script
+    script: now alias $(now build -t=$NOW_TOKEN --public) $URL_PROD -t=$NOW_TOKEN
+    on:
+      branch: master
