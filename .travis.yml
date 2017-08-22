@@ -6,7 +6,7 @@ env:
     - secure: >-
         c9S8BJHtX8F30aZvW8H3C2/sNKUzimh+mn7eNNgVtwdSQyh6Ahj4F8ARiudazJOn98ZObXWmaND06Iu1bdPmId77trl25Osjfzmz6Lv1XWVZJGF+9CO4BSdFeMQKxTgnPPVajwtLhXnxYql1Wz1y0lzesVfOdjEXByGjNqGEIwN1A3MFY7M9T6IyYu1g0ZJEx355Vk0vPpPkkUY0cIRLPPBdPq1A3xfYO9BLMKZc+A1XUh3IrjgW1672cmoISsVbefDQPx/YsOJQ1AvK/7aIkXVaO4/fI1RtM6GCy79ySgocfpOxCd+ylHYG2JDiXt882hOXs6yG4sU4eIR97fPlrzV5PjXqV857zJEH5F70+5v1tAZiyOYpX55e39W7auR0sWGsxMAABwjJIh5oT86w6TQbD1tOFyQJyqMW+WkfGuwhzhlm6Rg/BL3AUrQqK+krOx/vx1REHIS6pbRBOq/04Td30pqp2tx2yLTb6C9L4RLqN2/RuMXYbNxWSiSy8Q/aYjn442TSGtSQak5SBEe/d5UicoJaQE1001CHBWYq8hhk+H8LtQEAksIM4HNXWmih4kxvdO6Py/zpT4Kw1qNhytADz3/VPrNhxV/X7LugdHpUf13ahxTPn7z6y8G17XOfc944xn2CMczvMqZY4jE7EMImhaX+BCeQ4X9YaL0rcYs=
     - URL_DEV: vbikbaev-burberry-fake-shop-for-study-dev
-    - URL_PROPD: vbikbaev-burberry-fake-shop-for-study
+    - URL_PROD: vbikbaev-burberry-fake-shop-for-study
 
 cache:
   yarn: true
@@ -17,4 +17,8 @@ script:
   - npm run test && npm run build 
 
 after_success:
-  - now alias $(now build -t=$NOW_TOKEN --public) $URL_DEV -t=$NOW_TOKEN
+  - if [ "$TRAVIS_BRANCH" = "master" ]; then
+      now alias $(now build -t=$NOW_TOKEN --public) $URL_PROD -t=$NOW_TOKEN;
+    else
+      now alias $(now build -t=$NOW_TOKEN --public) $URL_DEV -t=$NOW_TOKEN;
+    fi
