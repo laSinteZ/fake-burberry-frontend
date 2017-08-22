@@ -11,4 +11,4 @@ script:
   - npm run test && npm run build 
 
 after_success:
-  - now build -t=$NOW_TOKEN --public
+  - now alias $(now build -t=$NOW_TOKEN --public) %alias-dev
