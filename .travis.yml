@@ -8,4 +8,7 @@ env:
     - alias-dev: vbikbaev-burberry-fake-shop-for-study-dev
     - alias-prod: vbikbaev-burberry-fake-shop-for-study
 script:
-  - npm run test && npm run build && now build -t=NOW_TOKEN --public
+  - npm run test && npm run build 
+
+after_success:
+  - now build -t=NOW_TOKEN --public
