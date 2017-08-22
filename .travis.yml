@@ -1,5 +1,19 @@
 language: node_js
 node_js:
-  - "6"
+  - '6'
+
+env:
+  global:
+    - secure: >-
+        JbWkE8AEqr/Ji1z2vr7Yl71JNccSI5tANapUqVBzdw053fjLvlS9G7ZO/T5uL7ox3F+4y8O8yUa7hqHywdJVveZZeTlorehfE7a+3aIgD0VZfH/JyuLwreZiDchURhNAx++G8prfRy8LWEGW+qleqc5jP2OADpVl+kXFv5eIqlVYntDsUOnDHSofkmg1i/TGGout8AC4WA1cNd2Me8EkC+iW/opb7BoIa6BRQSokseMkXgkmuueQANL5vhlBz1esqe+8xVnEWzzKG7qzouKurjBpWWZoDiPTFPSXOF1VeriCXYzps2XbppX5fNNO8LjDDfSkGDMx4IbIi16kQdYTezXmi623/xf1GQBlMLWgwPIv68yGTU0NBDSg4eMV+TuUqVr9CSD48yik1Uj3izLsJAbgmJ065u0mz2lMvabkm+P1zfzCqbKJ5qgwPruMHu7/y/u40tKnMGFi2bqj2JPWclDRNDwPIAyyjoePJt8TLv8UPq0fUI3rOSsK8cwZb+IWNuoqJ4W07QJE35IZs9+o1fdflCyVJ86NiRtCci/UNnilbknJKHdsPUOO6KKeC4kYjOF/BsvY1lnIt/bVfGGMxmPw72oP62Dfr3EDFc9cZQZFi25uGNll1cdcvdCk1N2GdiRLGVqklhI/8Hw0kAcCAe9FippohNQfP0jiKaQFHhg=
+    - secure: >-
+        ECHLi9Ku1lfR6QWI7IwrSAf0zh6fF8/GI2dWnCARNKM+N/6do/ll5jutm++vSOcuoWWVb1NF+/GSbf5Ofsj/vDiyJdj6vYfD3uWS6PypbhhsQVVbTsK45Md1RjDhfSpuwvKw6NVv9lpZXD/0KyueiGH5yr4BOcr9aEVRglF3Fz7JpVVGLWeSkEswhNwKqWNM98Iqq7pysKqr5oq3/VWxhaRJkG/Rp9ceGdLkt5Q1RVKexxcAJyycwNJNiakVH9WqI2F1B1l1ShwHbv8mlsSpvXc2gNhACCIN/IcDIz/CKtCJ03/0NZAXdO++xLr0sA7gQogP0m+hmWuaO/2jvdRdwfoppHJNvu1eeRFnGCyN7+puN3S+ad4A7gZ3GqtR4zldxoG49UwdLbC7pN1PeXG7DEhDWHkGAjzsQW48utCmQb22erM2crBSM5HGNnZh8jeDf33CUijDRXiW56EFLhCBks7By1Ui/RYDHmvNdknXIB2b8Df3qvo6jyI6U+/nehKTOP/TyuDRoIMFBwUCJ99JpT9obCSQjBiwjcT+pgr8/4wH6gTbnMqfqM8CckgZFPOPMPTAZD/YTiz6QEWrzee/YGnhdkRau7BFil6Cp+nSsWkMamqE+Ivp1dg+bj1gJTLSufkl772BhC3mJrJAnZ+VzMMP0326OWGOxHzEcuON4sM=
+    - alias-dev: vbikbaev-burberry-fake-shop-for-study-dev
+    - alias-prod: vbikbaev-burberry-fake-shop-for-study
+
 script:
-  - npm run test
+  - npm run test && npm run build
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" = "master" ]; then now build -t=NOW_TOKEN;
+  - if [ "$TRAVIS_BRANCH" != "master" ]; then now build -t=NOW_TOKEN;
