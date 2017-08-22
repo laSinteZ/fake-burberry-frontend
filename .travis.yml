@@ -1,10 +1,6 @@
 language: node_js
 node_js:
   - '6'
-env:
-  global:
-    - URL_DEV: vbikbaev-burberry-fake-shop-for-study-dev
-    - URL_PROD: vbikbaev-burberry-fake-shop-for-study
 
 cache:
   yarn: true
@@ -20,10 +16,12 @@ before_deploy:
 deploy:
   - provider: script
     script: now alias $(now build -t=$NOW_TOKEN --public) $URL_DEV -t=$NOW_TOKEN
+    skip_cleanup: true
     on:
       branch: develop
 
   - provider: script
     script: now alias $(now build -t=$NOW_TOKEN --public) $URL_PROD -t=$NOW_TOKEN
+    skip_cleanup: true
     on:
       branch: master
