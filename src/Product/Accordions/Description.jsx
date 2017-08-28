@@ -123,7 +123,7 @@ class Description extends Component {
             </Text>
           </div>
           <div className="col-xs-12 col-lg-8">
-            <Image src={`${process.env.PUBLIC_URL}/img/product-description.jpg`} alt="Beautiful Long Coat" />
+            <Image src="https://assets.burberry.com/is/image/Burberryltd/04a942f3a7fc26c30f37c4afbcb77a969f1621cb.jpg?$BBY_V2_SL_3X4$&hei=960&wid=720" alt="Beautiful Long Coat" />
           </div>
         </div>
       </Container>

@@ -93,7 +93,10 @@ export default function () {
         <Lg>
           <div className="col-md-3">
             <a href="/">
-              <Shop alt="Shop image" src={`${process.env.PUBLIC_URL}/img/shop.jpg`} />
+              <Shop
+                alt="Shop image"
+                src="https://assets.burberry.com/is/image/Burberryltd/933f04c94a361dfd816c77528ec0e7286921051b.jpg?$BBY_V2_BASIC$&wid=474"
+              />
               <ShopLink>Find a store</ShopLink>
             </a>
           </div>

@@ -114,7 +114,10 @@ class Shipping extends Component {
       <Container>
         <div className="row">
           <div className="col-xs-12 col-md-7">
-            <Image src={`${process.env.PUBLIC_URL}/img/shipping.png`} alt="Shipping gifts" />
+            <Image
+              src="https://assets.burberry.com/is/image/Burberryltd/3b9aeee5f69635abb991de3f1b070fdb38cc9d33.jpg?$BBY_V2_PK_4X3$&wid=710&hei=533"
+              alt="Shipping gifts"
+            />
           </div>
           <div className="col-xs-12 col-md-5 col-lg-offset-1 col-lg-4">
             <ButtonWrapper active={this.state.active} onClick={this.toggle}>
