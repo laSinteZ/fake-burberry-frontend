@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { FormattedNumber, FormattedMessage } from 'react-intl';
-import Heart from './Heart';
+import Heart from '../common/Icons/Heart';
 
 const Wrapper = styled.div`
   display: block;
@@ -89,10 +89,10 @@ const PromoLabel = styled.p`
 `;
 
 const Like = styled.button`
-padding: 0;
-border: none;
-background: Transparent;
-cursor: pointer;
+  padding: 0;
+  border: none;
+  background: Transparent;
+  cursor: pointer;
 `;
 
 const colourMessage = '{colourNumber, number} {colourNumber, plural, one {colour} other {colours}}';
@@ -123,7 +123,7 @@ class Card extends Component {
             {this.props.promoLabel}
           </PromoLabel>
           <Like onClick={this.like}>
-            <Heart isLiked={this.state.isLiked} />
+            <Heart fill={this.state.isLiked ? '#171717' : 'none'} />
           </Like>
         </Promo>
         <RouteLink to={this.props.to}>

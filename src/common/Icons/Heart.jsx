@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
 export default function ButtonLike(props) {
   return (
@@ -16,12 +15,12 @@ export default function ButtonLike(props) {
         stroke="#171717"
         transform="translate(1 1)"
         xlinkHref="#a"
-        fill={props.isLiked ? '#171717' : 'none'}
+        fill={props.fill}
       />
     </svg>
   );
 }
 
 ButtonLike.propTypes = {
-  isLiked: PropTypes.bool.isRequired,
+  fill: PropTypes.string.isRequired,
 };
