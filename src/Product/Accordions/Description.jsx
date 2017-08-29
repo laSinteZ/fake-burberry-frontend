@@ -99,10 +99,9 @@ class Description extends Component {
     this.state = {
       active: false,
     };
-    this.toggle = this.toggle.bind(this);
   }
 
-  toggle() {
+  handleToggle = () => {
     this.setState(state => ({ active: !state.active }));
   }
 
@@ -111,7 +110,7 @@ class Description extends Component {
       <Container>
         <div className="row">
           <div className="col-xs-12 col-lg-4">
-            <ButtonWrapper active={this.state.active} onClick={this.toggle}>
+            <ButtonWrapper active={this.state.active} onClick={this.handleToggle}>
               <Button type="button">
                 <Title>
                   {this.props.title}

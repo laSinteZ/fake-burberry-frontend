@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function ButtonLike(props) {
+export default function Heart(props) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15">
       <defs>
@@ -21,6 +21,6 @@ export default function ButtonLike(props) {
   );
 }
 
-ButtonLike.propTypes = {
+Heart.propTypes = {
   fill: PropTypes.string.isRequired,
 };

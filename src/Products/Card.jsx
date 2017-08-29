@@ -103,10 +103,9 @@ class Card extends Component {
     this.state = {
       isLiked: false,
     };
-    this.like = this.like.bind(this);
   }
 
-  like() {
+  handleLike = () => {
     this.setState(state => ({
       isLiked: !state.isLiked,
     }));
@@ -122,7 +121,7 @@ class Card extends Component {
           <PromoLabel>
             {this.props.promoLabel}
           </PromoLabel>
-          <Like onClick={this.like}>
+          <Like onClick={this.handleLike}>
             <Heart fill={this.state.isLiked ? '#171717' : 'none'} />
           </Like>
         </Promo>
