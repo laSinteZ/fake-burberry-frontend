@@ -41,6 +41,7 @@ const ButtonWrapper = styled.div`
   padding: 0;
   border: 0;
   background: white;
+  cursor: pointer;  
 
   justify-content: space-between;
   align-items: center;
@@ -73,6 +74,7 @@ const Button = styled.button`
   padding: 0;
   border: 0;
   background: white;
+  cursor: pointer;    
 `;
 
 const Title = styled.h2`
