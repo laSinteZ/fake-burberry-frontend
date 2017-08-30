@@ -106,8 +106,8 @@ class Card extends Component {
   }
 
   handleLike = () => {
-    this.setState(state => ({
-      isLiked: !state.isLiked,
+    this.setState(prevState => ({
+      isLiked: !prevState.isLiked,
     }));
   }
 

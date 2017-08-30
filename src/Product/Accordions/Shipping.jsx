@@ -106,7 +106,7 @@ class Shipping extends Component {
   }
 
   handleToggle = () => {
-    this.setState(state => ({ active: !state.active }));
+    this.setState(prevState => ({ active: !prevState.active }));
   }
 
   render() {
