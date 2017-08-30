@@ -1,10 +1,9 @@
-/* eslint react/style-prop-object: 0 */
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { FormattedNumber, FormattedMessage } from 'react-intl';
-import heart from '../assets/heart.svg';
+import Heart from '../common/Icons/Heart';
 
 const Wrapper = styled.div`
   display: block;
@@ -90,60 +89,71 @@ const PromoLabel = styled.p`
 `;
 
 const Like = styled.button`
-  display: inline-block;
-  content: '';
-  height: 1rem;
-  width: 14px;
+  padding: 0;
   border: none;
-
-  background: url(${heart}) no-repeat;
-  background-position: center;
-
-  border: none;
+  background: Transparent;
+  cursor: pointer;
 `;
 
 const colourMessage = '{colourNumber, number} {colourNumber, plural, one {colour} other {colours}}';
 
-export default function Card(props) {
-  return (
-    <Wrapper>
-      <RouteLink to={props.to}>
-        <Image alt={props.title} src={props.image} />
-      </RouteLink>
-      <Promo>
-        <PromoLabel>
-          {props.promoLabel}
-        </PromoLabel>
-        <Like />
-      </Promo>
-      <RouteLink to={props.to}>
-        <Title>
-          {props.title}
-        </Title>
-      </RouteLink>
-      <Colours>
-        Available in&nbsp;
-        <ColoursNumber to={props.to}>
-          <FormattedMessage
-            id="colour"
-            defaultMessage={colourMessage}
-            values={{
-              colourNumber: props.colours,
-            }}
+class Card extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLiked: false,
+    };
+  }
+
+  handleLike = () => {
+    this.setState(prevState => ({
+      isLiked: !prevState.isLiked,
+    }));
+  }
+
+  render() {
+    return (
+      <Wrapper>
+        <RouteLink to={this.props.to}>
+          <Image alt={this.props.title} src={this.props.image} />
+        </RouteLink>
+        <Promo>
+          <PromoLabel>
+            {this.props.promoLabel}
+          </PromoLabel>
+          <Like onClick={this.handleLike}>
+            <Heart fill={this.state.isLiked ? '#171717' : 'none'} />
+          </Like>
+        </Promo>
+        <RouteLink to={this.props.to}>
+          <Title>
+            {this.props.title}
+          </Title>
+        </RouteLink>
+        <Colours>
+          Available in{' '}
+          <ColoursNumber to={this.props.to}>
+            <FormattedMessage
+              id="colour"
+              defaultMessage={colourMessage}
+              values={{
+                colourNumber: this.props.colours,
+              }}
+            />
+          </ColoursNumber>
+        </Colours>
+        <Price>
+          <FormattedNumber
+            value={this.props.price}
+            style="currency" // eslint-disable-line
+            currency={this.props.currency}
+            currencyDisplay="symbol"
+            minimumFractionDigits={0}
           />
-        </ColoursNumber>
-      </Colours>
-      <Price>
-        <FormattedNumber
-          value={props.price}
-          style="currency"
-          currency={props.currency}
-          currencyDisplay="symbol"
-          minimumFractionDigits={0}
-        />
-      </Price>
-    </Wrapper>
-  );
+        </Price>
+      </Wrapper>
+    );
+  }
 }
 
 Card.propTypes = {
@@ -155,3 +165,5 @@ Card.propTypes = {
   colours: PropTypes.number.isRequired,
   promoLabel: PropTypes.string.isRequired,
 };
+
+export default Card;
