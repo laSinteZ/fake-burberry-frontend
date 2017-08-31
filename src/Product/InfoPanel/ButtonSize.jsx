@@ -15,11 +15,10 @@ const Size = Button.extend`
   `};
 `;
 
-
 export default function ButtonSize(props) {
   return (
     <Size value={props.value} type="button" isActive={props.isActive} onClick={props.onClick}>
-      {`${props.value}`}
+      {props.value}
     </Size>
   );
 }

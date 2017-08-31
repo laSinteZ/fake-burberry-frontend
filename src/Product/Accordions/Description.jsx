@@ -37,7 +37,7 @@ const Text = styled.div`
 
 const ButtonWrapper = styled.div`
   display: flex;
-  margin: 2rem 0rem;
+  margin: 0;
   padding: 0;
   border: 0;
   background: white;
@@ -71,10 +71,14 @@ const ButtonWrapper = styled.div`
 
 const Button = styled.button`
   margin: 0;
-  padding: 0;
+  padding: 2rem 0;
   border: 0;
   background: white;
   cursor: pointer;    
+
+  @media screen and (min-width: 48rem) {
+    padding: 0;
+  }
 `;
 
 const Title = styled.h2`

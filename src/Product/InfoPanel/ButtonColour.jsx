@@ -7,7 +7,8 @@ const Button = styled.button`
   height: 40px;
   border-radius: 100px;
   font-size: 0;
-
+  cursor: pointer;
+  
   margin-right: 1rem;
 
   border: ${props => (props.isActive ? 'solid 1px #232122' : 'none')};
