@@ -97,13 +97,18 @@ const recs = [
   },
 ];
 
+const colours = [
+  { name: 'Honey', value: '#cfa880' },
+  { name: 'White', value: '#ffffff' },
+  { name: 'Black', value: '#232122' },
+];
+const sizes = ['S', 'M', 'L', 'XL'];
+
 export default function Product(props) {
   return (
     <main>
       <Helmet>
-        <title>
-          {props.title} | Men - Burberry
-        </title>
+        <title>{props.title} | Men - Burberry</title>
         <meta
           name="description"
           content={
@@ -115,9 +120,7 @@ export default function Product(props) {
       <Background>
         <div className="container">
           <ToMd>
-            <Title>
-              {props.title}
-            </Title>
+            <Title>{props.title}</Title>
           </ToMd>
           <div className="row middle-lg">
             <div className="col-xs-12 col-md-7 col-lg-6">
@@ -131,11 +134,9 @@ export default function Product(props) {
             <div className="col-xs-12 col-md-5 col-lg-6">
               <InfoPanelWrapper>
                 <Lg>
-                  <Title>
-                    {props.title}
-                  </Title>
+                  <Title>{props.title}</Title>
                 </Lg>
-                <InfoPanel />
+                <InfoPanel colours={colours} sizes={sizes} />
               </InfoPanelWrapper>
             </div>
           </div>

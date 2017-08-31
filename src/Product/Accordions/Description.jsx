@@ -96,12 +96,9 @@ const Image = styled.img`
 `;
 
 class Description extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      active: false,
-    };
-  }
+  state = {
+    active: false,
+  };
 
   handleToggle = () => {
     this.setState(prevState => ({ active: !prevState.active }));
