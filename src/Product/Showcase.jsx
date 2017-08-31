@@ -24,13 +24,9 @@ const Image = styled.img`
 `;
 
 export default function Showcase(props) {
-  const allImages = props.images.map(img =>
-    <Image src={img.src} alt={img.alt} key={img.src.toString()} />,
-  );
-
   return (
     <Container>
-      {allImages}
+      {props.images.map(img => <Image src={img.src} alt={img.alt} key={img.src.toString()} />)}
     </Container>
   );
 }

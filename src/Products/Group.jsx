@@ -32,27 +32,23 @@ const Title = styled.h2`
 `;
 
 export default function Group(props) {
-  const allCards = props.cards.map(card =>
-    (<div className="col-xs-6 col-md-3" key={card.image.toString()}>
-      <Card
-        to="/men/clothing/test"
-        title={card.title}
-        price={card.price}
-        currency={card.currency}
-        image={card.image}
-        colours={card.colours}
-        promoLabel={card.promoLabel}
-      />
-    </div>),
-  );
-
   return (
     <Wrapper>
-      <Title>
-        {props.title}
-      </Title>
+      <Title>{props.title}</Title>
       <div className="row">
-        {allCards}
+        {props.cards.map(card => (
+          <div className="col-xs-6 col-md-3" key={card.image.toString()}>
+            <Card
+              to="/men/clothing/test"
+              title={card.title}
+              price={card.price}
+              currency={card.currency}
+              image={card.image}
+              colours={card.colours}
+              promoLabel={card.promoLabel}
+            />
+          </div>
+        ))}
       </div>
     </Wrapper>
   );
