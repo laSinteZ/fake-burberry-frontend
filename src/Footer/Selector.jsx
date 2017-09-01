@@ -10,7 +10,10 @@ const Country = styled.select`
   cursor: pointer;
   color: Transparent;
   width: 100%;
-    
+  
+  opacity: 0;
+  border: none;
+  
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   font-size: 12px;
 `;

@@ -10,6 +10,9 @@ const Country = styled.select`
   margin-bottom: -1rem;
   cursor: pointer;
   color: Transparent;
+
+  opacity: 0;
+  border: none;
   
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   font-size: 12px;
