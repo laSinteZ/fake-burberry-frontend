@@ -67,6 +67,16 @@ const Paragraph = styled.p`
   line-height: 1.35;
 `;
 
+const SizeSelect = styled.select`
+  width: 100%;
+  height: 3rem;
+  position: relative;
+  display: block;
+  margin-bottom: -3rem;
+  cursor: pointer;
+  color: Transparent;
+`;
+
 class InfoPanel extends Component {
   state = {
     selectedColour: 0,
@@ -106,6 +116,7 @@ class InfoPanel extends Component {
           <div className="col-xs-12 col-lg-6">
             {this.props.colours.map((colour, index) => (
               <ButtonColour
+                key={colour.value}
                 value={colour.value}
                 colourName={colour.name}
                 isActive={index === this.state.selectedColour}
@@ -119,6 +130,7 @@ class InfoPanel extends Component {
             <div className="col-lg-6">
               {this.props.sizes.map((size, index) => (
                 <ButtonSize
+                  key={size}
                   value={size}
                   isActive={index === this.state.selectedSize}
                   onClick={() => {
@@ -138,6 +150,18 @@ class InfoPanel extends Component {
             </Lg>
             <ToMd>
               <Divider />
+              <SizeSelect>
+                {this.props.sizes.map((size, index) => (
+                  <option
+                    key={size}
+                    onClick={() => {
+                      this.handleSelectSize(index);
+                    }}
+                  >
+                    {size}
+                  </option>
+                ))}
+              </SizeSelect>
               <Button primary type="button">
                 Select a size
               </Button>
