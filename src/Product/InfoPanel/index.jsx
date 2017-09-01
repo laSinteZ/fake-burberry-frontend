@@ -75,6 +75,9 @@ const SizeSelect = styled.select`
   margin-bottom: -3rem;
   cursor: pointer;
   color: Transparent;
+
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  font-size: 12px;
 `;
 
 class InfoPanel extends Component {
