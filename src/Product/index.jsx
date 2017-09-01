@@ -99,7 +99,7 @@ const recs = [
 
 const colours = [
   { name: 'Honey', value: '#cfa880' },
-  { name: 'White', value: '#ffffff' },
+  { name: 'Beige', value: '#f5f5dc' },
   { name: 'Black', value: '#232122' },
 ];
 const sizes = ['S', 'M', 'L', 'XL'];

@@ -21,7 +21,8 @@ const TextOnlyButton = styled.button`
   font-size: 12px;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   line-height: 1rem;
-
+  cursor: pointer;
+  
   & + & {
     margin-top: 1rem;
   }

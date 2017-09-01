@@ -11,6 +11,7 @@ const Dropdown = styled.button`
   font-weight: 600;  
   color: #999999;  
   background-color: Transparent;
+  cursor: pointer;
   
   ::after{
     display: inline-block;    
