@@ -3,14 +3,11 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Country = styled.select`
-  height: 1rem;
-  position: relative;
-  display: block;
-  margin-bottom: -1rem;
+
   cursor: pointer;
-  color: Transparent;
+  color: transparent;
   width: 100%;
-  
+
   opacity: 0;
   border: none;
   
@@ -19,6 +16,7 @@ const Country = styled.select`
 `;
 
 const TextOnlyButton = styled.button`
+  position: absolute;
   padding: 0;
   border: none;
   background-color: #f3f3f3;
@@ -31,22 +29,19 @@ const TextOnlyButton = styled.button`
 `;
 
 const Wrapper = styled.div`
-  & + & {
-    margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  &:last-child{
+    margin-right: 0;
+    margin-bottom: 0;    
   }
 
   @media screen and (min-width: 48rem) {
-    & + & {
-      margin-top: 0;
-      margin-left: 1.5rem;
-    }
+    margin-right: 1.5rem;
   }
 
   @media screen and (min-width: 62rem) {
-    & + & {
-      margin-top: 0;
-      margin-left: 3rem;
-    }
+    margin-right: 3rem;
   }
 `;
 
@@ -64,6 +59,9 @@ class Selector extends Component {
   render() {
     return (
       <Wrapper>
+        <TextOnlyButton type="button">
+          {this.props.title}: <DarkText>{this.props.options[this.state.selectedOption]}</DarkText>
+        </TextOnlyButton>
         <Country onChange={this.handleSelect}>
           {this.props.options.map(option => (
             <option key={option}>
@@ -71,9 +69,6 @@ class Selector extends Component {
             </option>
           ))}
         </Country>
-        <TextOnlyButton type="button">
-          {this.props.title}: <DarkText>{this.props.options[this.state.selectedOption]}</DarkText>
-        </TextOnlyButton>
       </Wrapper>
     );
   }

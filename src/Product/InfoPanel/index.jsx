@@ -67,14 +67,17 @@ const Paragraph = styled.p`
   line-height: 1.35;
 `;
 
+const ButtonsWrapper = styled.div`
+  position: relative;
+`;
+
 const SizeSelect = styled.select`
+  left: 0;
   width: 100%;
   height: 3rem;
-  position: relative;
-  display: block;
-  margin-bottom: -3rem;
+  position: absolute;
   cursor: pointer;
-  color: Transparent;
+  color: transparent;
 
   opacity: 0;
   border: none;
@@ -125,7 +128,7 @@ class InfoPanel extends Component {
                 key={colour.value}
                 value={colour.value}
                 colourName={colour.name}
-                isActive={index === this.state.selectedColour}
+                isActive={this.state.selectedColour === index}
                 onClick={() => {
                   this.handleSelectColour(index);
                 }}
@@ -138,7 +141,7 @@ class InfoPanel extends Component {
                 <ButtonSize
                   key={size}
                   value={size}
-                  isActive={index === this.state.selectedSize}
+                  isActive={this.state.selectedSize === index}
                   onClick={() => {
                     this.handleSelectSize(index);
                   }}
@@ -156,21 +159,23 @@ class InfoPanel extends Component {
             </Lg>
             <ToMd>
               <Divider />
-              <SizeSelect>
-                {this.props.sizes.map((size, index) => (
-                  <option
-                    key={size}
-                    onClick={() => {
-                      this.handleSelectSize(index);
-                    }}
-                  >
-                    {size}
-                  </option>
-                ))}
-              </SizeSelect>
-              <Button primary type="button">
-                Select a size
-              </Button>
+              <ButtonsWrapper>
+                <SizeSelect>
+                  {this.props.sizes.map((size, index) => (
+                    <option
+                      key={size}
+                      onClick={() => {
+                        this.handleSelectSize(index);
+                      }}
+                    >
+                      {size}
+                    </option>
+                  ))}
+                </SizeSelect>
+                <Button primary type="button">
+                  Select a size
+                </Button>
+              </ButtonsWrapper>
             </ToMd>
           </div>
           <div className="col-xs-12 col-lg-6">

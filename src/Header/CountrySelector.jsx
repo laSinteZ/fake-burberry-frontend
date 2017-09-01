@@ -4,16 +4,12 @@ import styled from 'styled-components';
 import Dropdown from '../common/Dropdown';
 
 const Country = styled.select`
-  height: 1rem;
-  position: relative;
-  display: block;
-  margin-bottom: -1rem;
+  position: absolute;
   cursor: pointer;
-  color: Transparent;
+  color: transparent;
 
   opacity: 0;
-  border: none;
-  
+
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   font-size: 12px;
 `;
