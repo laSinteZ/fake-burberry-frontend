@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Filters from './Filters';
 
@@ -45,7 +46,7 @@ const Link = styled.a`
 const Boldish = styled.span`
   font-weight: 500;
 `;
-export default function Header() {
+export default function Header(props) {
   return (
     <Background>
       <div className="container">
@@ -59,8 +60,12 @@ export default function Header() {
             </Text>
           </div>
         </div>
-        <Filters />
+        <Filters onToggle={props.onToggle} />
       </div>
     </Background>
   );
 }
+
+Header.propTypes = {
+  onToggle: PropTypes.func.isRequired,
+};

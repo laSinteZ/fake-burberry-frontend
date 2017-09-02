@@ -19,7 +19,7 @@ const TextOnlyButton = styled.button`
   position: absolute;
   padding: 0;
   border: none;
-  background-color: #f3f3f3;
+  background-color: transparent;
   color: #999999;
   text-align: left;
   font-size: 12px;
