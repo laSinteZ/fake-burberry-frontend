@@ -67,9 +67,7 @@ const Paragraph = styled.p`
   line-height: 1.35;
 `;
 
-const ButtonsWrapper = styled.div`
-  position: relative;
-`;
+const ButtonsWrapper = styled.div`position: relative;`;
 
 const SizeSelect = styled.select`
   left: 0;
@@ -129,9 +127,7 @@ class InfoPanel extends Component {
                 value={colour.value}
                 colourName={colour.name}
                 isActive={this.state.selectedColour === index}
-                onClick={() => {
-                  this.handleSelectColour(index);
-                }}
+                onClick={() => this.handleSelectColour(index)}
               />
             ))}
           </div>
@@ -142,9 +138,7 @@ class InfoPanel extends Component {
                   key={size}
                   value={size}
                   isActive={this.state.selectedSize === index}
-                  onClick={() => {
-                    this.handleSelectSize(index);
-                  }}
+                  onClick={() => this.handleSelectSize(index)}
                 />
               ))}
             </div>
@@ -162,12 +156,7 @@ class InfoPanel extends Component {
               <ButtonsWrapper>
                 <SizeSelect>
                   {this.props.sizes.map((size, index) => (
-                    <option
-                      key={size}
-                      onClick={() => {
-                        this.handleSelectSize(index);
-                      }}
-                    >
+                    <option key={size} onClick={() => this.handleSelectSize(index)}>
                       {size}
                     </option>
                   ))}
