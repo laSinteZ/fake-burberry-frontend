@@ -31,14 +31,16 @@ const Right = styled.div`
 
 class Filters extends Component {
   state = {
-    isOpened: false,
+    activeFilterName: undefined,
   };
 
-  handleFilterToggle = () => {
-    this.setState(
-      prevState => ({ isOpened: !prevState.isOpened }),
-      () => this.props.onToggle(this.state.isOpened),
-    );
+  handleFilterToggle = (filterName, toggledOn) => {
+    if (toggledOn) {
+      this.setState({ activeFilterName: filterName });
+    } else {
+      this.setState({ activeFilterName: undefined });
+    }
+    this.props.onToggle(toggledOn);
   };
 
   render() {
@@ -47,8 +49,10 @@ class Filters extends Component {
         <Left>
           <Filter
             title="Category"
-            onToggle={this.handleFilterToggle}
-            isSomeOpened={this.state.isOpened}
+            onToggle={toggledOn => this.handleFilterToggle('Category', toggledOn)}
+            isSomeOpened={
+              this.state.activeFilterName !== undefined && this.state.activeFilterName !== 'Category'
+            }
           >
             Fun<br />
             Funfunfunfunfunfunfunfunfunfunf<br />
@@ -56,8 +60,10 @@ class Filters extends Component {
           </Filter>
           <Filter
             title="Colour"
-            onToggle={this.handleFilterToggle}
-            isSomeOpened={this.state.isOpened}
+            onToggle={toggledOn => this.handleFilterToggle('Colour', toggledOn)}
+            isSomeOpened={
+              this.state.activeFilterName !== undefined && this.state.activeFilterName !== 'Colour'
+            }
           >
             Fun<br />
             Funfunfunfunfunfunfunfunfunfunf<br />
@@ -65,8 +71,10 @@ class Filters extends Component {
           </Filter>
           <Filter
             title="Size"
-            onToggle={this.handleFilterToggle}
-            isSomeOpened={this.state.isOpened}
+            onToggle={toggledOn => this.handleFilterToggle('Size', toggledOn)}
+            isSomeOpened={
+              this.state.activeFilterName !== undefined && this.state.activeFilterName !== 'Size'
+            }
           >
             Fun<br />
             Funfunfunfunfunfunfunfunfunfunf<br />
@@ -77,8 +85,10 @@ class Filters extends Component {
           <Filter
             title="Sort by price"
             isAlignedRight
-            onToggle={this.handleFilterToggle}
-            isSomeOpened={this.state.isOpened}
+            onToggle={toggledOn => this.handleFilterToggle('Sory by price', toggledOn)}
+            isSomeOpened={
+              this.state.activeFilterName !== undefined && this.state.activeFilterName !== 'Sort by price'
+            }
           >
             Fun<br />
             Funfunfunfunfunfunfunfunfunfunf<br />

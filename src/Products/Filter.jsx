@@ -48,26 +48,27 @@ class Filter extends Component {
     isOpened: false,
   };
 
-  toggle = () => {
-    this.setState(
-      prevState => ({ isOpened: !prevState.isOpened }),
-      () => this.props.onToggle(this.state.isOpened),
-    );
+  componentDidMount() {
+    document.addEventListener('click', this.handleOutsideClick, false);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('click', this.handleOutsideClick, false);
+  }
+
+  toggle = (on = true) => {
+    if (on || on !== this.state.isOpened) {
+      this.setState(
+        prevState => ({ isOpened: !prevState.isOpened }),
+        () => this.props.onToggle(this.state.isOpened),
+      );
+    }
   };
 
   handleOutsideClick = (e) => {
     if (this.node && !this.node.contains(e.target)) {
-      this.handleClick();
+      this.toggle(false);
     }
-  };
-
-  handleClick = () => {
-    if (this.state.isOpened) {
-      document.removeEventListener('click', this.handleOutsideClick, false);
-    } else {
-      document.addEventListener('click', this.handleOutsideClick, false);
-    }
-    this.toggle();
   };
 
   render() {
@@ -79,7 +80,7 @@ class Filter extends Component {
           }}
         >
           <Button
-            onClick={this.handleClick}
+            onClick={this.toggle}
             isOpened={this.state.isOpened}
             isSomeOpened={this.props.isSomeOpened}
           >

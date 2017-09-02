@@ -4,51 +4,46 @@ import styled from 'styled-components';
 
 const Select = styled.select`
 
-  cursor: pointer;
-  color: transparent;
-  width: 100%;
-
+  height: 3rem;
+  padding: 0.875rem;
+  font-size: 0.75rem;
+  line-height: 1.34;
   opacity: 0;
-  border: none;
-  
+    
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  font-size: 12px;
+  font-size: 0.75rem;
+  cursor: pointer;  
 `;
 
-const TextOnlyButton = styled.button`
+const Button = styled.button`
   position: absolute;
-  padding: 0;
+  padding: 1rem 0;
   border: none;
   background-color: transparent;
-  color: #999999;
-  text-align: left;
-  font-size: 12px;
+  left: 0;
+  width: 100%;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
-  line-height: 1rem;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  text-align: center;
+  border: 1px solid #171717;
+  border-radius: 2px;  
   cursor: pointer;
 `;
 
 const Wrapper = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
   margin-bottom: 1rem;
 
   &:last-child{
-    margin-right: 0;
-    margin-bottom: 0;    
-  }
-
-  @media screen and (min-width: 48rem) {
-    margin-right: 1.5rem;
-    margin-bottom: 0rem;    
-  }
-
-  @media screen and (min-width: 62rem) {
-    margin-right: 3rem;
+    margin-bottom: 0;
   }
 `;
 
-const DarkText = styled.span`color: #171717;`;
-
-class Selector extends Component {
+class ButtonSelector extends Component {
   state = {
     selectedOption: 0,
   };
@@ -60,13 +55,13 @@ class Selector extends Component {
   render() {
     return (
       <Wrapper>
-        <TextOnlyButton type="button">
-          {this.props.title}: <DarkText>{this.props.options[this.state.selectedOption]}</DarkText>
-        </TextOnlyButton>
+        <Button type="button">
+          {this.props.options[this.state.selectedOption]}
+        </Button>
         <Select onChange={this.handleSelect}>
           {this.props.options.map(option => (
             <option key={option}>
-              {this.props.title}: {option}
+              {option}
             </option>
           ))}
         </Select>
@@ -75,9 +70,8 @@ class Selector extends Component {
   }
 }
 
-Selector.propTypes = {
+ButtonSelector.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
-  title: PropTypes.string.isRequired,
 };
 
-export default Selector;
+export default ButtonSelector;

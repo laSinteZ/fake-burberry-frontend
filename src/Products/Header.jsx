@@ -60,12 +60,12 @@ export default function Header(props) {
             </Text>
           </div>
         </div>
-        <Filters onToggle={props.onToggle} />
+        <Filters onToggle={props.toggleOverlay} />
       </div>
     </Background>
   );
 }
 
 Header.propTypes = {
-  onToggle: PropTypes.func.isRequired,
+  toggleOverlay: PropTypes.func.isRequired,
 };

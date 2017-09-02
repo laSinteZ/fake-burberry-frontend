@@ -103,7 +103,7 @@ class List extends Component {
     isOverlayVisible: false,
   };
 
-  setOverlayVisible = (isOverlayVisible) => {
+  toggleOverlay = (isOverlayVisible) => {
     this.setState({ isOverlayVisible });
   };
 
@@ -115,7 +115,7 @@ class List extends Component {
           <meta name="description" content={'All types of coats, here adn now'} />
           <meta name="keywords" content="Man Coats, Man" />
         </Helmet>
-        <Header onToggle={this.setOverlayVisible} />
+        <Header toggleOverlay={this.toggleOverlay} />
         <Overlay isVisible={this.state.isOverlayVisible}>
           <div className="container">
             <Group title={coats.title} cards={coats.cards} />
