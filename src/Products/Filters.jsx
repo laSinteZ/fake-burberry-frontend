@@ -85,7 +85,7 @@ class Filters extends Component {
           <Filter
             title="Sort by price"
             isAlignedRight
-            onToggle={toggledOn => this.handleFilterToggle('Sory by price', toggledOn)}
+            onToggle={toggledOn => this.handleFilterToggle('Sort by price', toggledOn)}
             isOtherOpened={
               this.state.activeFilterName !== undefined && this.state.activeFilterName !== 'Sort by price'
             }
