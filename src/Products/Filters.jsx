@@ -50,7 +50,7 @@ class Filters extends Component {
           <Filter
             title="Category"
             onToggle={toggledOn => this.handleFilterToggle('Category', toggledOn)}
-            isSomeOpened={
+            isOtherOpened={
               this.state.activeFilterName !== undefined && this.state.activeFilterName !== 'Category'
             }
           >
@@ -61,7 +61,7 @@ class Filters extends Component {
           <Filter
             title="Colour"
             onToggle={toggledOn => this.handleFilterToggle('Colour', toggledOn)}
-            isSomeOpened={
+            isOtherOpened={
               this.state.activeFilterName !== undefined && this.state.activeFilterName !== 'Colour'
             }
           >
@@ -72,7 +72,7 @@ class Filters extends Component {
           <Filter
             title="Size"
             onToggle={toggledOn => this.handleFilterToggle('Size', toggledOn)}
-            isSomeOpened={
+            isOtherOpened={
               this.state.activeFilterName !== undefined && this.state.activeFilterName !== 'Size'
             }
           >
@@ -86,7 +86,7 @@ class Filters extends Component {
             title="Sort by price"
             isAlignedRight
             onToggle={toggledOn => this.handleFilterToggle('Sory by price', toggledOn)}
-            isSomeOpened={
+            isOtherOpened={
               this.state.activeFilterName !== undefined && this.state.activeFilterName !== 'Sort by price'
             }
           >
