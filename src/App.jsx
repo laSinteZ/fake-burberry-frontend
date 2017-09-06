@@ -57,7 +57,7 @@ const Page = styled.div`
 
   transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1);
   ${props =>
-    props.isHamburgerOpened &&
+    props.isMenuOpened &&
     css`
       overflow: hidden;        
       transform: translate3d(274px, 0, 0);
@@ -85,12 +85,12 @@ const Overlay = styled.div`
 
 class App extends Component {
   state = {
-    isHamburgerOpened: false,
+    isMenuOpened: false,
   };
 
-  toggleHamburger = () => {
+  toggleMenu = () => {
     this.setState(prevState => ({
-      isHamburgerOpened: !prevState.isHamburgerOpened,
+      isMenuOpened: !prevState.isMenuOpened,
     }));
   };
 
@@ -101,10 +101,10 @@ class App extends Component {
           <BrowserRouter>
             <div>
               <Wrapper>
-                <Hamburger handleHamburgerClick={this.toggleHamburger} />
-                <Page isHamburgerOpened={this.state.isHamburgerOpened}>
-                  {this.state.isHamburgerOpened && <Overlay onClick={this.toggleHamburger} />}
-                  <Header handleHamburgerClick={this.toggleHamburger} />
+                <Hamburger handleHamburgerClick={this.toggleMenu} />
+                <Page isMenuOpened={this.state.isMenuOpened}>
+                  {this.state.isMenuOpened && <Overlay onClick={this.toggleMenu} />}
+                  <Header handleHamburgerClick={this.toggleMenu} />
                   <Switch>
                     <Redirect exact from="/" to="/men" />
                     <Route

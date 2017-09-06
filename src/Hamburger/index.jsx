@@ -174,13 +174,13 @@ const subsections = [
 class Hamburger extends Component {
   state = {
     isSubsectionOpened: false,
-    subsectionNumber: 0,
+    subsectionIndex: 0,
   };
 
   toggleSubsection = (index) => {
     this.setState(prevState => ({
       isSubsectionOpened: !prevState.isSubsectionOpened,
-      subsectionNumber: index,
+      subsectionIndex: index,
     }));
   };
 
@@ -229,7 +229,7 @@ class Hamburger extends Component {
           </Block>
         </Main>
         <Subsection
-          content={subsections[this.state.subsectionNumber]}
+          content={subsections[this.state.subsectionIndex]}
           isOpened={this.state.isSubsectionOpened}
           close={this.closeSubsection}
           toggleHamburger={this.props.handleHamburgerClick}
