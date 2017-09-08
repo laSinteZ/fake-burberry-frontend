@@ -57,7 +57,7 @@ class Filter extends Component {
   }
 
   toggle = (on = true) => {
-    if (on || on !== this.state.isOpened) {
+    if (on || this.state.isOpened !== on) {
       this.setState(
         prevState => ({ isOpened: !prevState.isOpened }),
         () => this.props.onToggle(this.state.isOpened),
