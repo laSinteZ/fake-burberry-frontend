@@ -8,7 +8,7 @@ const Button = Dropdown.extend`
   font-weight: normal;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  ${props => props.isOtherOpened && css`opacity: 0.5;`};
+  ${props => props.isAnyOpened && !props.isOpened && css`opacity: 0.5;`};
 `;
 
 const Wrapper = styled.div`
@@ -82,7 +82,7 @@ class Filter extends Component {
           <Button
             onClick={this.toggle}
             isOpened={this.state.isOpened}
-            isOtherOpened={this.props.isOtherOpened}
+            isAnyOpened={this.props.isAnyOpened}
           >
             {this.props.title}
           </Button>
@@ -99,7 +99,7 @@ Filter.propTypes = {
   title: PropTypes.string.isRequired,
   isAlignedRight: PropTypes.bool,
   onToggle: PropTypes.func.isRequired,
-  isOtherOpened: PropTypes.bool.isRequired,
+  isAnyOpened: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
 };
 

@@ -31,11 +31,11 @@ const Right = styled.div`
 
 class Filters extends Component {
   state = {
-    activeFilterKey: undefined,
+    isAnyOpened: false,
   };
 
-  handleFilterToggle = (filterKey, toggledOn) => {
-    this.setState({ activeFilterKey: toggledOn ? filterKey : undefined });
+  handleFilterToggle = (toggledOn) => {
+    this.setState({ isAnyOpened: toggledOn });
     this.props.onToggle(toggledOn);
   };
 
@@ -46,11 +46,8 @@ class Filters extends Component {
           <Filter
             title="Category"
             key="category"
-            onToggle={toggledOn => this.handleFilterToggle('category', toggledOn)}
-            isOtherOpened={
-              this.state.activeFilterKey !== undefined &&
-              this.state.activeFilterKey !== 'category'
-            }
+            onToggle={toggledOn => this.handleFilterToggle(toggledOn)}
+            isAnyOpened={this.state.isAnyOpened}
           >
             Fun<br />
             Funfunfunfunfunfunfunfunfunfunf<br />
@@ -59,10 +56,8 @@ class Filters extends Component {
           <Filter
             title="Colour"
             key="colour"
-            onToggle={toggledOn => this.handleFilterToggle('colour', toggledOn)}
-            isOtherOpened={
-              this.state.activeFilterKey !== undefined && this.state.activeFilterKey !== 'colour'
-            }
+            onToggle={toggledOn => this.handleFilterToggle(toggledOn)}
+            isAnyOpened={this.state.isAnyOpened}
           >
             Fun<br />
             Funfunfunfunfunfunfunfunfunfunf<br />
@@ -71,10 +66,8 @@ class Filters extends Component {
           <Filter
             title="Size"
             key="size"
-            onToggle={toggledOn => this.handleFilterToggle('size', toggledOn)}
-            isOtherOpened={
-              this.state.activeFilterKey !== undefined && this.state.activeFilterKey !== 'size'
-            }
+            onToggle={toggledOn => this.handleFilterToggle(toggledOn)}
+            isAnyOpened={this.state.isAnyOpened}
           >
             Fun<br />
             Funfunfunfunfunfunfunfunfunfunf<br />
@@ -86,11 +79,8 @@ class Filters extends Component {
             title="Sort by price"
             key="sort-price"
             isAlignedRight
-            onToggle={toggledOn => this.handleFilterToggle('sort-price', toggledOn)}
-            isOtherOpened={
-              this.state.activeFilterKey !== undefined &&
-              this.state.activeFilterKey !== 'sort-price'
-            }
+            onToggle={toggledOn => this.handleFilterToggle(toggledOn)}
+            isAnyOpened={this.state.isAnyOpened}
           >
             Fun<br />
             Funfunfunfunfunfunfunfunfunfunf<br />
