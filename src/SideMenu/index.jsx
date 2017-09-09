@@ -171,7 +171,7 @@ const subsections = [
   },
 ];
 
-class Hamburger extends Component {
+class SideMenu extends Component {
   state = {
     isSubsectionOpened: false,
     subsectionIndex: 0,
@@ -232,15 +232,15 @@ class Hamburger extends Component {
           content={subsections[this.state.subsectionIndex]}
           isOpened={this.state.isSubsectionOpened}
           close={this.closeSubsection}
-          toggleHamburger={this.props.handleHamburgerClick}
+          toggleSideMenu={this.props.handleSideMenuClick}
         />
       </Wrapper>
     );
   }
 }
 
-Hamburger.propTypes = {
-  handleHamburgerClick: PropTypes.func.isRequired,
+SideMenu.propTypes = {
+  handleSideMenuClick: PropTypes.func.isRequired,
 };
 
-export default Hamburger;
+export default SideMenu;

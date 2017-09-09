@@ -46,7 +46,7 @@ export default function Header(props) {
     <header className="container">
       <div className="row middle-xs">
         <div className="col-xs-2 col-md-4">
-          <Hamburger onClick={props.handleHamburgerClick} />
+          <Hamburger onClick={props.onHamburgerClick} />
           <Md>
             <CountrySelector countries={countries} />
           </Md>
@@ -63,5 +63,5 @@ export default function Header(props) {
 }
 
 Header.propTypes = {
-  handleHamburgerClick: PropTypes.func.isRequired,
+  onHamburgerClick: PropTypes.func.isRequired,
 };

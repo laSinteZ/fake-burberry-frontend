@@ -7,7 +7,7 @@ import Header from './Header';
 import Product from './Product';
 import Products from './Products';
 import Footer from './Footer';
-import Hamburger from './Hamburger';
+import SideMenu from './SideMenu';
 
 addLocaleData(ruLocaleData);
 
@@ -57,9 +57,9 @@ const Page = styled.div`
 
   transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1);
   ${props =>
-    props.isMenuOpened &&
+    props.isSideMenuOpened &&
     css`
-      overflow: hidden;        
+      overflow: hidden;
       transform: translate3d(274px, 0, 0);
       @media screen and (min-width: 48rem) {
         transform: none;
@@ -85,43 +85,39 @@ const Overlay = styled.div`
 
 class App extends Component {
   state = {
-    isMenuOpened: false,
+    isSideMenuOpened: false,
   };
 
-  toggleMenu = () => {
+  toggleSideMenu = () => {
     this.setState(prevState => ({
-      isMenuOpened: !prevState.isMenuOpened,
+      isSideMenuOpened: !prevState.isSideMenuOpened,
     }));
   };
 
   render() {
     return (
       <IntlProvider locale="ru">
-        <div>
-          <BrowserRouter>
-            <div>
-              <Wrapper>
-                <Hamburger handleHamburgerClick={this.toggleMenu} />
-                <Page isMenuOpened={this.state.isMenuOpened}>
-                  {this.state.isMenuOpened && <Overlay onClick={this.toggleMenu} />}
-                  <Header handleHamburgerClick={this.toggleMenu} />
-                  <Switch>
-                    <Redirect exact from="/" to="/men" />
-                    <Route
-                      path="/:section/:subsection/:id"
-                      render={props => (
-                        <Product {...props} title={productTitle} images={productImages} />
-                      )}
-                    />
-                    <Route exact path="/:section/:subsection" component={Products} />
-                    <Route exact path="/:section" component={Products} />
-                  </Switch>
-                  <Footer />
-                </Page>
-              </Wrapper>
-            </div>
-          </BrowserRouter>
-        </div>
+        <BrowserRouter>
+          <Wrapper>
+            <SideMenu handleSideMenuClick={this.toggleSideMenu} />
+            <Page isSideMenuOpened={this.state.isSideMenuOpened}>
+              {this.state.isSideMenuOpened && <Overlay onClick={this.toggleSideMenu} />}
+              <Header onHamburgerClick={this.toggleSideMenu} />
+              <Switch>
+                <Redirect exact from="/" to="/men" />
+                <Route
+                  path="/:section/:subsection/:id"
+                  render={props => (
+                    <Product {...props} title={productTitle} images={productImages} />
+                  )}
+                />
+                <Route exact path="/:section/:subsection" component={Products} />
+                <Route exact path="/:section" component={Products} />
+              </Switch>
+              <Footer />
+            </Page>
+          </Wrapper>
+        </BrowserRouter>
       </IntlProvider>
     );
   }

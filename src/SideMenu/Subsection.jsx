@@ -103,7 +103,7 @@ export default function Subsection(props) {
       </Header>
       <Links>
         {props.content.links.map(link => (
-          <Link to={link.url} onClick={props.toggleHamburger} key={link.url}>
+          <Link to={link.url} onClick={props.toggleSideMenu} key={link.url}>
             {link.title}
           </Link>
         ))}
@@ -125,5 +125,5 @@ Subsection.propTypes = {
   }).isRequired,
   isOpened: PropTypes.bool.isRequired,
   close: PropTypes.func.isRequired,
-  toggleHamburger: PropTypes.func.isRequired,
+  toggleSideMenu: PropTypes.func.isRequired,
 };
