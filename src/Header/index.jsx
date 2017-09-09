@@ -8,7 +8,7 @@ import Navigation from './Navigation';
 import { Md } from '../common/Breakpoints';
 import CountrySelector from './CountrySelector';
 
-const Hamburger = styled.button`
+const Menu = styled.button`
   height: 1rem;
   width: 1rem;
 
@@ -46,7 +46,7 @@ export default function Header(props) {
     <header className="container">
       <div className="row middle-xs">
         <div className="col-xs-2 col-md-4">
-          <Hamburger onClick={props.onHamburgerClick} />
+          <Menu onClick={props.onSideMenuClick} />
           <Md>
             <CountrySelector countries={countries} />
           </Md>
@@ -63,5 +63,5 @@ export default function Header(props) {
 }
 
 Header.propTypes = {
-  onHamburgerClick: PropTypes.func.isRequired,
+  onSideMenuClick: PropTypes.func.isRequired,
 };

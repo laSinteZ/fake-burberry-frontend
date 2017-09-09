@@ -102,7 +102,7 @@ class App extends Component {
             <SideMenu handleSideMenuClick={this.toggleSideMenu} />
             <Page isSideMenuOpened={this.state.isSideMenuOpened}>
               {this.state.isSideMenuOpened && <Overlay onClick={this.toggleSideMenu} />}
-              <Header onHamburgerClick={this.toggleSideMenu} />
+              <Header onSideMenuClick={this.toggleSideMenu} />
               <Switch>
                 <Redirect exact from="/" to="/men" />
                 <Route
