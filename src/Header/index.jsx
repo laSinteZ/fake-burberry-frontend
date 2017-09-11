@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.svg';
@@ -7,10 +8,12 @@ import Navigation from './Navigation';
 import { Md } from '../common/Breakpoints';
 import CountrySelector from './CountrySelector';
 
-const Hamburger = styled.button`
+const Menu = styled.button`
   height: 1rem;
   width: 1rem;
 
+  cursor: pointer;
+  
   background: url(${hamburger}) no-repeat;
   background-position: center;
 
@@ -36,18 +39,14 @@ const Logo = styled.img`
   }
 `;
 
-const countries = [
-  'United Kingdom (£)',
-  'Russian Federation (₽)',
-  'Ukraine (₴)',
-];
+const countries = ['United Kingdom (£)', 'Russian Federation (₽)', 'Ukraine (₴)'];
 
-export default function Header() {
+export default function Header(props) {
   return (
     <header className="container">
       <div className="row middle-xs">
         <div className="col-xs-2 col-md-4">
-          <Hamburger />
+          <Menu onClick={props.onSideMenuClick} />
           <Md>
             <CountrySelector countries={countries} />
           </Md>
@@ -62,3 +61,7 @@ export default function Header() {
     </header>
   );
 }
+
+Header.propTypes = {
+  onSideMenuClick: PropTypes.func.isRequired,
+};

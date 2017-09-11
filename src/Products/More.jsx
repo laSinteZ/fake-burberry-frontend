@@ -6,10 +6,10 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
-  margin-bottom: 5rem;
+  padding-bottom: 5rem;
 
   @media screen and (min-width: 48rem) {
-    margin-top: 1rem;
+    padding-top: 1rem;
   }
 `;
 
@@ -31,6 +31,7 @@ const Title = styled.h2`
   font-size: 1rem;
   color: #171717;
   margin-bottom: 1rem;
+
   @media screen and (min-width: 48rem) {
     margin-bottom: 2rem;
     line-height: 1.5rem;
