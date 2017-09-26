@@ -7,10 +7,11 @@ const Button = styled.button`
   height: 40px;
   border-radius: 100px;
   font-size: 0;
-
+  cursor: pointer;
+  
   margin-right: 1rem;
 
-  border: ${props => (props.active ? 'solid 1px #232122' : 'none')};
+  border: ${props => (props.isActive ? 'solid 1px #232122' : 'none')};
   background-color: ${props => props.value};
 
   @media screen and (min-width: 62rem) {
@@ -20,7 +21,7 @@ const Button = styled.button`
 
 export default function ButtonColour(props) {
   return (
-    <Button value={props.value} type="button" active={props.isActive}>
+    <Button value={props.value} type="button" isActive={props.isActive} onClick={props.onClick}>
       {`${props.colourName} colour`}
     </Button>
   );
@@ -30,6 +31,7 @@ ButtonColour.propTypes = {
   value: PropTypes.node.isRequired,
   isActive: PropTypes.bool,
   colourName: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 ButtonColour.defaultProps = {

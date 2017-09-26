@@ -8,7 +8,8 @@ const ButtonTextOnly = styled.button`
   font-size: 12px;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   line-height: 1.35;
-
+  cursor: pointer;
+  
   align-self: flex-start;
 
   margin-top: 0.5rem;

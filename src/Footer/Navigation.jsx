@@ -28,9 +28,10 @@ const Link = styled.a`
   font-size: 12px;
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
   line-height: 1.34;
-
-  & + & {
-    margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  
+  &:last-child {
+    margin-bottom: 0;
   }
 `;
 

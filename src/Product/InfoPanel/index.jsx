@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Button from './Button';
 import ButtonColour from './ButtonColour';
@@ -66,72 +67,129 @@ const Paragraph = styled.p`
   line-height: 1.35;
 `;
 
-export default function () {
-  return (
-    <InfoContainer>
-      <PriceArticle id={39428531} price={110000} currency="RUB" />
-      <div className="row">
-        <div className="col-xs-12 col-lg-6">
-          <Colour>
-            Colour: <b>Honey</b>
-          </Colour>
-        </div>
-        <Lg>
-          <div className="col-lg-6">
-            <SizeWrapper>
-              <Size>
-                Size: <b>XL</b>
-              </Size>
-              <ButtonTextOnly type="button">NEED SIZE HELP?</ButtonTextOnly>
-            </SizeWrapper>
-          </div>
-        </Lg>
-      </div>
-      <div className="row">
-        <div className="col-xs-12 col-lg-6">
-          <ButtonColour value="#232122" colourName="Black" />
-          <ButtonColour value="#cfa880" colourName="Honey" isActive />
-        </div>
-        <Lg>
-          <div className="col-lg-6">
-            <ButtonSize type="button">S</ButtonSize>
-            <ButtonSize type="button">M</ButtonSize>
-            <ButtonSize type="button">L</ButtonSize>
-            <ButtonSize type="button" isActive>
-              XL
-            </ButtonSize>
-          </div>
-        </Lg>
-      </div>
-      <div className="row">
-        <div className="col-xs-12 col-lg-6">
-          <Lg>
-            <Button primary type="button">
-              Add to bag
-            </Button>
-          </Lg>
-          <ToMd>
-            <Divider />
-            <Button primary type="button">
-              Select a size
-            </Button>
-          </ToMd>
-        </div>
-        <div className="col-xs-12 col-lg-6">
-          <Button type="button">Find in store</Button>
-          <ToMd>
-            <ButtonTextOnly type="button">NEED SIZE HELP?</ButtonTextOnly>
-          </ToMd>
-        </div>
-      </div>
-      <Lg>
+const ButtonsWrapper = styled.div`position: relative;`;
+
+const SizeSelect = styled.select`
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  position: absolute;
+  cursor: pointer;
+  color: transparent;
+
+  opacity: 0;
+  border: none;
+
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial;
+  font-size: 12px;
+`;
+
+class InfoPanel extends Component {
+  state = {
+    selectedColour: 0,
+    selectedSize: 0,
+  };
+
+  handleSelectColour = (selectedColour) => {
+    this.setState({ selectedColour });
+  };
+
+  handleSelectSize = (selectedSize) => {
+    this.setState({ selectedSize });
+  };
+
+  render() {
+    return (
+      <InfoContainer>
+        <PriceArticle id={39428531} price={110000} currency="RUB" />
         <div className="row">
-          <div className="col-lg-12">
-            <Subtitle>Free Next Day Delivery</Subtitle>
-            <Paragraph>Order before 7pm Monday to Thursday for delivery the next day</Paragraph>
+          <div className="col-xs-12 col-lg-6">
+            <Colour>
+              Colour: <b>{this.props.colours[this.state.selectedColour].name}</b>
+            </Colour>
+          </div>
+          <Lg>
+            <div className="col-lg-6">
+              <SizeWrapper>
+                <Size>
+                  Size: <b>{this.props.sizes[this.state.selectedSize]}</b>
+                </Size>
+                <ButtonTextOnly type="button">NEED SIZE HELP?</ButtonTextOnly>
+              </SizeWrapper>
+            </div>
+          </Lg>
+        </div>
+        <div className="row">
+          <div className="col-xs-12 col-lg-6">
+            {this.props.colours.map((colour, index) => (
+              <ButtonColour
+                key={colour.value}
+                value={colour.value}
+                colourName={colour.name}
+                isActive={this.state.selectedColour === index}
+                onClick={() => this.handleSelectColour(index)}
+              />
+            ))}
+          </div>
+          <Lg>
+            <div className="col-lg-6">
+              {this.props.sizes.map((size, index) => (
+                <ButtonSize
+                  key={size}
+                  value={size}
+                  isActive={this.state.selectedSize === index}
+                  onClick={() => this.handleSelectSize(index)}
+                />
+              ))}
+            </div>
+          </Lg>
+        </div>
+        <div className="row">
+          <div className="col-xs-12 col-lg-6">
+            <Lg>
+              <Button primary type="button">
+                Add to bag
+              </Button>
+            </Lg>
+            <ToMd>
+              <Divider />
+              <ButtonsWrapper>
+                <SizeSelect>
+                  {this.props.sizes.map((size, index) => (
+                    <option key={size} onClick={() => this.handleSelectSize(index)}>
+                      {size}
+                    </option>
+                  ))}
+                </SizeSelect>
+                <Button primary type="button">
+                  Select a size
+                </Button>
+              </ButtonsWrapper>
+            </ToMd>
+          </div>
+          <div className="col-xs-12 col-lg-6">
+            <Button type="button">Find in store</Button>
+            <ToMd>
+              <ButtonTextOnly type="button">NEED SIZE HELP?</ButtonTextOnly>
+            </ToMd>
           </div>
         </div>
-      </Lg>
-    </InfoContainer>
-  );
+        <Lg>
+          <div className="row">
+            <div className="col-lg-12">
+              <Subtitle>Free Next Day Delivery</Subtitle>
+              <Paragraph>Order before 7pm Monday to Thursday for delivery the next day</Paragraph>
+            </div>
+          </div>
+        </Lg>
+      </InfoContainer>
+    );
+  }
 }
+
+InfoPanel.propTypes = {
+  colours: PropTypes.arrayOf(PropTypes.object).isRequired,
+  sizes: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
+export default InfoPanel;

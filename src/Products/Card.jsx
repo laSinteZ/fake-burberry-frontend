@@ -98,12 +98,9 @@ const Like = styled.button`
 const colourMessage = '{colourNumber, number} {colourNumber, plural, one {colour} other {colours}}';
 
 class Card extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isLiked: false,
-    };
-  }
+  state = {
+    isLiked: false,
+  };
 
   handleLike = () => {
     this.setState(prevState => ({

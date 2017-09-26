@@ -40,8 +40,7 @@ const Paragraph = styled.p`
 
 const ButtonWrapper = styled.div`
   display: flex;
-  margin: 2rem 0rem;
-  padding: 0;
+  margin: 0;
   border: 0;
   background: white;
   cursor: pointer;  
@@ -61,7 +60,7 @@ const ButtonWrapper = styled.div`
   }
 
   @media screen and (min-width: 48rem) {
-    margin: 0rem;
+    margin: 0;
     ::after {
       content: none;
     }
@@ -74,9 +73,13 @@ const ButtonWrapper = styled.div`
 
 const Button = styled.button`
   margin: 0;
-  padding: 0;
+  padding: 2rem 0;
   border: 0;
   background: white;
+  
+  @media screen and (min-width: 48rem) {
+    padding: 0;
+  }
 `;
 
 const Title = styled.h2`
@@ -98,12 +101,9 @@ const Image = styled.img`
 `;
 
 class Shipping extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      active: false,
-    };
-  }
+  state = {
+    active: false,
+  };
 
   handleToggle = () => {
     this.setState(prevState => ({ active: !prevState.active }));
